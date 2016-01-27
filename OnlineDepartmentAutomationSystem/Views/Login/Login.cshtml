@@ -1,0 +1,137 @@
+﻿@model OnlineDepartmentAutomationSystem.Models.AccountLoginModel
+
+@{
+    ViewBag.Title = "Login";
+}
+
+<script src="~/Scripts/jquery-1.7.1.js"></script>
+<script src="~/Scripts/jquery-ui-1.8.20.js"></script>
+<script src="~/Bootstrape/bootstrap-alert.js"></script>
+
+<div class="post">
+    @using (Html.BeginForm()) {
+        <div style="left: 25%;position: relative">
+            @Html.AntiForgeryToken()
+            @Html.ValidationSummary(true)
+
+            <fieldset>
+                <legend>Login</legend>
+                <table style="font-family: Arial;">
+            
+                    <tr>
+                        <td ></td>
+                        <td style="text-align: left"><h2>Login Using Your Account</h2></td>
+              
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold;font-size: 18px;text-align: right">Role</td>
+                        <td style="text-align: left">  @Html.DropDownList("Role", new List<SelectListItem>
+                                                       {
+                                                           new SelectListItem{Text = "Student",Value = "Student"},
+                                                           new SelectListItem{Text = "Teacher",Value = "Teacher"},
+               
+                                                       }, "Login  As", new { @class = "empty",id="roleDroupDownId" })
+                            @Html.ValidationMessageFor(model => model.Role)
+                        </td>
+                        <td> </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold;font-size: 18px;text-align: right">Username    <img src="~/Content/user1.png" width="25"/></td>
+                        <td>   @Html.TextBoxFor(model => model.Username,new{id="userNameTextBoxId"})
+                        </td>
+                        <td style="text-align: left"> @Html.ValidationMessageFor(model => model.Username)</td>
+                    </tr>         <tr>
+                                      <td></td>
+                                  </tr>
+                    <tr>
+                        <td style="font-weight: bold;font-size: 18px;text-align:right">Password  <img src="~/Content/lockoverlay.png" width="30"/></td>
+                        <td>      @Html.PasswordFor(model => model.Password,new{id="passwordTextBoxId"})
+                        </td>
+                        <td style="text-align: left"> @Html.ValidationMessageFor(model => model.Password)</td>
+                    </tr>         <tr>
+                                      <td></td>
+                                  </tr>
+                    <tr>
+                        <td></td>
+                        <td style="text-align: left">
+                            @if (ViewBag.loginErrorId != 1)
+                            {
+                               <input type="submit" id="loginButtonId" value="Login" class="btn btn-info" style="width: 150px"/>
+                         
+                            }
+                            @if (ViewBag.loginErrorId == 1)
+                            {
+                               <input type="submit" disabled="disabled" value="Login" class="btn btn-info" style="width: 150px"/>
+                         
+                            }
+                             </td>
+                        <td></td>  
+                    </tr>
+                </table>
+     
+   
+
+       
+
+            </fieldset></div>
+    }</div>
+
+<div  id="divLoading" >        
+                     <img src="~/Images/ajax-loader.gif" style="background-position: center;position: relative;left: 40%;top: 10px"/>    
+     </div>
+
+<div id="jqxLoginFailedNotification" style="display: none"> Invalid Username and Password Combination.</div>
+<input type="hidden" value="@ViewBag.LoginFailedId " id="loginFailedId"/>
+
+
+@if (ViewBag.loginErrorId == 1)
+{<div class="bs-docs-example" style="background: white;color: white;position: absolute;top: 5%">
+     <div class="alert alert-block alert-error fade in">
+         <button type="button" class="close" data-dismiss="alert">×</button>
+         <h4 class="alert-heading">Oh snap! You got an error!</h4>
+              
+         <p style="font-family: Courier New;font-size: 19px;">
+                  
+             <img src="~/Content/1405880767_warning_48.png" width="35"/>  
+   It seems you are already <b>Logged In</b> and you are trying to <b>Login</b> again.Please <b>Logg Off</b> first to <b>Login</b> again.                                                                                      
+                                                                                                                                                               
+           
+         
+         </p>
+          
+     </div>
+ </div>
+}
+<script>
+    
+   
+    if ($("#loginFailedId").val() == 1) {
+
+        $("#jqxLoginFailedNotification").dialog();
+    }
+  
+    $("table").css('border', '0px');
+
+    function lodingFunction() {
+
+
+
+        $('#divLoading').dialog({ title: '<span style="font-family:Courier New;"> Please Wait...</span>' });
+
+
+    }
+    
+
+    
+    $("#loginButtonId").click(function () {
+        if ($("#roleDroupDownId").val() != "" && $("#userNameTextBoxId").val() != "" && $("#passwordTextBoxId").val() != "") {
+            lodingFunction();
+        }
+
+    });
+
+</script>

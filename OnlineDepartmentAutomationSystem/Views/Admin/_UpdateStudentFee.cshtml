@@ -1,0 +1,123 @@
+﻿@model OnlineDepartmentAutomationSystem.Models.StudentFeeUpdateModel
+<link href="~/Content/css/bootstrap.css" rel="stylesheet" />
+<script src="~/Scripts/jquery-1.7.1.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>StudentFee</legend>
+
+    
+        <div class="editor-label">
+            @Html.LabelFor(model => model.AdmissionFee)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.AdmissionFee)
+            @Html.ValidationMessageFor(model => model.AdmissionFee)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CreditHourFee)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CreditHourFee)
+            @Html.ValidationMessageFor(model => model.CreditHourFee)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.StudentTrustFund)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.StudentTrustFund)
+            @Html.ValidationMessageFor(model => model.StudentTrustFund)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.HallRent)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.HallRent)
+            @Html.ValidationMessageFor(model => model.HallRent)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CentralLibraryFee)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CentralLibraryFee)
+            @Html.ValidationMessageFor(model => model.CentralLibraryFee)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.SeminarLibraryFee)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.SeminarLibraryFee)
+            @Html.ValidationMessageFor(model => model.SeminarLibraryFee)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.NonResidentialTransfortFee)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.NonResidentialTransfortFee)
+            @Html.ValidationMessageFor(model => model.NonResidentialTransfortFee)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ResidentialTransfortFee)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ResidentialTransfortFee)
+            @Html.ValidationMessageFor(model => model.ResidentialTransfortFee)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.BacklogFeePerCourse)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.BacklogFeePerCourse)
+            @Html.ValidationMessageFor(model => model.BacklogFeePerCourse)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.LateFee)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.LateFee)
+            @Html.ValidationMessageFor(model => model.LateFee)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Others)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Others)
+            @Html.ValidationMessageFor(model => model.Others)
+        </div>
+
+        <p>
+          <span>
+                                                                        
+                                                                        
+                    <button type="submit" class="btn btn-info" >
+                <i class="icon-edit  icon-white"></i> Save
+            </button>
+                      <button type="button" class="btn btn-danger" onclick="closeDialog();">
+                <i class="icon-remove  icon-white"></i> Cancel
+            </button>
+
+                                                                    </span>
+        </p>
+    </fieldset>
+}
+<script>
+    $(".cancel").css('background', 'red').css('color', '#fff');
+
+    function closeDialog() {
+        location.reload();
+    }
+</script>

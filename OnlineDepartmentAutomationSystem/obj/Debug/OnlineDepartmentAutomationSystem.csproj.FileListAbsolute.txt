@@ -1,0 +1,786 @@
+C:\Users\anowar\Documents\Visual Studio 2012\Projects\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\obj\Debug\OnlineDepartmentAutomationSystem.csprojResolveAssemblyReference.cache
+C:\Users\anowar\Documents\Visual Studio 2012\Projects\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\OnlineDepartmentAutomationSystem.dll
+C:\Users\anowar\Documents\Visual Studio 2012\Projects\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\OnlineDepartmentAutomationSystem.pdb
+C:\Users\anowar\Documents\Visual Studio 2012\Projects\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\Antlr3.Runtime.dll
+C:\Users\anowar\Documents\Visual Studio 2012\Projects\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.AspNet.dll
+C:\Users\anowar\Documents\Visual Studio 2012\Projects\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.Core.dll
+C:\Users\anowar\Documents\Visual Studio 2012\Projects\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.OAuth.Consumer.dll
+C:\Users\anowar\Documents\Visual Studio 2012\Projects\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.OAuth.dll
+C:\Users\anowar\Documents\Visual Studio 2012\Projects\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.OpenId.dll
+C:\Users\anowar\Documents\Visual Studio 2012\Projects\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+C:\Users\anowar\Documents\Visual Studio 2012\Projects\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\EntityFramework.dll
+C:\Users\anowar\Documents\Visual Studio 2012\Projects\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\anowar\Documents\Visual Studio 2012\Projects\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\Microsoft.Web.WebPages.OAuth.dll
+C:\Users\anowar\Documents\Visual Studio 2012\Projects\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\Newtonsoft.Json.dll
+C:\Users\anowar\Documents\Visual Studio 2012\Projects\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\System.Net.Http.Formatting.dll
+C:\Users\anowar\Documents\Visual Studio 2012\Projects\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\System.Web.Helpers.dll
+C:\Users\anowar\Documents\Visual Studio 2012\Projects\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\System.Web.Http.dll
+C:\Users\anowar\Documents\Visual Studio 2012\Projects\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\System.Web.Http.WebHost.dll
+C:\Users\anowar\Documents\Visual Studio 2012\Projects\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\System.Web.Mvc.dll
+C:\Users\anowar\Documents\Visual Studio 2012\Projects\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\System.Web.Optimization.dll
+C:\Users\anowar\Documents\Visual Studio 2012\Projects\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\System.Web.Razor.dll
+C:\Users\anowar\Documents\Visual Studio 2012\Projects\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\System.Web.WebPages.Deployment.dll
+C:\Users\anowar\Documents\Visual Studio 2012\Projects\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\System.Web.WebPages.dll
+C:\Users\anowar\Documents\Visual Studio 2012\Projects\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\System.Web.WebPages.Razor.dll
+C:\Users\anowar\Documents\Visual Studio 2012\Projects\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\WebGrease.dll
+C:\Users\anowar\Documents\Visual Studio 2012\Projects\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\WebMatrix.Data.dll
+C:\Users\anowar\Documents\Visual Studio 2012\Projects\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\WebMatrix.WebData.dll
+C:\Users\anowar\Documents\Visual Studio 2012\Projects\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\EntityFramework.xml
+C:\Users\anowar\Documents\Visual Studio 2012\Projects\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\Newtonsoft.Json.xml
+C:\Users\anowar\Documents\Visual Studio 2012\Projects\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\System.Net.Http.Formatting.xml
+C:\Users\anowar\Documents\Visual Studio 2012\Projects\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\System.Web.Helpers.xml
+C:\Users\anowar\Documents\Visual Studio 2012\Projects\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\System.Web.Http.xml
+C:\Users\anowar\Documents\Visual Studio 2012\Projects\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\System.Web.Http.WebHost.xml
+C:\Users\anowar\Documents\Visual Studio 2012\Projects\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\System.Web.Mvc.xml
+C:\Users\anowar\Documents\Visual Studio 2012\Projects\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\System.Web.Razor.xml
+C:\Users\anowar\Documents\Visual Studio 2012\Projects\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\System.Web.WebPages.xml
+C:\Users\anowar\Documents\Visual Studio 2012\Projects\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\System.Web.WebPages.Deployment.xml
+C:\Users\anowar\Documents\Visual Studio 2012\Projects\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\System.Web.WebPages.Razor.xml
+C:\Users\anowar\Documents\Visual Studio 2012\Projects\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\WebMatrix.Data.xml
+C:\Users\anowar\Documents\Visual Studio 2012\Projects\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\Microsoft.Web.WebPages.OAuth.xml
+C:\Users\anowar\Documents\Visual Studio 2012\Projects\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\WebMatrix.WebData.xml
+C:\Users\anowar\Documents\Visual Studio 2012\Projects\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.AspNet.xml
+C:\Users\anowar\Documents\Visual Studio 2012\Projects\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.Core.xml
+C:\Users\anowar\Documents\Visual Studio 2012\Projects\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.OAuth.Consumer.xml
+C:\Users\anowar\Documents\Visual Studio 2012\Projects\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.OAuth.xml
+C:\Users\anowar\Documents\Visual Studio 2012\Projects\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.OpenId.xml
+C:\Users\anowar\Documents\Visual Studio 2012\Projects\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+C:\Users\anowar\Documents\Visual Studio 2012\Projects\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\obj\Debug\OnlineDepartmentAutomationSystem.dll
+C:\Users\anowar\Documents\Visual Studio 2012\Projects\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\obj\Debug\OnlineDepartmentAutomationSystem.pdb
+C:\Users\anowar\Desktop\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\OnlineDepartmentAutomationSystem.dll
+C:\Users\anowar\Desktop\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\OnlineDepartmentAutomationSystem.pdb
+C:\Users\anowar\Desktop\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\Antlr3.Runtime.dll
+C:\Users\anowar\Desktop\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.AspNet.dll
+C:\Users\anowar\Desktop\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.Core.dll
+C:\Users\anowar\Desktop\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.OAuth.Consumer.dll
+C:\Users\anowar\Desktop\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.OAuth.dll
+C:\Users\anowar\Desktop\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.OpenId.dll
+C:\Users\anowar\Desktop\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+C:\Users\anowar\Desktop\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\EntityFramework.dll
+C:\Users\anowar\Desktop\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\anowar\Desktop\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\Microsoft.Web.WebPages.OAuth.dll
+C:\Users\anowar\Desktop\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\Newtonsoft.Json.dll
+C:\Users\anowar\Desktop\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\System.Net.Http.Formatting.dll
+C:\Users\anowar\Desktop\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\System.Web.Helpers.dll
+C:\Users\anowar\Desktop\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\System.Web.Http.dll
+C:\Users\anowar\Desktop\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\System.Web.Http.WebHost.dll
+C:\Users\anowar\Desktop\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\System.Web.Mvc.dll
+C:\Users\anowar\Desktop\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\System.Web.Optimization.dll
+C:\Users\anowar\Desktop\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\System.Web.Razor.dll
+C:\Users\anowar\Desktop\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\System.Web.WebPages.Deployment.dll
+C:\Users\anowar\Desktop\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\System.Web.WebPages.dll
+C:\Users\anowar\Desktop\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\System.Web.WebPages.Razor.dll
+C:\Users\anowar\Desktop\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\WebGrease.dll
+C:\Users\anowar\Desktop\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\WebMatrix.Data.dll
+C:\Users\anowar\Desktop\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\WebMatrix.WebData.dll
+C:\Users\anowar\Desktop\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\EntityFramework.xml
+C:\Users\anowar\Desktop\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\Newtonsoft.Json.xml
+C:\Users\anowar\Desktop\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\System.Net.Http.Formatting.xml
+C:\Users\anowar\Desktop\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\System.Web.Helpers.xml
+C:\Users\anowar\Desktop\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\System.Web.Http.xml
+C:\Users\anowar\Desktop\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\System.Web.Http.WebHost.xml
+C:\Users\anowar\Desktop\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\System.Web.Mvc.xml
+C:\Users\anowar\Desktop\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\System.Web.Razor.xml
+C:\Users\anowar\Desktop\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\System.Web.WebPages.xml
+C:\Users\anowar\Desktop\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\System.Web.WebPages.Deployment.xml
+C:\Users\anowar\Desktop\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\System.Web.WebPages.Razor.xml
+C:\Users\anowar\Desktop\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\WebMatrix.Data.xml
+C:\Users\anowar\Desktop\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\Microsoft.Web.WebPages.OAuth.xml
+C:\Users\anowar\Desktop\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\WebMatrix.WebData.xml
+C:\Users\anowar\Desktop\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.AspNet.xml
+C:\Users\anowar\Desktop\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.Core.xml
+C:\Users\anowar\Desktop\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.OAuth.Consumer.xml
+C:\Users\anowar\Desktop\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.OAuth.xml
+C:\Users\anowar\Desktop\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.OpenId.xml
+C:\Users\anowar\Desktop\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+C:\Users\anowar\Desktop\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\obj\Debug\OnlineDepartmentAutomationSystem.csprojResolveAssemblyReference.cache
+C:\Users\anowar\Desktop\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\obj\Debug\OnlineDepartmentAutomationSystem.dll
+C:\Users\anowar\Desktop\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\obj\Debug\OnlineDepartmentAutomationSystem.pdb
+C:\Users\n\Desktop\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\obj\Debug\OnlineDepartmentAutomationSystem.csprojResolveAssemblyReference.cache
+C:\Users\n\Desktop\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\obj\Debug\OnlineDepartmentAutomationSystem.dll
+C:\Users\n\Desktop\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\OnlineDepartmentAutomationSystem.dll
+C:\Users\n\Desktop\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\OnlineDepartmentAutomationSystem.pdb
+C:\Users\n\Desktop\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\Antlr3.Runtime.dll
+C:\Users\n\Desktop\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.AspNet.dll
+C:\Users\n\Desktop\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.Core.dll
+C:\Users\n\Desktop\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.OAuth.Consumer.dll
+C:\Users\n\Desktop\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.OAuth.dll
+C:\Users\n\Desktop\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.OpenId.dll
+C:\Users\n\Desktop\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+C:\Users\n\Desktop\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\EntityFramework.dll
+C:\Users\n\Desktop\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\n\Desktop\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\Microsoft.Web.WebPages.OAuth.dll
+C:\Users\n\Desktop\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\Newtonsoft.Json.dll
+C:\Users\n\Desktop\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\System.Net.Http.Formatting.dll
+C:\Users\n\Desktop\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\System.Web.Helpers.dll
+C:\Users\n\Desktop\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\System.Web.Http.dll
+C:\Users\n\Desktop\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\System.Web.Http.WebHost.dll
+C:\Users\n\Desktop\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\System.Web.Mvc.dll
+C:\Users\n\Desktop\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\System.Web.Optimization.dll
+C:\Users\n\Desktop\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\System.Web.Razor.dll
+C:\Users\n\Desktop\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\System.Web.WebPages.Deployment.dll
+C:\Users\n\Desktop\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\System.Web.WebPages.dll
+C:\Users\n\Desktop\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\System.Web.WebPages.Razor.dll
+C:\Users\n\Desktop\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\WebGrease.dll
+C:\Users\n\Desktop\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\WebMatrix.Data.dll
+C:\Users\n\Desktop\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\WebMatrix.WebData.dll
+C:\Users\n\Desktop\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\EntityFramework.xml
+C:\Users\n\Desktop\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\Newtonsoft.Json.xml
+C:\Users\n\Desktop\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\System.Net.Http.Formatting.xml
+C:\Users\n\Desktop\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\System.Web.Helpers.xml
+C:\Users\n\Desktop\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\System.Web.Http.xml
+C:\Users\n\Desktop\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\System.Web.Http.WebHost.xml
+C:\Users\n\Desktop\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\System.Web.Mvc.xml
+C:\Users\n\Desktop\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\System.Web.Razor.xml
+C:\Users\n\Desktop\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\System.Web.WebPages.xml
+C:\Users\n\Desktop\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\System.Web.WebPages.Deployment.xml
+C:\Users\n\Desktop\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\System.Web.WebPages.Razor.xml
+C:\Users\n\Desktop\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\WebMatrix.Data.xml
+C:\Users\n\Desktop\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\Microsoft.Web.WebPages.OAuth.xml
+C:\Users\n\Desktop\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\WebMatrix.WebData.xml
+C:\Users\n\Desktop\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.AspNet.xml
+C:\Users\n\Desktop\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.Core.xml
+C:\Users\n\Desktop\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.OAuth.Consumer.xml
+C:\Users\n\Desktop\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.OAuth.xml
+C:\Users\n\Desktop\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.OpenId.xml
+C:\Users\n\Desktop\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+C:\Users\n\Desktop\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\obj\Debug\OnlineDepartmentAutomationSystem.pdb
+C:\Users\anowar\Desktop\An\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\OnlineDepartmentAutomationSystem.dll
+C:\Users\anowar\Desktop\An\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\OnlineDepartmentAutomationSystem.pdb
+C:\Users\anowar\Desktop\An\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\Antlr3.Runtime.dll
+C:\Users\anowar\Desktop\An\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.AspNet.dll
+C:\Users\anowar\Desktop\An\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.Core.dll
+C:\Users\anowar\Desktop\An\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.OAuth.Consumer.dll
+C:\Users\anowar\Desktop\An\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.OAuth.dll
+C:\Users\anowar\Desktop\An\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.OpenId.dll
+C:\Users\anowar\Desktop\An\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+C:\Users\anowar\Desktop\An\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\EntityFramework.dll
+C:\Users\anowar\Desktop\An\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\anowar\Desktop\An\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\Microsoft.Web.WebPages.OAuth.dll
+C:\Users\anowar\Desktop\An\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\Newtonsoft.Json.dll
+C:\Users\anowar\Desktop\An\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\System.Net.Http.Formatting.dll
+C:\Users\anowar\Desktop\An\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\System.Web.Helpers.dll
+C:\Users\anowar\Desktop\An\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\System.Web.Http.dll
+C:\Users\anowar\Desktop\An\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\System.Web.Http.WebHost.dll
+C:\Users\anowar\Desktop\An\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\System.Web.Mvc.dll
+C:\Users\anowar\Desktop\An\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\System.Web.Optimization.dll
+C:\Users\anowar\Desktop\An\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\System.Web.Razor.dll
+C:\Users\anowar\Desktop\An\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\System.Web.WebPages.Deployment.dll
+C:\Users\anowar\Desktop\An\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\System.Web.WebPages.dll
+C:\Users\anowar\Desktop\An\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\System.Web.WebPages.Razor.dll
+C:\Users\anowar\Desktop\An\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\WebGrease.dll
+C:\Users\anowar\Desktop\An\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\WebMatrix.Data.dll
+C:\Users\anowar\Desktop\An\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\WebMatrix.WebData.dll
+C:\Users\anowar\Desktop\An\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\EntityFramework.xml
+C:\Users\anowar\Desktop\An\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\Newtonsoft.Json.xml
+C:\Users\anowar\Desktop\An\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\System.Net.Http.Formatting.xml
+C:\Users\anowar\Desktop\An\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\System.Web.Helpers.xml
+C:\Users\anowar\Desktop\An\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\System.Web.Http.xml
+C:\Users\anowar\Desktop\An\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\System.Web.Http.WebHost.xml
+C:\Users\anowar\Desktop\An\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\System.Web.Mvc.xml
+C:\Users\anowar\Desktop\An\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\System.Web.Razor.xml
+C:\Users\anowar\Desktop\An\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\System.Web.WebPages.xml
+C:\Users\anowar\Desktop\An\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\System.Web.WebPages.Deployment.xml
+C:\Users\anowar\Desktop\An\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\System.Web.WebPages.Razor.xml
+C:\Users\anowar\Desktop\An\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\WebMatrix.Data.xml
+C:\Users\anowar\Desktop\An\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\Microsoft.Web.WebPages.OAuth.xml
+C:\Users\anowar\Desktop\An\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\WebMatrix.WebData.xml
+C:\Users\anowar\Desktop\An\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.AspNet.xml
+C:\Users\anowar\Desktop\An\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.Core.xml
+C:\Users\anowar\Desktop\An\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.OAuth.Consumer.xml
+C:\Users\anowar\Desktop\An\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.OAuth.xml
+C:\Users\anowar\Desktop\An\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.OpenId.xml
+C:\Users\anowar\Desktop\An\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+C:\Users\anowar\Desktop\An\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\obj\Debug\OnlineDepartmentAutomationSystem.csprojResolveAssemblyReference.cache
+C:\Users\anowar\Desktop\An\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\obj\Debug\OnlineDepartmentAutomationSystem.dll
+C:\Users\anowar\Desktop\An\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\obj\Debug\OnlineDepartmentAutomationSystem.pdb
+D:\Special Code By Anowar\Alamin\OkProjects\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\OnlineDepartmentAutomationSystem.dll
+D:\Special Code By Anowar\Alamin\OkProjects\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\OnlineDepartmentAutomationSystem.pdb
+D:\Special Code By Anowar\Alamin\OkProjects\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\Antlr3.Runtime.dll
+D:\Special Code By Anowar\Alamin\OkProjects\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.AspNet.dll
+D:\Special Code By Anowar\Alamin\OkProjects\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.Core.dll
+D:\Special Code By Anowar\Alamin\OkProjects\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.OAuth.Consumer.dll
+D:\Special Code By Anowar\Alamin\OkProjects\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.OAuth.dll
+D:\Special Code By Anowar\Alamin\OkProjects\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.OpenId.dll
+D:\Special Code By Anowar\Alamin\OkProjects\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+D:\Special Code By Anowar\Alamin\OkProjects\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\EntityFramework.dll
+D:\Special Code By Anowar\Alamin\OkProjects\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\Microsoft.Web.Infrastructure.dll
+D:\Special Code By Anowar\Alamin\OkProjects\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\Microsoft.Web.WebPages.OAuth.dll
+D:\Special Code By Anowar\Alamin\OkProjects\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\Newtonsoft.Json.dll
+D:\Special Code By Anowar\Alamin\OkProjects\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\System.Net.Http.Formatting.dll
+D:\Special Code By Anowar\Alamin\OkProjects\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\System.Web.Helpers.dll
+D:\Special Code By Anowar\Alamin\OkProjects\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\System.Web.Http.dll
+D:\Special Code By Anowar\Alamin\OkProjects\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\System.Web.Http.WebHost.dll
+D:\Special Code By Anowar\Alamin\OkProjects\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\System.Web.Mvc.dll
+D:\Special Code By Anowar\Alamin\OkProjects\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\System.Web.Optimization.dll
+D:\Special Code By Anowar\Alamin\OkProjects\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\System.Web.Razor.dll
+D:\Special Code By Anowar\Alamin\OkProjects\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\System.Web.WebPages.Deployment.dll
+D:\Special Code By Anowar\Alamin\OkProjects\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\System.Web.WebPages.dll
+D:\Special Code By Anowar\Alamin\OkProjects\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\System.Web.WebPages.Razor.dll
+D:\Special Code By Anowar\Alamin\OkProjects\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\WebGrease.dll
+D:\Special Code By Anowar\Alamin\OkProjects\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\WebMatrix.Data.dll
+D:\Special Code By Anowar\Alamin\OkProjects\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\WebMatrix.WebData.dll
+D:\Special Code By Anowar\Alamin\OkProjects\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\EntityFramework.xml
+D:\Special Code By Anowar\Alamin\OkProjects\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\Newtonsoft.Json.xml
+D:\Special Code By Anowar\Alamin\OkProjects\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\System.Net.Http.Formatting.xml
+D:\Special Code By Anowar\Alamin\OkProjects\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\System.Web.Helpers.xml
+D:\Special Code By Anowar\Alamin\OkProjects\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\System.Web.Http.xml
+D:\Special Code By Anowar\Alamin\OkProjects\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\System.Web.Http.WebHost.xml
+D:\Special Code By Anowar\Alamin\OkProjects\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\System.Web.Mvc.xml
+D:\Special Code By Anowar\Alamin\OkProjects\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\System.Web.Razor.xml
+D:\Special Code By Anowar\Alamin\OkProjects\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\System.Web.WebPages.xml
+D:\Special Code By Anowar\Alamin\OkProjects\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\System.Web.WebPages.Deployment.xml
+D:\Special Code By Anowar\Alamin\OkProjects\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\System.Web.WebPages.Razor.xml
+D:\Special Code By Anowar\Alamin\OkProjects\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\WebMatrix.Data.xml
+D:\Special Code By Anowar\Alamin\OkProjects\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\Microsoft.Web.WebPages.OAuth.xml
+D:\Special Code By Anowar\Alamin\OkProjects\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\WebMatrix.WebData.xml
+D:\Special Code By Anowar\Alamin\OkProjects\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.AspNet.xml
+D:\Special Code By Anowar\Alamin\OkProjects\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.Core.xml
+D:\Special Code By Anowar\Alamin\OkProjects\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.OAuth.Consumer.xml
+D:\Special Code By Anowar\Alamin\OkProjects\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.OAuth.xml
+D:\Special Code By Anowar\Alamin\OkProjects\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.OpenId.xml
+D:\Special Code By Anowar\Alamin\OkProjects\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+D:\Special Code By Anowar\Alamin\OkProjects\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\obj\Debug\OnlineDepartmentAutomationSystem.csprojResolveAssemblyReference.cache
+D:\Special Code By Anowar\Alamin\OkProjects\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\obj\Debug\OnlineDepartmentAutomationSystem.dll
+D:\Special Code By Anowar\Alamin\OkProjects\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\obj\Debug\OnlineDepartmentAutomationSystem.pdb
+D:\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\OnlineDepartmentAutomationSystem.dll
+D:\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\OnlineDepartmentAutomationSystem.pdb
+D:\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\Antlr3.Runtime.dll
+D:\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.AspNet.dll
+D:\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.Core.dll
+D:\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.OAuth.Consumer.dll
+D:\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.OAuth.dll
+D:\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.OpenId.dll
+D:\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+D:\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\EntityFramework.dll
+D:\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\Microsoft.Web.Infrastructure.dll
+D:\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\Microsoft.Web.WebPages.OAuth.dll
+D:\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\Newtonsoft.Json.dll
+D:\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\System.Net.Http.Formatting.dll
+D:\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\System.Web.Helpers.dll
+D:\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\System.Web.Http.dll
+D:\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\System.Web.Http.WebHost.dll
+D:\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\System.Web.Mvc.dll
+D:\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\System.Web.Optimization.dll
+D:\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\System.Web.Razor.dll
+D:\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\System.Web.WebPages.Deployment.dll
+D:\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\System.Web.WebPages.dll
+D:\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\System.Web.WebPages.Razor.dll
+D:\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\WebGrease.dll
+D:\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\WebMatrix.Data.dll
+D:\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\WebMatrix.WebData.dll
+D:\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\EntityFramework.xml
+D:\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\Newtonsoft.Json.xml
+D:\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\System.Net.Http.Formatting.xml
+D:\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\System.Web.Helpers.xml
+D:\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\System.Web.Http.xml
+D:\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\System.Web.Http.WebHost.xml
+D:\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\System.Web.Mvc.xml
+D:\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\System.Web.Razor.xml
+D:\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\System.Web.WebPages.xml
+D:\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\System.Web.WebPages.Deployment.xml
+D:\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\System.Web.WebPages.Razor.xml
+D:\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\WebMatrix.Data.xml
+D:\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\Microsoft.Web.WebPages.OAuth.xml
+D:\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\WebMatrix.WebData.xml
+D:\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.AspNet.xml
+D:\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.Core.xml
+D:\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.OAuth.Consumer.xml
+D:\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.OAuth.xml
+D:\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.OpenId.xml
+D:\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+D:\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\obj\Debug\OnlineDepartmentAutomationSystem.dll
+D:\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\obj\Debug\OnlineDepartmentAutomationSystem.pdb
+D:\OnlineDepartmentAutomationSystem\OnlineDepartmentAutomationSystem\obj\Debug\OnlineDepartmentAutomationSystem.csprojResolveAssemblyReference.cache
+C:\Users\PC\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\OnlineDepartmentAutomationSystem.dll
+C:\Users\PC\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\OnlineDepartmentAutomationSystem.pdb
+C:\Users\PC\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\Antlr3.Runtime.dll
+C:\Users\PC\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.AspNet.dll
+C:\Users\PC\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.Core.dll
+C:\Users\PC\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.OAuth.Consumer.dll
+C:\Users\PC\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.OAuth.dll
+C:\Users\PC\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.OpenId.dll
+C:\Users\PC\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\EntityFramework.dll
+C:\Users\PC\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\PC\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\Microsoft.Web.WebPages.OAuth.dll
+C:\Users\PC\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\Newtonsoft.Json.dll
+C:\Users\PC\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Net.Http.Formatting.dll
+C:\Users\PC\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.Helpers.dll
+C:\Users\PC\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.Http.dll
+C:\Users\PC\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.Http.WebHost.dll
+C:\Users\PC\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.Mvc.dll
+C:\Users\PC\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.Optimization.dll
+C:\Users\PC\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.Razor.dll
+C:\Users\PC\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.WebPages.Deployment.dll
+C:\Users\PC\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.WebPages.dll
+C:\Users\PC\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.WebPages.Razor.dll
+C:\Users\PC\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\WebGrease.dll
+C:\Users\PC\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\WebMatrix.Data.dll
+C:\Users\PC\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\WebMatrix.WebData.dll
+C:\Users\PC\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\EntityFramework.xml
+C:\Users\PC\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\Newtonsoft.Json.xml
+C:\Users\PC\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Net.Http.Formatting.xml
+C:\Users\PC\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.Helpers.xml
+C:\Users\PC\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.Http.xml
+C:\Users\PC\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.Http.WebHost.xml
+C:\Users\PC\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.Mvc.xml
+C:\Users\PC\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.Razor.xml
+C:\Users\PC\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.WebPages.xml
+C:\Users\PC\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.WebPages.Deployment.xml
+C:\Users\PC\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.WebPages.Razor.xml
+C:\Users\PC\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\WebMatrix.Data.xml
+C:\Users\PC\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\Microsoft.Web.WebPages.OAuth.xml
+C:\Users\PC\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\WebMatrix.WebData.xml
+C:\Users\PC\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.AspNet.xml
+C:\Users\PC\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.Core.xml
+C:\Users\PC\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.OAuth.Consumer.xml
+C:\Users\PC\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.OAuth.xml
+C:\Users\PC\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.OpenId.xml
+C:\Users\PC\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+C:\Users\PC\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\obj\Debug\OnlineDepartmentAutomationSystem.csprojResolveAssemblyReference.cache
+C:\Users\PC\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\obj\Debug\OnlineDepartmentAutomationSystem.dll
+C:\Users\PC\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\obj\Debug\OnlineDepartmentAutomationSystem.pdb
+C:\Users\PC\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\Microsoft.Web.Mvc.dll
+C:\Users\PC\Desktop\Online-Forum-master\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\OnlineDepartmentAutomationSystem.dll
+C:\Users\PC\Desktop\Online-Forum-master\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\OnlineDepartmentAutomationSystem.pdb
+C:\Users\PC\Desktop\Online-Forum-master\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\Antlr3.Runtime.dll
+C:\Users\PC\Desktop\Online-Forum-master\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.AspNet.dll
+C:\Users\PC\Desktop\Online-Forum-master\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.Core.dll
+C:\Users\PC\Desktop\Online-Forum-master\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.OAuth.Consumer.dll
+C:\Users\PC\Desktop\Online-Forum-master\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.OAuth.dll
+C:\Users\PC\Desktop\Online-Forum-master\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.OpenId.dll
+C:\Users\PC\Desktop\Online-Forum-master\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+C:\Users\PC\Desktop\Online-Forum-master\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\EntityFramework.dll
+C:\Users\PC\Desktop\Online-Forum-master\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\PC\Desktop\Online-Forum-master\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\Microsoft.Web.Mvc.dll
+C:\Users\PC\Desktop\Online-Forum-master\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\Microsoft.Web.WebPages.OAuth.dll
+C:\Users\PC\Desktop\Online-Forum-master\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\Newtonsoft.Json.dll
+C:\Users\PC\Desktop\Online-Forum-master\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Net.Http.Formatting.dll
+C:\Users\PC\Desktop\Online-Forum-master\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.Helpers.dll
+C:\Users\PC\Desktop\Online-Forum-master\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.Http.dll
+C:\Users\PC\Desktop\Online-Forum-master\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.Http.WebHost.dll
+C:\Users\PC\Desktop\Online-Forum-master\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.Mvc.dll
+C:\Users\PC\Desktop\Online-Forum-master\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.Optimization.dll
+C:\Users\PC\Desktop\Online-Forum-master\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.Razor.dll
+C:\Users\PC\Desktop\Online-Forum-master\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.WebPages.Deployment.dll
+C:\Users\PC\Desktop\Online-Forum-master\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.WebPages.dll
+C:\Users\PC\Desktop\Online-Forum-master\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.WebPages.Razor.dll
+C:\Users\PC\Desktop\Online-Forum-master\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\WebGrease.dll
+C:\Users\PC\Desktop\Online-Forum-master\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\WebMatrix.Data.dll
+C:\Users\PC\Desktop\Online-Forum-master\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\WebMatrix.WebData.dll
+C:\Users\PC\Desktop\Online-Forum-master\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.Helpers.xml
+C:\Users\PC\Desktop\Online-Forum-master\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.Mvc.xml
+C:\Users\PC\Desktop\Online-Forum-master\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.Razor.xml
+C:\Users\PC\Desktop\Online-Forum-master\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.WebPages.xml
+C:\Users\PC\Desktop\Online-Forum-master\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.WebPages.Deployment.xml
+C:\Users\PC\Desktop\Online-Forum-master\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.WebPages.Razor.xml
+C:\Users\PC\Desktop\Online-Forum-master\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\EntityFramework.xml
+C:\Users\PC\Desktop\Online-Forum-master\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\Newtonsoft.Json.xml
+C:\Users\PC\Desktop\Online-Forum-master\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Net.Http.Formatting.xml
+C:\Users\PC\Desktop\Online-Forum-master\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.Http.xml
+C:\Users\PC\Desktop\Online-Forum-master\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.Http.WebHost.xml
+C:\Users\PC\Desktop\Online-Forum-master\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\WebMatrix.Data.xml
+C:\Users\PC\Desktop\Online-Forum-master\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\Microsoft.Web.WebPages.OAuth.xml
+C:\Users\PC\Desktop\Online-Forum-master\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\WebMatrix.WebData.xml
+C:\Users\PC\Desktop\Online-Forum-master\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.AspNet.xml
+C:\Users\PC\Desktop\Online-Forum-master\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.Core.xml
+C:\Users\PC\Desktop\Online-Forum-master\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.OAuth.Consumer.xml
+C:\Users\PC\Desktop\Online-Forum-master\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.OAuth.xml
+C:\Users\PC\Desktop\Online-Forum-master\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.OpenId.xml
+C:\Users\PC\Desktop\Online-Forum-master\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+C:\Users\PC\Desktop\Online-Forum-master\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\obj\Debug\OnlineDepartmentAutomationSystem.csprojResolveAssemblyReference.cache
+C:\Users\PC\Desktop\Online-Forum-master\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\obj\Debug\OnlineDepartmentAutomationSystem.dll
+C:\Users\PC\Desktop\Online-Forum-master\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\obj\Debug\OnlineDepartmentAutomationSystem.pdb
+C:\Users\PC\Desktop\selectivity-master\Department-Automation-System-master(1)\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\OnlineDepartmentAutomationSystem.dll
+C:\Users\PC\Desktop\selectivity-master\Department-Automation-System-master(1)\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\OnlineDepartmentAutomationSystem.pdb
+C:\Users\PC\Desktop\selectivity-master\Department-Automation-System-master(1)\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\Antlr3.Runtime.dll
+C:\Users\PC\Desktop\selectivity-master\Department-Automation-System-master(1)\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.AspNet.dll
+C:\Users\PC\Desktop\selectivity-master\Department-Automation-System-master(1)\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.Core.dll
+C:\Users\PC\Desktop\selectivity-master\Department-Automation-System-master(1)\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.OAuth.Consumer.dll
+C:\Users\PC\Desktop\selectivity-master\Department-Automation-System-master(1)\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.OAuth.dll
+C:\Users\PC\Desktop\selectivity-master\Department-Automation-System-master(1)\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.OpenId.dll
+C:\Users\PC\Desktop\selectivity-master\Department-Automation-System-master(1)\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+C:\Users\PC\Desktop\selectivity-master\Department-Automation-System-master(1)\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\EntityFramework.dll
+C:\Users\PC\Desktop\selectivity-master\Department-Automation-System-master(1)\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\PC\Desktop\selectivity-master\Department-Automation-System-master(1)\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\Microsoft.Web.Mvc.dll
+C:\Users\PC\Desktop\selectivity-master\Department-Automation-System-master(1)\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\Microsoft.Web.WebPages.OAuth.dll
+C:\Users\PC\Desktop\selectivity-master\Department-Automation-System-master(1)\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\Newtonsoft.Json.dll
+C:\Users\PC\Desktop\selectivity-master\Department-Automation-System-master(1)\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Net.Http.Formatting.dll
+C:\Users\PC\Desktop\selectivity-master\Department-Automation-System-master(1)\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.Helpers.dll
+C:\Users\PC\Desktop\selectivity-master\Department-Automation-System-master(1)\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.Http.dll
+C:\Users\PC\Desktop\selectivity-master\Department-Automation-System-master(1)\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.Http.WebHost.dll
+C:\Users\PC\Desktop\selectivity-master\Department-Automation-System-master(1)\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.Mvc.dll
+C:\Users\PC\Desktop\selectivity-master\Department-Automation-System-master(1)\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.Optimization.dll
+C:\Users\PC\Desktop\selectivity-master\Department-Automation-System-master(1)\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.Razor.dll
+C:\Users\PC\Desktop\selectivity-master\Department-Automation-System-master(1)\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.WebPages.Deployment.dll
+C:\Users\PC\Desktop\selectivity-master\Department-Automation-System-master(1)\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.WebPages.dll
+C:\Users\PC\Desktop\selectivity-master\Department-Automation-System-master(1)\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.WebPages.Razor.dll
+C:\Users\PC\Desktop\selectivity-master\Department-Automation-System-master(1)\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\WebGrease.dll
+C:\Users\PC\Desktop\selectivity-master\Department-Automation-System-master(1)\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\WebMatrix.Data.dll
+C:\Users\PC\Desktop\selectivity-master\Department-Automation-System-master(1)\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\WebMatrix.WebData.dll
+C:\Users\PC\Desktop\selectivity-master\Department-Automation-System-master(1)\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.Helpers.xml
+C:\Users\PC\Desktop\selectivity-master\Department-Automation-System-master(1)\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.Mvc.xml
+C:\Users\PC\Desktop\selectivity-master\Department-Automation-System-master(1)\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.Razor.xml
+C:\Users\PC\Desktop\selectivity-master\Department-Automation-System-master(1)\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.WebPages.xml
+C:\Users\PC\Desktop\selectivity-master\Department-Automation-System-master(1)\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.WebPages.Deployment.xml
+C:\Users\PC\Desktop\selectivity-master\Department-Automation-System-master(1)\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.WebPages.Razor.xml
+C:\Users\PC\Desktop\selectivity-master\Department-Automation-System-master(1)\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\EntityFramework.xml
+C:\Users\PC\Desktop\selectivity-master\Department-Automation-System-master(1)\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\Newtonsoft.Json.xml
+C:\Users\PC\Desktop\selectivity-master\Department-Automation-System-master(1)\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Net.Http.Formatting.xml
+C:\Users\PC\Desktop\selectivity-master\Department-Automation-System-master(1)\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.Http.xml
+C:\Users\PC\Desktop\selectivity-master\Department-Automation-System-master(1)\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.Http.WebHost.xml
+C:\Users\PC\Desktop\selectivity-master\Department-Automation-System-master(1)\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\WebMatrix.Data.xml
+C:\Users\PC\Desktop\selectivity-master\Department-Automation-System-master(1)\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\Microsoft.Web.WebPages.OAuth.xml
+C:\Users\PC\Desktop\selectivity-master\Department-Automation-System-master(1)\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\WebMatrix.WebData.xml
+C:\Users\PC\Desktop\selectivity-master\Department-Automation-System-master(1)\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.AspNet.xml
+C:\Users\PC\Desktop\selectivity-master\Department-Automation-System-master(1)\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.Core.xml
+C:\Users\PC\Desktop\selectivity-master\Department-Automation-System-master(1)\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.OAuth.Consumer.xml
+C:\Users\PC\Desktop\selectivity-master\Department-Automation-System-master(1)\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.OAuth.xml
+C:\Users\PC\Desktop\selectivity-master\Department-Automation-System-master(1)\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.OpenId.xml
+C:\Users\PC\Desktop\selectivity-master\Department-Automation-System-master(1)\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+C:\Users\PC\Desktop\selectivity-master\Department-Automation-System-master(1)\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\obj\Debug\OnlineDepartmentAutomationSystem.dll
+C:\Users\PC\Desktop\selectivity-master\Department-Automation-System-master(1)\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\obj\Debug\OnlineDepartmentAutomationSystem.pdb
+D:\Special Code By Anowar\Alamin\OkProjects\Department-Automation-System-master(1)\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\obj\Debug\OnlineDepartmentAutomationSystem.dll
+D:\Special Code By Anowar\Alamin\OkProjects\Department-Automation-System-master(1)\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\obj\Debug\OnlineDepartmentAutomationSystem.pdb
+C:\Users\PC\Desktop\Department-Automation-System-master(1)\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\OnlineDepartmentAutomationSystem.dll
+C:\Users\PC\Desktop\Department-Automation-System-master(1)\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\OnlineDepartmentAutomationSystem.pdb
+C:\Users\PC\Desktop\Department-Automation-System-master(1)\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\Antlr3.Runtime.dll
+C:\Users\PC\Desktop\Department-Automation-System-master(1)\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.AspNet.dll
+C:\Users\PC\Desktop\Department-Automation-System-master(1)\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.Core.dll
+C:\Users\PC\Desktop\Department-Automation-System-master(1)\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.OAuth.Consumer.dll
+C:\Users\PC\Desktop\Department-Automation-System-master(1)\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.OAuth.dll
+C:\Users\PC\Desktop\Department-Automation-System-master(1)\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.OpenId.dll
+C:\Users\PC\Desktop\Department-Automation-System-master(1)\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\EntityFramework.dll
+C:\Users\PC\Desktop\Department-Automation-System-master(1)\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\PC\Desktop\Department-Automation-System-master(1)\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\Microsoft.Web.Mvc.dll
+C:\Users\PC\Desktop\Department-Automation-System-master(1)\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\Microsoft.Web.WebPages.OAuth.dll
+C:\Users\PC\Desktop\Department-Automation-System-master(1)\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\Newtonsoft.Json.dll
+C:\Users\PC\Desktop\Department-Automation-System-master(1)\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Net.Http.Formatting.dll
+C:\Users\PC\Desktop\Department-Automation-System-master(1)\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.Helpers.dll
+C:\Users\PC\Desktop\Department-Automation-System-master(1)\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.Http.dll
+C:\Users\PC\Desktop\Department-Automation-System-master(1)\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.Http.WebHost.dll
+C:\Users\PC\Desktop\Department-Automation-System-master(1)\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.Mvc.dll
+C:\Users\PC\Desktop\Department-Automation-System-master(1)\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.Optimization.dll
+C:\Users\PC\Desktop\Department-Automation-System-master(1)\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.Razor.dll
+C:\Users\PC\Desktop\Department-Automation-System-master(1)\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.WebPages.Deployment.dll
+C:\Users\PC\Desktop\Department-Automation-System-master(1)\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.WebPages.dll
+C:\Users\PC\Desktop\Department-Automation-System-master(1)\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.WebPages.Razor.dll
+C:\Users\PC\Desktop\Department-Automation-System-master(1)\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\WebGrease.dll
+C:\Users\PC\Desktop\Department-Automation-System-master(1)\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\WebMatrix.Data.dll
+C:\Users\PC\Desktop\Department-Automation-System-master(1)\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\WebMatrix.WebData.dll
+C:\Users\PC\Desktop\Department-Automation-System-master(1)\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.Helpers.xml
+C:\Users\PC\Desktop\Department-Automation-System-master(1)\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.Mvc.xml
+C:\Users\PC\Desktop\Department-Automation-System-master(1)\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.Razor.xml
+C:\Users\PC\Desktop\Department-Automation-System-master(1)\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.WebPages.xml
+C:\Users\PC\Desktop\Department-Automation-System-master(1)\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.WebPages.Deployment.xml
+C:\Users\PC\Desktop\Department-Automation-System-master(1)\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.WebPages.Razor.xml
+C:\Users\PC\Desktop\Department-Automation-System-master(1)\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\EntityFramework.xml
+C:\Users\PC\Desktop\Department-Automation-System-master(1)\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\Newtonsoft.Json.xml
+C:\Users\PC\Desktop\Department-Automation-System-master(1)\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Net.Http.Formatting.xml
+C:\Users\PC\Desktop\Department-Automation-System-master(1)\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.Http.xml
+C:\Users\PC\Desktop\Department-Automation-System-master(1)\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.Http.WebHost.xml
+C:\Users\PC\Desktop\Department-Automation-System-master(1)\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\WebMatrix.Data.xml
+C:\Users\PC\Desktop\Department-Automation-System-master(1)\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\Microsoft.Web.WebPages.OAuth.xml
+C:\Users\PC\Desktop\Department-Automation-System-master(1)\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\WebMatrix.WebData.xml
+C:\Users\PC\Desktop\Department-Automation-System-master(1)\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.AspNet.xml
+C:\Users\PC\Desktop\Department-Automation-System-master(1)\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.Core.xml
+C:\Users\PC\Desktop\Department-Automation-System-master(1)\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.OAuth.Consumer.xml
+C:\Users\PC\Desktop\Department-Automation-System-master(1)\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.OAuth.xml
+C:\Users\PC\Desktop\Department-Automation-System-master(1)\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.OpenId.xml
+C:\Users\PC\Desktop\Department-Automation-System-master(1)\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+C:\Users\PC\Desktop\Department-Automation-System-master(1)\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\obj\Debug\OnlineDepartmentAutomationSystem.csprojResolveAssemblyReference.cache
+C:\Users\PC\Desktop\Department-Automation-System-master(1)\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\obj\Debug\OnlineDepartmentAutomationSystem.dll
+C:\Users\PC\Desktop\Department-Automation-System-master(1)\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\obj\Debug\OnlineDepartmentAutomationSystem.pdb
+D:\Special Code By Anowar\Alamin\OkProjects\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\OnlineDepartmentAutomationSystem.dll
+D:\Special Code By Anowar\Alamin\OkProjects\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\OnlineDepartmentAutomationSystem.pdb
+D:\Special Code By Anowar\Alamin\OkProjects\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\Antlr3.Runtime.dll
+D:\Special Code By Anowar\Alamin\OkProjects\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.AspNet.dll
+D:\Special Code By Anowar\Alamin\OkProjects\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.Core.dll
+D:\Special Code By Anowar\Alamin\OkProjects\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.OAuth.Consumer.dll
+D:\Special Code By Anowar\Alamin\OkProjects\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.OAuth.dll
+D:\Special Code By Anowar\Alamin\OkProjects\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.OpenId.dll
+D:\Special Code By Anowar\Alamin\OkProjects\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\EntityFramework.dll
+D:\Special Code By Anowar\Alamin\OkProjects\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\Microsoft.Web.Infrastructure.dll
+D:\Special Code By Anowar\Alamin\OkProjects\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\Microsoft.Web.Mvc.dll
+D:\Special Code By Anowar\Alamin\OkProjects\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\Microsoft.Web.WebPages.OAuth.dll
+D:\Special Code By Anowar\Alamin\OkProjects\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\Newtonsoft.Json.dll
+D:\Special Code By Anowar\Alamin\OkProjects\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Net.Http.Formatting.dll
+D:\Special Code By Anowar\Alamin\OkProjects\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.Helpers.dll
+D:\Special Code By Anowar\Alamin\OkProjects\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.Http.dll
+D:\Special Code By Anowar\Alamin\OkProjects\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.Http.WebHost.dll
+D:\Special Code By Anowar\Alamin\OkProjects\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.Mvc.dll
+D:\Special Code By Anowar\Alamin\OkProjects\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.Optimization.dll
+D:\Special Code By Anowar\Alamin\OkProjects\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.Razor.dll
+D:\Special Code By Anowar\Alamin\OkProjects\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.WebPages.Deployment.dll
+D:\Special Code By Anowar\Alamin\OkProjects\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.WebPages.dll
+D:\Special Code By Anowar\Alamin\OkProjects\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.WebPages.Razor.dll
+D:\Special Code By Anowar\Alamin\OkProjects\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\WebGrease.dll
+D:\Special Code By Anowar\Alamin\OkProjects\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\WebMatrix.Data.dll
+D:\Special Code By Anowar\Alamin\OkProjects\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\WebMatrix.WebData.dll
+D:\Special Code By Anowar\Alamin\OkProjects\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.Helpers.xml
+D:\Special Code By Anowar\Alamin\OkProjects\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.Mvc.xml
+D:\Special Code By Anowar\Alamin\OkProjects\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.Razor.xml
+D:\Special Code By Anowar\Alamin\OkProjects\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.WebPages.xml
+D:\Special Code By Anowar\Alamin\OkProjects\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.WebPages.Deployment.xml
+D:\Special Code By Anowar\Alamin\OkProjects\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.WebPages.Razor.xml
+D:\Special Code By Anowar\Alamin\OkProjects\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\EntityFramework.xml
+D:\Special Code By Anowar\Alamin\OkProjects\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\Newtonsoft.Json.xml
+D:\Special Code By Anowar\Alamin\OkProjects\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Net.Http.Formatting.xml
+D:\Special Code By Anowar\Alamin\OkProjects\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.Http.xml
+D:\Special Code By Anowar\Alamin\OkProjects\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.Http.WebHost.xml
+D:\Special Code By Anowar\Alamin\OkProjects\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\WebMatrix.Data.xml
+D:\Special Code By Anowar\Alamin\OkProjects\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\Microsoft.Web.WebPages.OAuth.xml
+D:\Special Code By Anowar\Alamin\OkProjects\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\WebMatrix.WebData.xml
+D:\Special Code By Anowar\Alamin\OkProjects\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.AspNet.xml
+D:\Special Code By Anowar\Alamin\OkProjects\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.Core.xml
+D:\Special Code By Anowar\Alamin\OkProjects\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.OAuth.Consumer.xml
+D:\Special Code By Anowar\Alamin\OkProjects\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.OAuth.xml
+D:\Special Code By Anowar\Alamin\OkProjects\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.OpenId.xml
+D:\Special Code By Anowar\Alamin\OkProjects\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+D:\Special Code By Anowar\Alamin\OkProjects\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\obj\Debug\OnlineDepartmentAutomationSystem.csprojResolveAssemblyReference.cache
+D:\Special Code By Anowar\Alamin\OkProjects\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\obj\Debug\OnlineDepartmentAutomationSystem.dll
+D:\Special Code By Anowar\Alamin\OkProjects\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\obj\Debug\OnlineDepartmentAutomationSystem.pdb
+C:\Users\PC\Desktop\Ajax\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\OnlineDepartmentAutomationSystem.dll
+C:\Users\PC\Desktop\Ajax\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\OnlineDepartmentAutomationSystem.pdb
+C:\Users\PC\Desktop\Ajax\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\Antlr3.Runtime.dll
+C:\Users\PC\Desktop\Ajax\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.AspNet.dll
+C:\Users\PC\Desktop\Ajax\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.Core.dll
+C:\Users\PC\Desktop\Ajax\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.OAuth.Consumer.dll
+C:\Users\PC\Desktop\Ajax\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.OAuth.dll
+C:\Users\PC\Desktop\Ajax\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.OpenId.dll
+C:\Users\PC\Desktop\Ajax\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\EntityFramework.dll
+C:\Users\PC\Desktop\Ajax\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\PC\Desktop\Ajax\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\Microsoft.Web.Mvc.dll
+C:\Users\PC\Desktop\Ajax\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\Microsoft.Web.WebPages.OAuth.dll
+C:\Users\PC\Desktop\Ajax\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\Newtonsoft.Json.dll
+C:\Users\PC\Desktop\Ajax\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Net.Http.Formatting.dll
+C:\Users\PC\Desktop\Ajax\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.Helpers.dll
+C:\Users\PC\Desktop\Ajax\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.Http.dll
+C:\Users\PC\Desktop\Ajax\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.Http.WebHost.dll
+C:\Users\PC\Desktop\Ajax\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.Mvc.dll
+C:\Users\PC\Desktop\Ajax\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.Optimization.dll
+C:\Users\PC\Desktop\Ajax\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.Razor.dll
+C:\Users\PC\Desktop\Ajax\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.WebPages.Deployment.dll
+C:\Users\PC\Desktop\Ajax\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.WebPages.dll
+C:\Users\PC\Desktop\Ajax\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.WebPages.Razor.dll
+C:\Users\PC\Desktop\Ajax\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\WebGrease.dll
+C:\Users\PC\Desktop\Ajax\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\WebMatrix.Data.dll
+C:\Users\PC\Desktop\Ajax\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\WebMatrix.WebData.dll
+C:\Users\PC\Desktop\Ajax\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.Helpers.xml
+C:\Users\PC\Desktop\Ajax\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.Mvc.xml
+C:\Users\PC\Desktop\Ajax\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.Razor.xml
+C:\Users\PC\Desktop\Ajax\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.WebPages.xml
+C:\Users\PC\Desktop\Ajax\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.WebPages.Deployment.xml
+C:\Users\PC\Desktop\Ajax\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.WebPages.Razor.xml
+C:\Users\PC\Desktop\Ajax\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\EntityFramework.xml
+C:\Users\PC\Desktop\Ajax\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\Newtonsoft.Json.xml
+C:\Users\PC\Desktop\Ajax\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Net.Http.Formatting.xml
+C:\Users\PC\Desktop\Ajax\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.Http.xml
+C:\Users\PC\Desktop\Ajax\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.Http.WebHost.xml
+C:\Users\PC\Desktop\Ajax\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\WebMatrix.Data.xml
+C:\Users\PC\Desktop\Ajax\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\Microsoft.Web.WebPages.OAuth.xml
+C:\Users\PC\Desktop\Ajax\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\WebMatrix.WebData.xml
+C:\Users\PC\Desktop\Ajax\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.AspNet.xml
+C:\Users\PC\Desktop\Ajax\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.Core.xml
+C:\Users\PC\Desktop\Ajax\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.OAuth.Consumer.xml
+C:\Users\PC\Desktop\Ajax\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.OAuth.xml
+C:\Users\PC\Desktop\Ajax\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.OpenId.xml
+C:\Users\PC\Desktop\Ajax\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+C:\Users\PC\Desktop\Ajax\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\obj\Debug\OnlineDepartmentAutomationSystem.csprojResolveAssemblyReference.cache
+C:\Users\PC\Desktop\Ajax\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\obj\Debug\OnlineDepartmentAutomationSystem.dll
+C:\Users\PC\Desktop\Ajax\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\obj\Debug\OnlineDepartmentAutomationSystem.pdb
+C:\Users\Rony\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\OnlineDepartmentAutomationSystem.dll
+C:\Users\Rony\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\OnlineDepartmentAutomationSystem.pdb
+C:\Users\Rony\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\Antlr3.Runtime.dll
+C:\Users\Rony\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.AspNet.dll
+C:\Users\Rony\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.Core.dll
+C:\Users\Rony\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.OAuth.Consumer.dll
+C:\Users\Rony\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.OAuth.dll
+C:\Users\Rony\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.OpenId.dll
+C:\Users\Rony\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\EntityFramework.dll
+C:\Users\Rony\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Rony\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\Microsoft.Web.Mvc.dll
+C:\Users\Rony\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\Microsoft.Web.WebPages.OAuth.dll
+C:\Users\Rony\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\Newtonsoft.Json.dll
+C:\Users\Rony\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Net.Http.Formatting.dll
+C:\Users\Rony\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.Helpers.dll
+C:\Users\Rony\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.Http.dll
+C:\Users\Rony\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.Http.WebHost.dll
+C:\Users\Rony\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.Mvc.dll
+C:\Users\Rony\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.Optimization.dll
+C:\Users\Rony\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.Razor.dll
+C:\Users\Rony\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Rony\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.WebPages.dll
+C:\Users\Rony\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.WebPages.Razor.dll
+C:\Users\Rony\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\WebGrease.dll
+C:\Users\Rony\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\WebMatrix.Data.dll
+C:\Users\Rony\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\WebMatrix.WebData.dll
+C:\Users\Rony\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.Helpers.xml
+C:\Users\Rony\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.Mvc.xml
+C:\Users\Rony\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.Razor.xml
+C:\Users\Rony\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.WebPages.xml
+C:\Users\Rony\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Rony\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.WebPages.Razor.xml
+C:\Users\Rony\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\EntityFramework.xml
+C:\Users\Rony\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\Newtonsoft.Json.xml
+C:\Users\Rony\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Net.Http.Formatting.xml
+C:\Users\Rony\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.Http.xml
+C:\Users\Rony\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.Http.WebHost.xml
+C:\Users\Rony\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\WebMatrix.Data.xml
+C:\Users\Rony\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\Microsoft.Web.WebPages.OAuth.xml
+C:\Users\Rony\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\WebMatrix.WebData.xml
+C:\Users\Rony\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.AspNet.xml
+C:\Users\Rony\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.Core.xml
+C:\Users\Rony\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.OAuth.Consumer.xml
+C:\Users\Rony\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.OAuth.xml
+C:\Users\Rony\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.OpenId.xml
+C:\Users\Rony\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+C:\Users\Rony\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\obj\Debug\OnlineDepartmentAutomationSystem.csprojResolveAssemblyReference.cache
+C:\Users\Rony\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\obj\Debug\OnlineDepartmentAutomationSystem.dll
+C:\Users\Rony\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\obj\Debug\OnlineDepartmentAutomationSystem.pdb
+C:\Users\Rony\Desktop\A\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\OnlineDepartmentAutomationSystem.dll
+C:\Users\Rony\Desktop\A\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\OnlineDepartmentAutomationSystem.pdb
+C:\Users\Rony\Desktop\A\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\Antlr3.Runtime.dll
+C:\Users\Rony\Desktop\A\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.AspNet.dll
+C:\Users\Rony\Desktop\A\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.Core.dll
+C:\Users\Rony\Desktop\A\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.OAuth.Consumer.dll
+C:\Users\Rony\Desktop\A\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.OAuth.dll
+C:\Users\Rony\Desktop\A\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.OpenId.dll
+C:\Users\Rony\Desktop\A\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\EntityFramework.dll
+C:\Users\Rony\Desktop\A\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Rony\Desktop\A\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\Microsoft.Web.Mvc.dll
+C:\Users\Rony\Desktop\A\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\Microsoft.Web.WebPages.OAuth.dll
+C:\Users\Rony\Desktop\A\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\Newtonsoft.Json.dll
+C:\Users\Rony\Desktop\A\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Net.Http.Formatting.dll
+C:\Users\Rony\Desktop\A\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.Helpers.dll
+C:\Users\Rony\Desktop\A\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.Http.dll
+C:\Users\Rony\Desktop\A\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.Http.WebHost.dll
+C:\Users\Rony\Desktop\A\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.Mvc.dll
+C:\Users\Rony\Desktop\A\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.Optimization.dll
+C:\Users\Rony\Desktop\A\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.Razor.dll
+C:\Users\Rony\Desktop\A\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Rony\Desktop\A\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.WebPages.dll
+C:\Users\Rony\Desktop\A\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.WebPages.Razor.dll
+C:\Users\Rony\Desktop\A\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\WebGrease.dll
+C:\Users\Rony\Desktop\A\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\WebMatrix.Data.dll
+C:\Users\Rony\Desktop\A\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\WebMatrix.WebData.dll
+C:\Users\Rony\Desktop\A\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.Helpers.xml
+C:\Users\Rony\Desktop\A\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.Mvc.xml
+C:\Users\Rony\Desktop\A\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.Razor.xml
+C:\Users\Rony\Desktop\A\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.WebPages.xml
+C:\Users\Rony\Desktop\A\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Rony\Desktop\A\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.WebPages.Razor.xml
+C:\Users\Rony\Desktop\A\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\EntityFramework.xml
+C:\Users\Rony\Desktop\A\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\Newtonsoft.Json.xml
+C:\Users\Rony\Desktop\A\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Net.Http.Formatting.xml
+C:\Users\Rony\Desktop\A\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.Http.xml
+C:\Users\Rony\Desktop\A\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.Http.WebHost.xml
+C:\Users\Rony\Desktop\A\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\WebMatrix.Data.xml
+C:\Users\Rony\Desktop\A\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\Microsoft.Web.WebPages.OAuth.xml
+C:\Users\Rony\Desktop\A\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\WebMatrix.WebData.xml
+C:\Users\Rony\Desktop\A\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.AspNet.xml
+C:\Users\Rony\Desktop\A\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.Core.xml
+C:\Users\Rony\Desktop\A\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.OAuth.Consumer.xml
+C:\Users\Rony\Desktop\A\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.OAuth.xml
+C:\Users\Rony\Desktop\A\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.OpenId.xml
+C:\Users\Rony\Desktop\A\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+C:\Users\Rony\Desktop\A\Department-Automation-System-master\OnlineDepartmentAutomationSystem\obj\Debug\OnlineDepartmentAutomationSystem.csprojResolveAssemblyReference.cache
+C:\Users\Rony\Desktop\A\Department-Automation-System-master\OnlineDepartmentAutomationSystem\obj\Debug\OnlineDepartmentAutomationSystem.dll
+C:\Users\Rony\Desktop\A\Department-Automation-System-master\OnlineDepartmentAutomationSystem\obj\Debug\OnlineDepartmentAutomationSystem.pdb
+C:\Users\Rony\Desktop\Department-Automation-System\OnlineDepartmentAutomationSystem\bin\OnlineDepartmentAutomationSystem.dll
+C:\Users\Rony\Desktop\Department-Automation-System\OnlineDepartmentAutomationSystem\bin\OnlineDepartmentAutomationSystem.pdb
+C:\Users\Rony\Desktop\Department-Automation-System\OnlineDepartmentAutomationSystem\bin\Antlr3.Runtime.dll
+C:\Users\Rony\Desktop\Department-Automation-System\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.AspNet.dll
+C:\Users\Rony\Desktop\Department-Automation-System\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.Core.dll
+C:\Users\Rony\Desktop\Department-Automation-System\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.OAuth.Consumer.dll
+C:\Users\Rony\Desktop\Department-Automation-System\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.OAuth.dll
+C:\Users\Rony\Desktop\Department-Automation-System\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.OpenId.dll
+C:\Users\Rony\Desktop\Department-Automation-System\OnlineDepartmentAutomationSystem\bin\EntityFramework.dll
+C:\Users\Rony\Desktop\Department-Automation-System\OnlineDepartmentAutomationSystem\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Rony\Desktop\Department-Automation-System\OnlineDepartmentAutomationSystem\bin\Microsoft.Web.Mvc.dll
+C:\Users\Rony\Desktop\Department-Automation-System\OnlineDepartmentAutomationSystem\bin\Microsoft.Web.WebPages.OAuth.dll
+C:\Users\Rony\Desktop\Department-Automation-System\OnlineDepartmentAutomationSystem\bin\Newtonsoft.Json.dll
+C:\Users\Rony\Desktop\Department-Automation-System\OnlineDepartmentAutomationSystem\bin\System.Net.Http.Formatting.dll
+C:\Users\Rony\Desktop\Department-Automation-System\OnlineDepartmentAutomationSystem\bin\System.Web.Helpers.dll
+C:\Users\Rony\Desktop\Department-Automation-System\OnlineDepartmentAutomationSystem\bin\System.Web.Http.dll
+C:\Users\Rony\Desktop\Department-Automation-System\OnlineDepartmentAutomationSystem\bin\System.Web.Http.WebHost.dll
+C:\Users\Rony\Desktop\Department-Automation-System\OnlineDepartmentAutomationSystem\bin\System.Web.Mvc.dll
+C:\Users\Rony\Desktop\Department-Automation-System\OnlineDepartmentAutomationSystem\bin\System.Web.Optimization.dll
+C:\Users\Rony\Desktop\Department-Automation-System\OnlineDepartmentAutomationSystem\bin\System.Web.Razor.dll
+C:\Users\Rony\Desktop\Department-Automation-System\OnlineDepartmentAutomationSystem\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Rony\Desktop\Department-Automation-System\OnlineDepartmentAutomationSystem\bin\System.Web.WebPages.dll
+C:\Users\Rony\Desktop\Department-Automation-System\OnlineDepartmentAutomationSystem\bin\System.Web.WebPages.Razor.dll
+C:\Users\Rony\Desktop\Department-Automation-System\OnlineDepartmentAutomationSystem\bin\WebGrease.dll
+C:\Users\Rony\Desktop\Department-Automation-System\OnlineDepartmentAutomationSystem\bin\WebMatrix.Data.dll
+C:\Users\Rony\Desktop\Department-Automation-System\OnlineDepartmentAutomationSystem\bin\WebMatrix.WebData.dll
+C:\Users\Rony\Desktop\Department-Automation-System\OnlineDepartmentAutomationSystem\bin\System.Web.Helpers.xml
+C:\Users\Rony\Desktop\Department-Automation-System\OnlineDepartmentAutomationSystem\bin\System.Web.Mvc.xml
+C:\Users\Rony\Desktop\Department-Automation-System\OnlineDepartmentAutomationSystem\bin\System.Web.Razor.xml
+C:\Users\Rony\Desktop\Department-Automation-System\OnlineDepartmentAutomationSystem\bin\System.Web.WebPages.xml
+C:\Users\Rony\Desktop\Department-Automation-System\OnlineDepartmentAutomationSystem\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Rony\Desktop\Department-Automation-System\OnlineDepartmentAutomationSystem\bin\System.Web.WebPages.Razor.xml
+C:\Users\Rony\Desktop\Department-Automation-System\OnlineDepartmentAutomationSystem\bin\EntityFramework.xml
+C:\Users\Rony\Desktop\Department-Automation-System\OnlineDepartmentAutomationSystem\bin\Newtonsoft.Json.xml
+C:\Users\Rony\Desktop\Department-Automation-System\OnlineDepartmentAutomationSystem\bin\System.Net.Http.Formatting.xml
+C:\Users\Rony\Desktop\Department-Automation-System\OnlineDepartmentAutomationSystem\bin\System.Web.Http.xml
+C:\Users\Rony\Desktop\Department-Automation-System\OnlineDepartmentAutomationSystem\bin\System.Web.Http.WebHost.xml
+C:\Users\Rony\Desktop\Department-Automation-System\OnlineDepartmentAutomationSystem\bin\WebMatrix.Data.xml
+C:\Users\Rony\Desktop\Department-Automation-System\OnlineDepartmentAutomationSystem\bin\Microsoft.Web.WebPages.OAuth.xml
+C:\Users\Rony\Desktop\Department-Automation-System\OnlineDepartmentAutomationSystem\bin\WebMatrix.WebData.xml
+C:\Users\Rony\Desktop\Department-Automation-System\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.AspNet.xml
+C:\Users\Rony\Desktop\Department-Automation-System\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.Core.xml
+C:\Users\Rony\Desktop\Department-Automation-System\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.OAuth.Consumer.xml
+C:\Users\Rony\Desktop\Department-Automation-System\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.OAuth.xml
+C:\Users\Rony\Desktop\Department-Automation-System\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.OpenId.xml
+C:\Users\Rony\Desktop\Department-Automation-System\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+C:\Users\Rony\Desktop\Department-Automation-System\OnlineDepartmentAutomationSystem\obj\Debug\OnlineDepartmentAutomationSystem.csprojResolveAssemblyReference.cache
+C:\Users\Rony\Desktop\Department-Automation-System\OnlineDepartmentAutomationSystem\obj\Debug\OnlineDepartmentAutomationSystem.dll
+C:\Users\Rony\Desktop\Department-Automation-System\OnlineDepartmentAutomationSystem\obj\Debug\OnlineDepartmentAutomationSystem.pdb
+C:\Users\Anowar\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\OnlineDepartmentAutomationSystem.dll
+C:\Users\Anowar\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\OnlineDepartmentAutomationSystem.pdb
+C:\Users\Anowar\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\Antlr3.Runtime.dll
+C:\Users\Anowar\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.AspNet.dll
+C:\Users\Anowar\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.Core.dll
+C:\Users\Anowar\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.OAuth.Consumer.dll
+C:\Users\Anowar\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.OAuth.dll
+C:\Users\Anowar\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.OpenId.dll
+C:\Users\Anowar\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\EntityFramework.dll
+C:\Users\Anowar\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Anowar\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\Microsoft.Web.Mvc.dll
+C:\Users\Anowar\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\Microsoft.Web.WebPages.OAuth.dll
+C:\Users\Anowar\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\Newtonsoft.Json.dll
+C:\Users\Anowar\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Net.Http.Formatting.dll
+C:\Users\Anowar\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.Helpers.dll
+C:\Users\Anowar\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.Http.dll
+C:\Users\Anowar\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.Http.WebHost.dll
+C:\Users\Anowar\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.Mvc.dll
+C:\Users\Anowar\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.Optimization.dll
+C:\Users\Anowar\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.Razor.dll
+C:\Users\Anowar\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Anowar\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.WebPages.dll
+C:\Users\Anowar\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.WebPages.Razor.dll
+C:\Users\Anowar\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\WebGrease.dll
+C:\Users\Anowar\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\WebMatrix.Data.dll
+C:\Users\Anowar\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\WebMatrix.WebData.dll
+C:\Users\Anowar\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.Helpers.xml
+C:\Users\Anowar\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.Mvc.xml
+C:\Users\Anowar\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.Razor.xml
+C:\Users\Anowar\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.WebPages.xml
+C:\Users\Anowar\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Anowar\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.WebPages.Razor.xml
+C:\Users\Anowar\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\EntityFramework.xml
+C:\Users\Anowar\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\Newtonsoft.Json.xml
+C:\Users\Anowar\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Net.Http.Formatting.xml
+C:\Users\Anowar\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.Http.xml
+C:\Users\Anowar\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\System.Web.Http.WebHost.xml
+C:\Users\Anowar\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\WebMatrix.Data.xml
+C:\Users\Anowar\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\Microsoft.Web.WebPages.OAuth.xml
+C:\Users\Anowar\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\WebMatrix.WebData.xml
+C:\Users\Anowar\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.AspNet.xml
+C:\Users\Anowar\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.Core.xml
+C:\Users\Anowar\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.OAuth.Consumer.xml
+C:\Users\Anowar\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.OAuth.xml
+C:\Users\Anowar\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\bin\DotNetOpenAuth.OpenId.xml
+C:\Users\Anowar\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\obj\Debug\OnlineDepartmentAutomationSystem.dll
+C:\Users\Anowar\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\obj\Debug\OnlineDepartmentAutomationSystem.pdb
+C:\Users\Anowar\Desktop\Department-Automation-System-master\Department-Automation-System-master\OnlineDepartmentAutomationSystem\obj\Debug\OnlineDepartmentAutomationSystem.csprojResolveAssemblyReference.cache

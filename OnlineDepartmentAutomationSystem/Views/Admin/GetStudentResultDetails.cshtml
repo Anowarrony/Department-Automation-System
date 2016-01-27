@@ -1,0 +1,49 @@
+﻿@model OnlineDepartmentAutomationSystem.Models.SudentResultViewModel
+
+@{
+    ViewBag.Title = "GetStudentResultDetails";
+}
+
+<h2>GetStudentResultDetails</h2>
+
+<fieldset>
+    <legend>tudentresultView</legend>
+    <div style="background: #fff;">
+    <div class="display-label">
+        <span style="font-weight: bold"> @Html.DisplayNameFor(model => model.Name)</span>:   @Html.DisplayFor(model => model.Name)
+    </div>
+  
+
+    <div class="display-label">
+        <span style="font-weight: bold">  @Html.DisplayNameFor(model => model.DepartmentName)</span>:         @Html.DisplayFor(model => model.DepartmentName)
+    </div>
+  
+
+    <div class="display-label">
+       <span style="font-weight: bold">   @Html.DisplayNameFor(model => model.StudentId)</span>: @Html.DisplayFor(model => model.StudentId)
+    </div>
+
+
+    <div class="display-label">
+        <span style="font-weight: bold">  @Html.DisplayNameFor(model => model.YearTermName)</span> :  @Html.DisplayFor(model => model.YearTermName)
+    </div>
+   
+    <div class="display-label">
+       <span style="font-weight: bold">  Credit </span>:  @Html.DisplayFor(model => model.TotalCompletedCredit)
+    </div>
+
+
+ 
+
+    <div class="display-label">
+       <span style="font-weight: bold">   @Html.DisplayNameFor(model => model.Cgpa)</span>:   @Html.DisplayFor(model => model.Cgpa)
+    </div>
+  
+    <div>
+       <span style="font-weight: bold">  Running CGPA </span>: @ViewData["r"]
+    </div></div>
+</fieldset>
+<p>
+   
+    @Html.ActionLink("Back to List", "GetStudentResult")
+</p>

@@ -1,0 +1,148 @@
+﻿@model OnlineDepartmentAutomationSystem.Models.StudentFeeAddModel
+
+@{
+    Layout = "~/Views/Admin/_AdminLayout.cshtml";
+    ViewBag.Title = "AddStudentFee";
+}
+
+<div  class="prettyprint">
+<h2>Add Student Fee</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>StudentFeeAddModel</legend>
+
+        <div style="position: relative;left: 26%">
+            
+      
+     <div class="editor-label">
+            <span style="font-weight: bold">Admission Fee</span>
+      <span style="color: darkgray">(Yearly)</span>
+              </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.AdmissionFee)
+            @Html.ValidationMessageFor(model => model.AdmissionFee)
+        </div>
+
+       <div class="editor-label">
+            <span style="font-weight: bold">Credit Hour Fee </span>
+      <span style="color: darkgray">(Per Course)</span>
+              </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CreditHourFee)
+            @Html.ValidationMessageFor(model => model.CreditHourFee)
+        </div>
+
+        
+     <div class="editor-label">
+            <span style="font-weight: bold">Student Trust Fund</span>
+      <span style="color: darkgray">(Yearly)</span>
+              </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.StudentTrustFund)
+            @Html.ValidationMessageFor(model => model.StudentTrustFund)
+        </div>
+
+    
+     <div class="editor-label">
+            <span style="font-weight: bold">Hall Rent </span>
+      <span style="color: darkgray">(Yearly)</span>
+              </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.HallRent)
+            @Html.ValidationMessageFor(model => model.HallRent)
+        </div>
+
+     <div class="editor-label">
+            <span style="font-weight: bold">Central Library Fee </span>
+      <span style="color: darkgray">(Yearly)</span>
+              </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CentralLibraryFee)
+            @Html.ValidationMessageFor(model => model.CentralLibraryFee)
+        </div>
+
+   <div class="editor-label">
+            <span style="font-weight: bold">Seminar Library Fee </span>
+      <span style="color: darkgray">(Yearly)</span>
+              </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.SeminarLibraryFee)
+            @Html.ValidationMessageFor(model => model.SeminarLibraryFee)
+        </div>
+
+        <div class="editor-label" style="font-weight: bold">
+       NonResidential Transfort Fee
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.NonResidentialTransfortFee)
+            @Html.ValidationMessageFor(model => model.NonResidentialTransfortFee)
+        </div>
+
+        <div class="editor-label" style="font-weight: bold">
+         Residential Transfort Fee
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ResidentialTransfortFee)
+            @Html.ValidationMessageFor(model => model.ResidentialTransfortFee)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.LateFee)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.LateFee)
+            @Html.ValidationMessageFor(model => model.LateFee)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Others)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Others)
+            @Html.ValidationMessageFor(model => model.Others)
+        </div>
+
+        <div class="editor-label">
+            <span style="font-weight: bold">Backlog Fee </span>
+      <span style="color: darkgray">(Per Course)</span>
+              </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.BacklogFeePerCourse)
+            @Html.ValidationMessageFor(model => model.BacklogFeePerCourse)
+        </div>
+        <br/>
+        <p>
+            <input type="submit" value="Save" class="btn-info" style="width: 300px"/>
+        </p>  </div>
+    </fieldset>
+}
+    
+</div>
+<input type="hidden" value="@ViewBag.successNotificationId" id="successnotificationCheckId"/>
+<div style="display: none" id="messageNotification">
+    Successfully Saved
+</div>
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+<script>
+
+    $(function () {
+        $("#messageNotification").jqxNotification({
+            width: "30%", position: "top-left", opacity: 0.9,
+            autoOpen: false, animationOpenDelay: 800, autoClose: true, autoCloseDelay: 8000, template: "info", icon: { width: 35, height: 35, url: '/Content/1405880759_accepted_48.png', padding: 5 }
+        });
+        if ($("#successnotificationCheckId").val() == 1) {
+            $("#messageNotification").jqxNotification("open");
+        }
+        $(".btn").css('color', 'white');
+    });
+
+     
+</script>
+ 
+}

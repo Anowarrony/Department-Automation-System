@@ -1,0 +1,111 @@
+﻿@using OnlineDepartmentAutomationSystem.Models
+@model SessionAddModel
+
+@{
+    ViewBag.Title = "AddSession";
+    Layout = "~/Views/Admin/_AdminLayout.cshtml";
+}
+<style>
+     
+    #errorMessageDisId 
+    {
+	
+        display: none;
+        background-repeat: no-repeat;
+        position: absolute;
+        height: 50px;
+        width: 50%;
+        top: 4%;
+        left: 15%;
+        background-color: rgb(216,0,0) ;
+        color:#fff;
+        text-align: center;font-size: 25px;
+        font-family: Courier New;
+    }
+</style>
+
+<h2>Add Session</h2>
+<div class="prettyprint">
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+     <fieldset>
+        <legend>FacultyAddModel</legend>
+
+     <table>
+            <tr>
+                <td style="font-weight: bold">
+                   Faculty 
+                </td>
+                <td>
+                    @Html.EditorFor(model => model.Session)
+                </td>
+                <td style="text-align: left">
+                    @Html.ValidationMessageFor(model => model.Session) 
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    
+                </td>
+                <td style="text-align: left">   <input type="submit" value="Add New Session" class="btn btn-info" id="btnSubmit"/></td>
+                <td></td>
+            </tr>
+        </table></fieldset>
+}
+    
+     
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>
+                    Faculty 
+                </th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var session in (IEnumerable<SessionViewModel>)ViewData["Sessions"])
+            {
+                    <tr>
+                <td>@Html.DisplayFor(x=>session.Session)</td>
+                <td>@Html.ActionLink("Delete", "DeleteSession", new { id=session.SessionId},new{@class="lnkDelete button danger icon trash"}) </td>
+            </tr>
+            }
+        
+        </tbody>
+    </table>
+
+</div>
+
+ 
+
+<input type="hidden" value="@ViewBag.errorId" id="errorTextBoxId"/>
+
+<div id="errorMessageDisId">
+  
+</div>
+<div id="f"></div>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+
+
+    <script>
+        function ErrorMsgShow(message) {
+            $("#errorMessageDisId").html('<p id="sucessMsgAlignId">' + " " + "<span>" + message + "</span>" + "</p>").fadeIn().delay(5000).fadeOut();
+
+        }
+        if ($("#errorTextBoxId").val() == 1) {
+            ErrorMsgShow(' <span style="font-family:Courier New;">Session already exist.</span>');
+
+        }
+        $("#btnSubmit").click(function() {
+            if ($("#Session").val()!="") {
+                lodingFunction();
+}
+        });
+     
+      
+    </script>
+}
+

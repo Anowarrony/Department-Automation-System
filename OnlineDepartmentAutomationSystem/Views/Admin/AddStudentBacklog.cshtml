@@ -1,0 +1,490 @@
+﻿@model OnlineDepartmentAutomationSystem.Models.BacklogAddModel
+
+@{
+    ViewBag.Title = "AddStudentBacklok"; ViewBag.Title = "T"; Layout = "~/Views/Admin/_AdminLayout.cshtml";
+}
+
+<link href="~/Content/css/bootstrap.css" rel="stylesheet" />
+<style>
+   .ui-dialog-titlebar-close{background: red}
+    #successMessageDisplayId 
+    {
+	
+        display: none;
+        background-repeat: no-repeat;
+        position: absolute;
+        height: 80px;
+        width: 50%;
+        top: 0;
+        left: 15%;
+        background-color: #B8860B;
+        color:#fff;
+        text-align: center;
+    }
+    #successMessageDisplayId #sucessMsgAlignId {
+        position: relative;
+        padding: 0PX;
+        margin: 0PX;
+        top: 25%;
+        color: #fff;
+        font-size: 22px;
+        font-family: Courier New;
+
+    }
+
+</style>
+
+<script src="~/jqwidgets/jquery-1.11.1.min.js"></script>
+
+  <table id="jQGridDemo">
+    </table>
+<div id="jQGridDemoPager">
+</div>
+
+<div  class="prettyprint">
+    
+     <div id='jqxWidget' style="font-size: 13px; font-family: Verdana;">
+        <div id="grid"></div>
+        
+        <div id="jqxwindow">
+            <h5 style="text-align: center">
+                <img src="~/Content/search(1).png" width="17"/>
+                Search Account 
+            </h5>
+            <div style="overflow: hidden;">
+                <div>
+                    Find what:</div>
+                <div style='margin-top:5px;'>
+                    <input id='inputField' type="text" class="jqx-input" style="width: 200px; height: 23px;" />
+                    <span id="requiredMsg">
+                        
+                    </span>
+                     </div>
+                <div style="margin-top: 7px; clear: both;">
+                    Look in:</div>
+                <div style='margin-top:5px;'>
+                    <div id='dropdownlist'>
+                    </div>
+                </div>
+                <div>
+                    <input type="button" class="btn btn-primary" style='margin-top: 15px; margin-left: 50px; float: left;' value="Search" id="findButton" />
+                    <input type="button" class="btn btn-danger" style='margin-left: 5px; margin-top: 15px; float: left;' value="Clear" id="clearButton" />
+                </div>
+            </div>
+        </div>
+      
+    </div>
+  
+      <div id="jqxErrorDialog" style="font-family: Courier New;font-size: 19px;display: none">
+        <img src="~/Content/cancel(1).png" width="29"/>
+        Please select a <b>row </b>to delete.
+    </div>
+    <div id="jqxDelete" style="font-family: Courier New;font-size:19px;display: none">
+        <img src="~/Content/1405880767_warning_48.png" width="30" />
+        Are you sure to <b>delete</b> this <b>account</b>? This will <b>delete</b> the account <b>permanently</b>.
+    </div>
+
+    <h2 style="text-align: center">Add Student Backlok</h2>
+    <div style="position: relative;left: 25%">
+        @using (Html.BeginForm()) {
+            @Html.ValidationSummary(true)
+
+            <fieldset>
+                <legend>BacklokAddModel</legend>
+               
+                
+                   <div class="editor-label">
+                  @Html.LabelFor(m=>m.DepartmentId)
+                </div>
+                <div class="editor-field">
+                    @Html.DropDownListFor(m=>m.DepartmentId,ViewBag.departments as SelectList, "Select Department", new { id = "DepartmentSelectId" })
+             <span style="color: red"> @Html.ValidationMessageFor(m=>m.DepartmentId) </span>
+                </div>  
+
+                <div class="editor-label">
+                   Year Term
+                </div>
+                <div class="editor-field">
+                    @Html.DropDownListFor(m=>m.YearTerm,  ViewBag.yearTerms as SelectList, "Select Year Term", new { id = "yearTermSelectId" })
+             <span style="color: red"> @ViewBag.yearTermerrorMsg </span>
+                </div>
+                
+                <br/>
+                <div class="editor-label">
+                    CourseCode
+                </div>
+                <div class="editor-field">
+                  
+                    <select  id="courseCodeBox" multiple="multiple"></select>
+                    <select name="courseCode" id="courseCodeBoxId" multiple="multiple"></select>
+            <span style="color: red"> </span>
+                </div>
+                <br/>
+                <div class="editor-label">
+                    @Html.LabelFor(model => model.StudentId)
+                </div>
+                <div class="editor-field">
+                    @Html.TextBoxFor(model => model.StudentId,new{style="height: 36px;width: 300px"})
+                    @Html.ValidationMessageFor(model => model.StudentId)
+                </div>
+            
+                   <div style="color: red"> @ViewBag.errorMsg</div> 
+              <br/>
+                <p>
+                         
+                    <button type="submit" class="btn btn-info" style="width: 170px">
+                        <i class="icon-plus icon-white"></i> Add
+                    </button>
+                </p>
+            </fieldset>
+        }
+    </div>
+
+</div>
+<div id="successMessageDisplayId">
+     <div id="studentId"></div>
+</div>
+
+<input type="text" value="@ViewBag.successMessageShowId " style="display: none" id="successMessageCheckId"/>
+  <div id="jqxGridDetailsDialog"></div>
+<link href="~/jqwidgets/styles/jqx.base.css" rel="stylesheet" />
+<link href="~/jqwidgets/jqx.darkblue.css" rel="stylesheet" />
+
+ 
+<script>
+    function SuccessMsgShow(message) {
+        $("#successMessageDisplayId").html('<p id="sucessMsgAlignId">'  + " " + "<span>" + message + "</span>" + "</p>").slideDown().delay(3000).slideUp();
+
+    }
+
+
+    if ($("#successMessageCheckId").val() == 1) {
+        SuccessMsgShow('<img src="/Content/1405880759_accepted_48.png" width="25"/> <span style="font-family:Courier New;">Backlog course has been added successfully.</span>');
+
+        $(".empty").attr('value', "");
+
+    }
+
+
+    $(document).ready(function () {
+
+
+
+
+
+
+
+        var source =
+        {
+            datatype: "json",
+            datafields: [
+                { name: 'Id' },
+                { name: 'StudentId' },
+                { name: 'CourseCode' },
+                { name: 'CourseTitle' },
+                { name: 'Credit' },
+                { name: 'YearTermName' }
+
+
+            ],
+            id: 'Id',
+            url: '/Admin/GetBacklog', deleterow: function (rowid) {
+                // synchronize with the server - send delete command
+                var data = "Id=" + rowid;
+                $.ajax({
+                    dataType: 'json',
+                    url: '/Admin/DeleteBaclog',
+                    data: data,
+                    success: function (data, status, xhr) {
+                        $("#grid").jqxGrid({ source: source });
+                    }
+                });
+            }
+
+     
+
+        };
+
+
+        var initrowdetails = function (index, parentElement, gridElement, datarecord) {
+            var tabsdiv = null;
+            var information = null;
+
+            tabsdiv = $($(parentElement).children()[0]);
+            if (tabsdiv != null) {
+                information = tabsdiv.find('.information');
+
+                var title = tabsdiv.find('.title');
+                title.text(datarecord.StudentId + "'s Details");
+
+                var container = $('<div style="margin: 5px;"></div>');
+                container.appendTo($(information));
+          
+                var leftcolumn = $('<div style="float: left; width: 45%;"></div>');
+                var rightcolumn = $('<div style="float: left; width: 40%;"></div>');
+          
+                container.append(leftcolumn);
+                container.append(rightcolumn);
+
+
+                var studentId = "<div style='margin: 10px;'><b>StudentId :</b> " + datarecord.StudentId + "</div>";
+                var courseCode = "<div style='margin: 10px;'><b>CourseCode :</b> " + datarecord.CourseCode + "</div>";
+                var courseTitle = "<div style='margin: 10px;'><b>CourseTitle :</b> " + datarecord.CourseTitle + "</div>";
+                var credit = "<div style='margin: 10px;'><b>Credit :</b> " + datarecord.Credit + "</div>";
+                var yearTerm = "<div style='margin: 10px;'><b>YearTermName :</b> " + datarecord.YearTermName + "</div>";
+
+               
+              
+                $(leftcolumn).append(studentId);
+                $(leftcolumn).append(courseCode);
+                $(leftcolumn).append(courseTitle);
+                $(rightcolumn).append(credit);
+                $(rightcolumn).append(yearTerm);
+
+
+
+
+                $(tabsdiv).jqxTabs({ width: 500, height: 450 });
+            }
+        }
+    
+        $("#grid").jqxGrid(
+        {
+
+            source: source,
+           
+            sortable: true,
+            autorowheight: true,
+            autoheight: true, columnsresize: true, rowdetails: true,
+
+            rowdetailstemplate: { rowdetails: "<div style='margin: 10px;'><ul style='margin-left: 30px;'><li class='title'></li><li></li></ul><div class='information'></div><div class='notes'></div></div>", rowdetailsheight: 150 },
+            initrowdetails: initrowdetails, showstatusbar: true,
+
+            renderstatusbar: function (statusbar) {
+                // appends buttons to the status bar.
+                var container = $("<div style='overflow: hidden; position: relative; margin: 5px;'></div>");
+
+                var deleteButton = $("<div style='float: left; margin-left: 5px;'><img style='position: relative; margin-top: 2px;' src='/Content/close.png'/><span style='margin-left: 4px; position: relative; top: 2px;'>Delete</span></div>");
+                var reloadButton = $("<div style='float: left; margin-left: 5px;'><img style='position: relative; margin-top: 2px;' src='/Content/refresh.png'/><span style='margin-left: 4px; position: relative; top: 2px;'>Reload</span></div>");
+                var searchButton = $("<div style='float: left; margin-left: 5px;'><img style='position: relative; margin-top: 2px;' src='/Content/search.png'/><span style='margin-left: 4px; position: relative; top: 2px;'>Find</span></div>");
+
+                container.append(deleteButton);
+                container.append(reloadButton);
+                container.append(searchButton);
+                statusbar.append(container);
+
+                deleteButton.jqxButton({ width: 65, height: 20 });
+                reloadButton.jqxButton({ width: 65, height: 20 });
+                searchButton.jqxButton({ width: 50, height: 20 });
+                // add new row.
+
+
+
+                // delete selected row.
+                deleteButton.click(function (event) {
+                    var selectedrowindex = $("#grid").jqxGrid('getselectedrowindex');
+                    var rowscount = $("#grid").jqxGrid('getdatainformation').rowscount;
+                    if (selectedrowindex >= 0 && selectedrowindex < rowscount) {
+
+
+                        $("#jqxDelete").dialog({
+                            width: 600, modal: true,
+                            title: 'Account delete warning dialog',
+                            buttons: {
+                                "Yes": function () {
+
+                                    var id = $("#grid").jqxGrid('getrowid', selectedrowindex);
+                                    $("#grid").jqxGrid('deleterow', id);                             
+                                    $(this).dialog('close');
+                                   $("#grid").jqxGrid({ source: source });
+                                  
+                                }, "No": function () {
+                                    $(this).dialog('close');
+                                
+                                    $("#grid").jqxGrid({ source: source });
+
+                                }
+                            }
+                        });
+
+
+                    } else {
+                        $("#jqxErrorDialog").dialog({ title: 'Error', width: 420, buttons: { "Ok": function () { $(this).dialog('close'); } } });
+                    }
+
+                });
+                // reload grid data.
+                reloadButton.click(function (event) {
+                    $("#grid").jqxGrid({ source: source });
+                });
+                // search for a record.
+                searchButton.click(function (event) {
+                    var offset = $("#grid").offset();
+
+                    $("#jqxwindow").dialog('open');
+                    $("#jqxwindow").dialog('move', offset.left + 120, offset.top + 30);
+
+
+                });
+            },
+            width: 900,
+            pageable: true, filterable: true, showtoolbar: true, enabletooltips: true,  theme: 'arctic', pagesize: 5,
+
+
+            columns: [
+                { text: ' ID', dataField: 'Id', cellsalign: 'center', align: 'center' },
+                { text: 'Student ID', dataField: 'StudentId', cellsalign: 'center', align: 'center' },
+                { text: 'Course Code', dataField: 'CourseCode', cellsalign: 'center', align: 'center' },
+                { text: 'Course Title', dataField: 'CourseTitle', cellsalign: 'center', align: 'center' },
+
+                { text: 'Credit', dataField: 'Credit', cellsalign: 'center', align: 'center' },
+                { text: 'YearTerm Name', dataField: 'YearTermName', cellsalign: 'center', align: 'center' }
+            ]
+        });
+        $("#dropdownlist").jqxDropDownList({
+            autoDropDownHeight: true, selectedIndex: 0, width: 200, height: 23,
+            source: [
+                'Student ID', 'Course Code'
+            ]
+        });
+
+        $("#updaterowbutton").bind('click', function () {
+
+            var selectedrowindex = $("#grid").jqxGrid('getselectedrowindex');
+            var rowscount = $("#grid").jqxGrid('getdatainformation').rowscount;
+            if (selectedrowindex >= 0 && selectedrowindex < rowscount) {
+                var id = $("#grid").jqxGrid('getrowid', selectedrowindex);
+
+
+
+                $.ajax({
+                    dataType: 'json',
+                    url: '/Admin/UpdateAccount',
+                    data: id,
+                    success: function (data, status, xhr) {
+                        // delete command is executed.
+                    }
+                });
+            }
+        });
+
+        $("#clearButton").click(function () {
+            $("#grid").jqxGrid('clearfilters');
+        });
+
+        // find records that match a criteria.
+        $("#findButton").click(function () {
+
+            if ($("#inputField").val() == "") {
+                $("#requiredMsg").html('* Required!').css('color', 'red');
+            }
+            $("#inputField").keyup(function () {
+                if ($("#inputField").val() == "") {
+                    $("#requiredMsg").html('* Required!').css('color', 'red');
+                } else {
+                    $("#requiredMsg").html('');
+                }
+
+            });
+            $("#grid").jqxGrid('clearfilters');
+            var searchColumnIndex = $("#dropdownlist").jqxDropDownList('selectedIndex');
+            var datafield = "";
+            switch (searchColumnIndex) {
+            case 0:
+                datafield = "StudentId";
+                break;
+
+            case 1:
+                datafield = "CourseCode";
+                break;
+
+
+            }
+
+            var searchText = $("#inputField").val();
+            var filtergroup = new $.jqx.filter();
+            var filter_or_operator = 1;
+            var filtervalue = searchText;
+            var filtercondition = 'contains';
+            var filter = filtergroup.createfilter('stringfilter', filtervalue, filtercondition);
+            filtergroup.addfilter(filter_or_operator, filter);
+            $("#grid").jqxGrid('addfilter', datafield, filtergroup);
+
+            $("#grid").jqxGrid('applyfilters');
+        });
+
+        $("#jqxwindow").dialog({ resizable: false, autoOpen: false, width: 320, height: 280 });
+
+    });
+
+
+</script>
+<script src="~/Bootstrape/jquery.sumoselect.js"></script>
+<script>
+
+
+    $("#courseCodeBox").click(function () {
+        var obj = ($("#courseCodeBox option:selected"));
+        $.each(obj, function (index, item) {
+            $("#courseCodeBoxId").append($(this));
+        });
+      
+    });
+
+    $("#courseCodeBoxId").click(function () {
+        var obj = ($("#courseCodeBoxId option:selected"));
+        $.each(obj, function (index, item) {
+            $("#courseCodeBox").append($(this));
+        });
+        $("#courseCodeBoxId").remove($(this));
+    });
+
+
+   $('#yearTermSelectId').SumoSelect();
+   $('#DepartmentSelectId').SumoSelect();
+</script>
+
+
+
+<script> $('#yearTermSelectId').on('change', function () {
+     var courseCodeDropdown = $('#courseCodeBox');
+     courseCodeDropdown.prop('disabled', 'disabled');
+     courseCodeDropdown.empty();
+   
+     var yearTermId = $(this).val();
+     var departmentId = $("#DepartmentSelectId").val();
+
+         $.getJSON('@Url.Action("GetCourses")', {
+             DepartmentId: departmentId, YearTerm: yearTermId
+     })
+    .done(function (data) {
+
+        courseCodeDropdown.removeProp('disabled');
+
+        $.each(data, function (i, state) {
+
+            var option = $('<option />').html(state);
+
+            courseCodeDropdown.append(option);
+        });
+    })
+    .fail(function (jqxhr, textStatus, error) {
+        var err = textStatus + ", " + error;
+        console.log("Request Failed: " + err);
+    });
+ 
+ });
+
+   
+
+</script>
+    
+
+
+@section Scripts
+{
+
+           @Scripts.Render("~/bundles/jqueryval")
+       
+
+    }

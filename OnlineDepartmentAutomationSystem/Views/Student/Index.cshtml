@@ -1,0 +1,649 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    
+}
+
+<h2>Index</h2>
+<style>
+    td{background: #fff}
+</style>
+
+
+
+@if (ViewBag.AlertForRegistrationId == 1)
+{<div  style="background: #768331;color: white">
+   <div class="alert alert-block alert-success fade in">
+         <button type="button" class="close" data-dismiss="alert">×</button>
+  
+              
+         <p style="font-family: Courier New;font-size: 19px;" >
+                  
+       <img src="~/Content/info_blue.png" width="30"/>
+             Course Registration <b>Date</b>  has been <b>published</b> by the authority (<b>@string.Format("{0:dd-MM-yyyy}",ViewBag.startdate )</b> to <b>@string.Format("{0:dd-MM-yyyy}",ViewBag.lastDate )</b> ).<br/>
+     <span style="font-size: 24px;font-weight: bold;color: red;font-style: italic"> @ViewBag.daysLeft</span>   days <b>left</b>      .   It seems you <b>didn't register</b> your courses yet. So, Please do it <b>now</b>.
+         
+         </p>
+          
+     </div>
+ </div>
+}
+ 
+<br />
+
+<div class="post" >
+<div class="bs-docs-example" style="width: 104%">
+            <ul id="myTab" class="nav nav-tabs" >
+                <li class="active">
+                    
+                    <a href="#home" data-toggle="tab">
+      
+                        <i class="icon-info-sign "></i> Account Information
+                    </a>
+                </li>
+                
+                <li ><a href="#backlok" data-toggle="tab">
+                         
+                <i class="icon-info-sign "></i> 
+                         Backlok Info
+                     </a></li>
+        
+                 <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="icon-edit "></i> 
+                         Details
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+             
+                         <li ><a href="#fee" data-toggle="tab">
+                         
+ 
+                       Fee Information
+                     </a></li>
+                        <li><a href="#dropdown2" data-toggle="tab">   @Html.ActionLink("Course Details", "GetYearTerms", "Student", new { @class = "link", id = "imageUpdateId"  })</a></li>
+          
+                    </ul>
+                    
+                     
+                    
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="icon-edit "></i> 
+                         Update Profile
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                       <li><a href="#dropdown1" data-toggle="tab">   @Html.ActionLink("Update Account", "UpdateAccount", "Student", new { @class = "link",id = "accountUpdateId" })</a></li>
+                                     <li><a href="#dropdown2" data-toggle="tab">   @Html.ActionLink("Update Image", "UpdateStudentImage", "Student", new { @class = "link", id = "imageUpdateId"  })</a></li>
+          
+                    </ul>
+                    
+                     
+                    
+                </li>
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                             <i class="icon-file "></i> 
+                            
+                            Register
+                            <b class="caret"></b>
+                        </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            
+                            <a href="#dropdown1" data-toggle="tab">  
+                        @Html.ActionLink("Register Regular Course", "RegisterStudentCourse", "Student", new { @class = "link",id = "courseRegId" })
+          </a>
+                        
+                        </li>
+                        
+                        
+                        <li>
+                            <a href="#dropdown2" data-toggle="tab">
+                    @Html.ActionLink("Register Backlok Courses", "Load", "Student", new { @class = "link",id = "backlogCourseId" })
+          </a>
+                                       <a href="#dropdown2" data-toggle="tab">
+                    @Html.ActionLink("Download Registration Form", "GetRegistrationForm", "Student", new { @class = "link",id = "regFormId" })
+          </a>    
+                             </li>
+          
+                    </ul>
+                    
+                     
+                    
+                </li>
+
+               
+                
+                  <li ><a href="#Result" data-toggle="tab">
+                  <i class="icon-book "></i> 
+                          
+                           Result Information
+                                   </a></li>
+            </ul>
+            <div id="myTabContent" class="tab-content">
+              <div class="tab-pane fade in active" id="home">
+                
+                      
+ 
+                    <div class="post">
+                      <table  class="table table-bordered" style="color: black;position: relative;left: 16%" id="userProTab">
+    
+                          <tr>
+                              <th colspan="2" style="text-align: center;background: darkcyan;color: white;font-size: 21px"> <img src="~/Content/chat_2(1).png" width="40px"/> User Account Info</th>
+                          </tr>
+  
+
+    @foreach (var item in ((IEnumerable<StudentAccountInormation>)ViewData["profileInfo"]))
+    {
+        
+        
+          <tr >
+                <td>Name</td>
+            <td>
+              
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+        
+        </tr>
+        <tr >
+                <td>ID</td>
+            <td>
+              
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+        
+        </tr>
+        <tr >
+            <td>Email</td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+                    
+            </td>
+        </tr>
+        <tr >
+            <td>
+                Gender
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Gender)
+       
+            </td>
+        </tr>
+        <tr >
+            <td>
+                Nationality
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nationality)
+       
+            </td>
+        </tr>
+        <tr>
+            <td>Present Address</td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PresentAddress)
+                                                  
+ 
+            </td>
+        
+        </tr>
+        
+        <tr >
+            <td>Parmanent Address</td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ParmanentAddress)
+                                                  
+ 
+            </td>
+        
+        </tr>
+        
+        <tr >
+            <td>Department</td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Department)
+                                                  
+ 
+            </td>
+        
+        </tr>
+        
+        <tr >
+            <td>Session</td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Session)
+                                                  
+ 
+            </td>
+        
+        </tr>
+        
+        <tr >
+                      <td>Phone Number</td>
+                      <td>
+                          @Html.DisplayFor(modelItem => item.Phonenumber)
+                                                  
+ 
+                      </td>
+        
+                  </tr>
+    }
+
+</table>
+
+      </div>            
+                  
+                       
+             
+          
+              </div>
+                <div class="tab-pane fade" id="backlok">
+               
+                      
+                 
+                      
+                 
+    
+                
+                      
+                    <div id='jqxWidget' style="font-size: 13px; font-family: Verdana;">
+                        <table style="width: 800px">
+                            <tr>
+                                           
+                                <th style="background: red;color: white;font-family: Courier New;font-size: 20px;" rowspan="4">
+                                             
+                                    <img src="~/Content/1405880767_warning_48.png" width="30" />
+                                    Backloks Not <b>Registered Yet</b>.
+                                </th>
+
+                            </tr>
+                        </table>  <div id="grid"></div>
+                        <div id="jqxwindow">
+                            <div>
+                                Find Record</div>
+                            <div style="overflow: hidden;">
+                                <div>
+                                    Find what:</div>
+                                <div style='margin-top:5px;'>
+                                    <input id='inputField' type="text" class="jqx-input" style="width: 200px; height: 23px;" />
+                                </div>
+                                <div style="margin-top: 7px; clear: both;">
+                                    Look in:</div>
+                                <div style='margin-top:5px;'>
+                                    <div id='dropdownlist'>
+                                    </div>
+                                </div>
+                                <div>
+                                    <input type="button" style='margin-top: 15px; margin-left: 50px; float: left;' value="Find" id="findButton" class="btn btn-success"/>
+                                    <input type="button" style='margin-left: 5px; margin-top: 15px; float: left;' value="Clear" id="clearButton" class="btn btn-danger"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <br/><br/>
+                          
+                    <div id='jqxWidget' style="font-size: 13px; font-family: Verdana;">
+                        <table style="width: 800px">
+                            <tr>
+                                           
+                                <th style="background: darkcyan;color: white;font-family: Courier New;font-size: 20px;" rowspan="4">
+                                    <img src="~/Content/1405880759_accepted_48.png" width="30"/>
+                                                 
+                                    Latest Registered Backloks.
+                                </th>
+
+                            </tr>
+                        </table>  
+                        <div id="latestBacklokGrid"></div>
+                    
+                        <div id="latestBacklokGridJqxwindow">
+                            <div>
+                                Find Record</div>
+                            <div style="overflow: hidden;">
+                                <div>
+                                    Find what:</div>
+                                <div style='margin-top:5px;'>
+                                    <input id='latestBacklokGridinputField' type="text" class="jqx-input" style="width: 200px; height: 23px;" />
+                                </div>
+                                <div style="margin-top: 7px; clear: both;">
+                                    Look in:</div>
+                                <div style='margin-top:5px;'>
+                                    <div id='latestBacklokGridDropdownlist'>
+                                    </div>
+                                </div>
+                                <div>
+                                    <input type="button" style='margin-top: 15px; margin-left: 50px; float: left;' value="Find" id="latestBacklokGridFindButton" class="btn btn-success"/>
+                                    <input type="button" style='margin-left: 5px; margin-top: 15px; float: left;' value="Clear" id="latestBacklokGridClearButton" class="btn btn-danger"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                  
+                    <link href="~/Content/gh-buttons.css" rel="stylesheet" />
+                    <link href="~/jqwidgets/styles/jqx.base.css" rel="stylesheet" />
+                    <link href="~/jqwidgets/jqx.darkblue.css" rel="stylesheet" />
+               
+
+                    <div  id="divLoading" >        
+  <img src="~/Images/ajax-loader.gif" style="background-position: center;position: relative;left: 40%;top: 10px"/>    
+     </div>    
+                      
+                  
+                      
+                      
+                      
+
+                    <br/><br/>
+                      
+                    @section scripts{
+                        
+                          @Scripts.Render("~/bundles/jqueryval")
+                          <script>
+
+                              function lodingFunction() {
+                                  $('#divLoading').dialog({ title: '<span style="font-family:Courier New;"> Please Wait...</span>' });
+                              }
+
+                              $("#accountUpdateId,#imageUpdateId,#courseRegId,#backlogCourseId,#regFormId").click(function () {
+                                  lodingFunction();
+                              });
+                              $(document).ready(function () {
+
+                                  var source =
+                                  {
+                                      datatype: "json",
+                                      datafields: [
+                                          { name: 'CourseCode', type: 'string' },
+                                          { name: 'CourseTitle', type: 'string' },
+                                          { name: 'Credit', type: 'number' },
+                                          { name: 'YearTerm', type: 'string' }
+
+
+                                      ],
+
+                                      url: '/Student/GetLatestRegisteredBacklokDetails'
+                                  };
+
+
+
+
+                                  $("#latestBacklokGrid").jqxGrid(
+                                  {
+
+                                      source: source,
+                                      selectionmode: 'singlecell',
+                                      width: 800,
+                                      autorowheight: true,
+                                      autoheight: true, columnsresize: true,
+
+
+                                      showstatusbar: true,
+
+                                      renderstatusbar: function (statusbar) {
+
+                                          var container = $("<div style='overflow: hidden; position: relative; margin: 5px;'></div>");
+                                          var reloadButton = $("<div style='float: left; margin-left: 5px;'><img style='position: relative; margin-top: 2px;' src='/Content/refresh.png'/><span style='margin-left: 4px; position: relative; top: 2px;'>Reload</span></div>");
+                                          var searchButton = $("<div style='float: left; margin-left: 5px;'><img style='position: relative; margin-top: 2px;' src='/Content/search.png'/><span style='margin-left: 4px; position: relative; top: 2px;'>Find</span></div>");
+
+
+                                          container.append(reloadButton);
+                                          container.append(searchButton);
+                                          statusbar.append(container);
+
+
+                                          reloadButton.jqxButton({ width: 65, height: 20 });
+                                          searchButton.jqxButton({ width: 50, height: 20 });
+                                          // add new row.
+
+
+
+                                          // reload grid data.
+                                          reloadButton.click(function (event) {
+                                              $("#latestBacklokGrid").jqxGrid({ source: source });
+                                          });
+                                          // search for a record.
+                                          searchButton.click(function (event) {
+                                              var offset = $("#latestBacklokGrid").offset();
+                                              $("#latestBacklokGridJqxwindow").jqxWindow('open');
+                                              $("#latestBacklokGridJqxwindow").jqxWindow('move', offset.left + 120, offset.top + 30);
+                                          });
+                                      },
+
+                                      pageable: true, enabletooltips: true, theme: 'darkblue', pagesize: 5,
+
+
+                                      columns: [
+                                          { text: 'Course Code', dataField: 'CourseCode', cellsalign: 'center', align: 'center' }
+                                          ,
+                                          { text: 'Course Title', dataField: 'CourseTitle', cellsalign: 'center', align: 'center' },
+                                          { text: 'Credit', dataField: 'Credit', cellsalign: 'center', align: 'center' },
+                                          { text: 'Year Term', dataField: 'YearTerm', cellsalign: 'center', align: 'center' }
+
+
+                                      ]
+                                  });
+                                  $("#latestBacklokGridDropdownlist").jqxDropDownList({
+                                      autoDropDownHeight: true, selectedIndex: 0, width: 200, height: 23,
+                                      source: [
+                                          'Course Code', 'Year Term'
+                                      ]
+                                  });
+                                  $("#latestBacklokGridClearButton").click(function () {
+                                      $("#latestBacklokGrid").jqxGrid('clearfilters');
+                                  });
+
+                                  // find records that match a criteria.
+                                  $("#latestBacklokGridFindButton").click(function () {
+                                      $("#latestBacklokGrid").jqxGrid('clearfilters');
+                                      var searchColumnIndex = $("#latestBacklokGridDropdownlist").jqxDropDownList('selectedIndex');
+                                      var datafield = "";
+                                      switch (searchColumnIndex) {
+                                          case 0:
+                                              datafield = "CourseCode";
+                                              break;
+
+                                          case 1:
+                                              datafield = "YearTerm";
+                                              break;
+
+
+                                      }
+
+                                      var searchText = $("#latestBacklokGridinputField").val();
+                                      var filtergroup = new $.jqx.filter();
+                                      var filter_or_operator = 1;
+                                      var filtervalue = searchText;
+                                      var filtercondition = 'contains';
+                                      var filter = filtergroup.createfilter('stringfilter', filtervalue, filtercondition);
+                                      filtergroup.addfilter(filter_or_operator, filter);
+                                      $("#latestBacklokGrid").jqxGrid('addfilter', datafield, filtergroup);
+
+                                      $("#latestBacklokGrid").jqxGrid('applyfilters');
+                                  });
+                                  $("#latestBacklokGridJqxwindow").jqxWindow({ resizable: false, autoOpen: false, width: 250, height: 200 });
+
+                              });
+
+                    </script>
+
+                        <script>
+
+
+
+                            $(document).ready(function () {
+
+                                var source =
+                                {
+                                    datatype: "json",
+                                    datafields: [
+                                        { name: 'CourseCode', type: 'string' },
+                                        { name: 'CourseTitle', type: 'string' },
+                                        { name: 'Credit', type: 'number' },
+                                        { name: 'YearTerm', type: 'string' }
+
+
+                                    ],
+
+                                    url: '/Student/GetBacklokDetails'
+                                };
+
+
+
+
+
+
+                                $("#grid").jqxGrid(
+                                {
+
+                                    source: source,
+                                    selectionmode: 'singlecell',
+
+                                    autorowheight: true,
+                                    autoheight: true, columnsresize: true,
+                                    width: 800,
+
+
+                                    showstatusbar: true,
+
+                                    renderstatusbar: function (statusbar) {
+                                        // appends buttons to the status bar.
+                                        var container = $("<div style='overflow: hidden; position: relative; margin: 5px;'></div>");
+
+
+                                        var reloadButton = $("<div style='float: left; margin-left: 5px;'><img style='position: relative; margin-top: 2px;' src='/Content/refresh.png'/><span style='margin-left: 4px; position: relative; top: 2px;'>Reload</span></div>");
+                                        var searchButton = $("<div style='float: left; margin-left: 5px;'><img style='position: relative; margin-top: 2px;' src='/Content/search.png'/><span style='margin-left: 4px; position: relative; top: 2px;'>Find</span></div>");
+
+
+                                        container.append(reloadButton);
+                                        container.append(searchButton);
+                                        statusbar.append(container);
+
+
+                                        reloadButton.jqxButton({ width: 65, height: 20 });
+                                        searchButton.jqxButton({ width: 50, height: 20 });
+                                        // add new row.
+
+
+                                        reloadButton.click(function (event) {
+                                            $("#grid").jqxGrid({ source: source });
+                                        });
+                                        // search for a record.
+                                        searchButton.click(function (event) {
+                                            var offset = $("#grid").offset();
+                                            $("#jqxwindow").jqxWindow('open');
+                                            $("#jqxwindow").jqxWindow('move', offset.left + 120, offset.top + 30);
+                                        });
+                                    },
+
+                                    pageable: true, enabletooltips: true, theme: 'darkblue', pagesize: 5,
+
+
+                                    columns: [
+                                        { text: 'Course Code', dataField: 'CourseCode', cellsalign: 'center', align: 'center' }
+                                        ,
+                                        { text: 'Course Title', dataField: 'CourseTitle', cellsalign: 'center', align: 'center' },
+                                        { text: 'Credit', dataField: 'Credit', cellsalign: 'center', align: 'center' },
+                                        { text: 'Year Term', dataField: 'YearTerm', cellsalign: 'center', align: 'center' }
+
+
+                                    ]
+                                });
+                                $("#dropdownlist").jqxDropDownList({
+                                    autoDropDownHeight: true, selectedIndex: 0, width: 200, height: 23,
+                                    source: [
+                                        'Course Code', 'Year Term'
+                                    ]
+                                });
+                                $("#clearButton").click(function () {
+                                    $("#grid").jqxGrid('clearfilters');
+                                });
+
+                                // find records that match a criteria.
+                                $("#findButton").click(function () {
+                                    $("#grid").jqxGrid('clearfilters');
+                                    var searchColumnIndex = $("#dropdownlist").jqxDropDownList('selectedIndex');
+                                    var datafield = "";
+                                    switch (searchColumnIndex) {
+                                        case 0:
+                                            datafield = "CourseCode";
+                                            break;
+
+                                        case 1:
+                                            datafield = "YearTerm";
+                                            break;
+
+
+                                    }
+
+                                    var searchText = $("#inputField").val();
+                                    var filtergroup = new $.jqx.filter();
+                                    var filter_or_operator = 1;
+                                    var filtervalue = searchText;
+                                    var filtercondition = 'contains';
+                                    var filter = filtergroup.createfilter('stringfilter', filtervalue, filtercondition);
+                                    filtergroup.addfilter(filter_or_operator, filter);
+                                    $("#grid").jqxGrid('addfilter', datafield, filtergroup);
+
+                                    $("#grid").jqxGrid('applyfilters');
+                                });
+                                $("#jqxwindow").jqxWindow({ resizable: false, autoOpen: false, width: 250, height: 200 });
+
+                            });
+
+                    </script>
+              
+                 }
+               
+                </div>
+                
+                
+                <div class="tab-pane fade" id="fee">
+                    @Html.Partial("_FeeDetails")
+                </div>
+                <div class="tab-pane fade" id="dropdown1">
+                   
+                  <p>
+             
+                                  
+                  @using System.Collections                  @using OnlineDepartmentAutomationSystem.Models                  @using OnlineDepartmentAutomationSystem.Models                  @model IEnumerable<OnlineDepartmentAutomationSystem.Models.StudentInformation>
+
+@{
+    ViewBag.Title = "UserAnsQuestionList";
+}
+
+                      <h2>
+                          <img src="~/Png/exclamation_circle.png" width="45" />
+                       Profile Information
+                      </h2>
+
+                      
+                     
+   
+                  </p>
+               
+                </div>
+                <div class="tab-pane fade" id="dropdown2">
+                    <p>
+                
+                    </p>
+                </div>
+                
+                <div class="tab-pane fade" id="Result">
+                    <p>
+                        
+     
+                        @Html.Partial("_Result")
+          
+                    </p>
+
+                </div>
+                </div>
+          </div>
+     </div>

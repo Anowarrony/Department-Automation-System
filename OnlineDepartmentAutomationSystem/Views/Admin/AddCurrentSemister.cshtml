@@ -1,0 +1,174 @@
+﻿@using OnlineDepartmentAutomationSystem.Models
+@model CurrentSemisterAddViewModel
+
+@{
+    ViewBag.Title = "AddCurrentSemister"; ViewBag.Title = "T"; Layout = "~/Views/Admin/_AdminLayout.cshtml";
+}
+<style>
+    
+    #successMessageDisplayId 
+    {
+	
+        display: none;
+        background-repeat: no-repeat;
+        position: absolute;
+        height: 80px;
+        width: 50%;
+        top: 0;
+        left: 15%;
+        background-color: #B8860B;
+        color:#fff;
+        text-align: center;
+    }
+    #successMessageDisplayId #sucessMsgAlignId {
+        position: relative;
+        padding: 0PX;
+        margin: 0PX;
+        top: 25%;
+        color: #fff;
+        font-size: 22px;
+        font-family: Courier New;
+
+    }
+
+</style>
+
+
+<div  class="prettyprint">
+
+    <br />
+    <h2 style="text-align: center">
+        <img src="~/Content/1405880856_add_48.png" width="25"/>
+        Add Current Semister
+    </h2>
+    <div style="position: relative;left:25%">
+        @using (Html.BeginForm()) {
+            @Html.ValidationSummary(true)
+
+ 
+            <div class="editor-label">
+                @Html.LabelFor(model => model.Session)
+            </div>
+            <div class="editor-field">
+        
+                @Html.DropDownList("Session", (SelectList)ViewBag.sessions, "Select Session", new { id = "g",@class="empty" })
+                @Html.ValidationMessageFor(model => model.Session)
+            </div>
+            <br/>
+            <div class="editor-label">
+                @Html.LabelFor(model => model.Department)
+            </div>
+            <div class="editor-field">
+
+              @Html.DropDownListFor(x=>x.Department, (SelectList) ViewBag.Departments, "Select Year Term", new {id = "yearTermSelectBox"})
+                  @Html.ValidationMessageFor(model => model.Department)
+          
+            
+            </div>
+            <br/>
+            <div class="editor-label">
+                @Html.LabelFor(model => model.YearTerm)
+            </div>
+            <div class="editor-field">
+                @Html.DropDownList("YearTerm", (MultiSelectList)ViewBag.yearTerms, "Select YearTerm", new { id = "g",@class="empty" })
+                @Html.ValidationMessageFor(model => model.YearTerm)
+            </div>
+            <br/>
+            <p>
+                <input type="submit" value="Add Current Semister" class="button pill"/>
+            
+           
+            </p>
+  
+        }</div>
+    
+    
+    <table id="currentSemisterDetailsKendoGrid">
+        <thead>
+            <tr>
+                <th data-sortable="false" data-menuable="false" data-filterable="false">Session</th>
+                <th >Department</th>
+                <th data-sortable="false" data-menuable="false" data-filterable="false">Year Term</th>
+                <th data-sortable="false" data-menuable="false" data-filterable="false">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+            @foreach (var item in (IEnumerable<CurrentSemisterDetailsModel>)ViewData["currentSemisterDetails"])
+            {
+                <tr>
+                    <td>@Html.DisplayFor(m=>item.Session)</td>
+                    <td>@Html.DisplayFor(m=>item.Department)</td>
+                    <td>@Html.DisplayFor(m=>item.YearTerm)</td>
+                    <td>
+                        @Html.ActionLink("Delete", "DeleteCurrentSemister", new { id=item.Id },new{@class="lnkDelete button danger icon trash"})
+      
+                    </td>
+                </tr>
+              
+            }
+        </tbody>
+    </table>
+    <input type="text" value="@ViewBag.successMessageShowId " style="display: none" id="successMessageCheckId"/>
+    <div id="successMessageDisplayId">
+     
+    </div>
+  
+    
+ 
+    
+</div>
+
+@section Scripts
+{
+
+           @Scripts.Render("~/bundles/jqueryval")
+
+    <script src="~/KendoUI/kendo.all.min.js"></script>
+       <script>
+           $("#currentSemisterDetailsKendoGrid").kendoGrid(
+               {
+
+                   pageable: {
+                       refresh: true,
+                       pageSizes: true,
+                       buttonCount: 5
+                   }
+
+                   , dataSource: { pageSize: 5 }
+                   ,
+
+                   scrollable: false
+                   ,
+                   sortable: true,
+                   filterable: true,
+                   columnMenu: false,
+                   serverPaging: true,
+                   type: "odata"
+               }
+           );
+
+           $(function () {
+               $(".hi").hide();
+
+           });
+
+           function SuccessMsgShow(message) {
+               $("#successMessageDisplayId").html('<p id="sucessMsgAlignId">' + ' <img src="/Content/1405880759_accepted_48.png" />' + " " + "<span>" + message + "</span>" + "</p>").slideDown().delay(3000).slideUp();
+
+           }
+
+
+           if ($("#successMessageCheckId").val() == 1) {
+               SuccessMsgShow('A record has been added successfully.');
+
+               $(".empty").attr('value', "");
+
+           }
+
+
+
+
+    </script>
+
+    }

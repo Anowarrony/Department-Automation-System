@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="DepartmentAuomationtDatabaseModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="DepartmentAuomationtDatabaseModelStoreContainer">
+          <EntitySet Name="StudentResultDetails" EntityType="DepartmentAuomationtDatabaseModel.Store.StudentResultDetails" store:Type="Views" store:Schema="dbo" store:Name="StudentResultDetails">
+            <DefiningQuery>SELECT 
+      [StudentResultDetails].[Name] AS [Name], 
+      [StudentResultDetails].[DepartmentFullName] AS [DepartmentFullName], 
+      [StudentResultDetails].[StudentId] AS [StudentId], 
+      [StudentResultDetails].[YearTermName] AS [YearTermName], 
+      [StudentResultDetails].[TotalCompletedCredit] AS [TotalCompletedCredit], 
+      [StudentResultDetails].[TotalGpa] AS [TotalGpa], 
+      [StudentResultDetails].[Cgpa] AS [Cgpa]
+      FROM [dbo].[StudentResultDetails] AS [StudentResultDetails]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'DepartmentAuomationtDatabase.dbo.StudentResultDetails' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="StudentResultDetails">
+          <Key>
+            <PropertyRef Name="Name" />
+            <PropertyRef Name="DepartmentFullName" />
+            <PropertyRef Name="StudentId" />
+            <PropertyRef Name="YearTermName" />
+          </Key>
+          <Property Name="Name" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="DepartmentFullName" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="StudentId" Type="varchar" Nullable="false" MaxLength="150" />
+          <Property Name="YearTermName" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="TotalCompletedCredit" Type="float" />
+          <Property Name="TotalGpa" Type="float" />
+          <Property Name="Cgpa" Type="float" />
+        </EntityType>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DepartmentAuomationtDatabaseModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="StudentsResultDbContext" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="StudentResultDetails" EntityType="DepartmentAuomationtDatabaseModel.StudentResultDetail" />
+        </EntityContainer>
+        <EntityType Name="StudentResultDetail">
+          <Key>
+            <PropertyRef Name="Name" />
+            <PropertyRef Name="DepartmentFullName" />
+            <PropertyRef Name="StudentId" />
+            <PropertyRef Name="YearTermName" />
+          </Key>
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="DepartmentFullName" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="StudentId" Type="String" Nullable="false" MaxLength="150" Unicode="false" FixedLength="false" />
+          <Property Name="YearTermName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="TotalCompletedCredit" Type="Double" />
+          <Property Name="TotalGpa" Type="Double" />
+          <Property Name="Cgpa" Type="Double" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DepartmentAuomationtDatabaseModelStoreContainer" CdmEntityContainer="StudentsResultDbContext">
+          <EntitySetMapping Name="StudentResultDetails">
+            <EntityTypeMapping TypeName="DepartmentAuomationtDatabaseModel.StudentResultDetail">
+              <MappingFragment StoreEntitySet="StudentResultDetails">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="DepartmentFullName" ColumnName="DepartmentFullName" />
+                <ScalarProperty Name="StudentId" ColumnName="StudentId" />
+                <ScalarProperty Name="YearTermName" ColumnName="YearTermName" />
+                <ScalarProperty Name="TotalCompletedCredit" ColumnName="TotalCompletedCredit" />
+                <ScalarProperty Name="TotalGpa" ColumnName="TotalGpa" />
+                <ScalarProperty Name="Cgpa" ColumnName="Cgpa" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

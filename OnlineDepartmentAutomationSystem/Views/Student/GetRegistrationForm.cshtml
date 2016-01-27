@@ -1,0 +1,371 @@
+﻿@using System.Collections
+@using OnlineDepartmentAutomationSystem.Models
+@{
+    ViewBag.Title = "GetRegistrationForm";
+    var s = 0d;
+}
+
+
+<style>td{text-align: left}</style>
+<div id="dvContainer">
+    
+                                        
+    <div  class="prettyprint">
+        
+        <img src="~/Content/logo.png" />
+        <h2 style="text-align: center">Term Charge Paper</h2>
+        <img src="data:image/jpg;base64,@Convert.ToBase64String(ViewBag.studentImage)" width="70px" height="60" style="position: relative;right: -90%"/>
+   
+        <table  style="position: relative;left:30%;" >
+    
+
+            @foreach (var item in (IEnumerable<RegistrationDetailsViewModel>)ViewData["regDetails"])
+            {
+                try
+                {
+                  
+                    
+                    var seminarLibraryFee = 0;
+                    var centralLibraryFee = 0;
+                    var transportFee = 0;
+                    var hallRent = 0;
+                    var other = 0;
+                    var admissionFee = 0;
+                    var studentTrustFund = 0;
+                    if (item.YearTerm.EndsWith("1") || item.YearTerm.EndsWith("3") || item.YearTerm.EndsWith("5") || item.YearTerm.EndsWith("7"))
+                    {
+                        admissionFee = ViewBag.admissionFee;
+                        studentTrustFund = ViewBag.studentTrustFund;
+                        centralLibraryFee = ViewBag.centralLibraryFee;
+                        seminarLibraryFee = ViewBag.seminarLibraryFee;
+
+
+                    }
+                    if (item.YearTerm.EndsWith("2") || item.YearTerm.EndsWith("4") || item.YearTerm.EndsWith("6") || item.YearTerm.EndsWith("8"))
+                    {
+                        admissionFee = 0;
+                        studentTrustFund = 0;
+                    }
+                    if (ViewBag.others!=null)
+                    {
+                        other += ViewBag.others;
+                    }
+                    if (ViewBag.hallName != null)
+                    {
+                        transportFee = ViewBag.residentialTransfortFee;
+                        hallRent = ViewBag.hallRent;
+                    }
+                    if (ViewBag.hallName == null)
+                    {
+                        hallRent = 0;
+                        transportFee = ViewBag.nonResidentialTransfortFee;
+                    }
+                    double creditHour = Convert.ToDouble(ViewData["TotalCredits"]) * ViewBag.creditHour;
+                    
+                    var total = 0d;
+                    if (ViewBag.backlogCredits != null)
+                    {
+                        total += seminarLibraryFee + centralLibraryFee + admissionFee + studentTrustFund + creditHour + hallRent + transportFee + ViewBag.backlogCredits+other;
+                    }
+                    if (ViewBag.backlogCredits == null)
+                    {
+                        total += (double)seminarLibraryFee + centralLibraryFee + admissionFee + studentTrustFund + creditHour + hallRent + transportFee + other;
+                    }
+ 
+                    <tr>
+                    
+                
+                        <td>
+                            Session 
+                        </td>
+       
+                        <td>
+                            @Html.DisplayFor(m => item.Session)
+                        </td>
+                    </tr>
+     
+                    <tr>
+                        <td>
+                            Year Term 
+                        </td>
+       
+                        <td>
+                            @Html.DisplayFor(m => item.YearTerm)
+                        </td>
+                    </tr>
+     
+                    <tr>
+                        <td>
+                            Department 
+                        </td>
+       
+                        <td>
+                            @Html.DisplayFor(m => item.Department)
+                        </td>
+                    </tr>
+     
+                    <tr>
+                        <td>
+                            Hall 
+                        </td>
+       
+                        <td>
+           
+                            @if (ViewBag.hallName == null)
+                            {
+                                <span>-</span>
+                            }
+                            @if (ViewBag.hallName != null)
+                            {
+                                @ViewBag.hallName
+                            }
+                        </td>
+                    </tr>
+     
+                    <tr>
+                        <td>
+                            Name 
+                        </td>
+       
+                        <td>
+                            @Html.DisplayFor(m => item.Name)
+                        </td>
+                    </tr>
+     
+                    <tr>
+                        <td>
+                            Roll 
+                        </td>
+       
+                        <td>
+                            @Html.DisplayFor(m => item.Roll)
+                        </td>
+                    </tr>
+   
+                    <tr>
+                        <td>
+                            Admission Fee <span style="color: darkgray">( Yearly)</span>  
+                        </td>
+       
+                        <td>
+                            @if (admissionFee == 0)
+                            {
+                                <label>-</label>
+                            }
+                            @if (admissionFee != 0)
+                            {
+                                @admissionFee
+                            }
+           
+                        </td>
+                    </tr>
+     
+                    <tr>
+                        <td>
+                            Student Trust Fund <span style="color: darkgray">( Yearly)</span>
+                        </td>
+       
+                        <td>
+       
+                            @if (studentTrustFund == 0)
+                            {
+                                <label>-</label>
+                            }
+                            @if (studentTrustFund != 0)
+                            {
+                                @studentTrustFund
+                            }
+           
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Credit Hour Fee 
+                        </td>
+       
+                        <td>
+              
+                            @creditHour
+
+                        </td>
+                    </tr>
+     
+
+     
+                    <tr>
+                        <td>
+                            Hall Seat Rent
+                        </td>
+       
+                        <td>
+              
+          
+             
+             
+                            @if (hallRent == 0)
+                            {
+                                <label>-</label>
+                            }
+                            @if (hallRent != 0)
+                            {
+                                @hallRent
+                            }
+
+                        </td>
+                    </tr>
+     
+     
+         
+                    <tr>
+                        <td>
+                            Central Library Fee<span style="color: darkgray">( Yearly)</span>
+                        </td>
+       
+                        <td>
+              
+             
+             
+             
+                            @if (centralLibraryFee == 0)
+                            {
+                                <label>-</label>
+                            }
+                            @if (centralLibraryFee != 0)
+                            {
+                                @centralLibraryFee
+                            }
+
+                        </td>
+                    </tr>
+     
+         
+                    <tr>
+                        <td>
+                            Seminar Library Fee<span style="color: darkgray">( Yearly)</span>
+                        </td>
+       
+                        <td>
+              
+             
+                            @if (seminarLibraryFee == 0)
+                            {
+                                <label>-</label>
+                            }
+                            @if (seminarLibraryFee != 0)
+                            {
+                                @seminarLibraryFee
+                            }
+                        </td>
+                    </tr>
+     
+                    <tr>
+                        <td>
+                            Transport Fee
+                        </td>
+       
+                        <td>
+              
+                            @transportFee
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Others
+                        </td>
+       
+                        <td>
+              
+             
+                            @if (ViewBag.others == 0)
+                            {
+                                <label>-</label>
+                            }
+                            @if (ViewBag.others != 0)
+                            {
+                                @ViewBag.others
+                            }
+                        </td>
+                    </tr>
+     
+                    <tr>
+                        <td>
+                            Repeat Examination Fee 
+                        </td>
+       
+                        <td>
+                            @if (ViewBag.backlogCredits == null)
+                            {
+                                <label>-</label>
+                            }
+                            @if (ViewBag.backlogCredits != null)
+                            {
+                                @ViewBag.backlogCredits 
+                            }
+             
+           
+                        </td>
+                    </tr>
+                      
+
+                    <tr class="table table">
+                        <td  colspan="2">
+      
+       
+       
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td>
+                           
+                            <span style="font-weight: bold">Total</span>   <span style="color: darkgray">( Taka)</span>
+                        </td>
+       
+                        <td>
+       
+                            @total 
+           
+                        </td>
+                    </tr>
+                }
+                catch (Exception)
+                {
+
+                   
+                }
+
+
+            }
+        
+ 
+        </table>
+   
+    </div>    
+</div>
+
+
+<a href="#" class="btn btn-info"  id="btnPrint">
+    <img src="~/Content/printer.png" width="25"/>
+    
+    Print
+</a>
+<script src="~/Scripts/jquery-1.7.1.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
+    <script type="text/javascript">
+        $("#btnPrint").live("click", function () {
+            var divContents = $("#dvContainer").html();
+            var printWindow = window.open('', '', 'height=400,width=800');
+            //printWindow.document.write('<html><head><title>DIV Contents</title>');
+            printWindow.document.write('</head><body >');
+            printWindow.document.write(divContents);
+            printWindow.document.write('</body></html>');
+            printWindow.document.close();
+            printWindow.print();
+        });
+    </script>
+
+     
+

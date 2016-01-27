@@ -1,0 +1,184 @@
+﻿
+@using OnlineDepartmentAutomationSystem.Models
+@model CourseAddModel
+
+@{
+    var _db = new DeptAutDbContext();
+    ViewBag.Title = "AddCourse";
+    ViewBag.Title = "T"; Layout = "~/Views/Admin/_AdminLayout.cshtml";
+}
+<div  class="prettyprint">
+    <h4 style="text-align: left">
+    
+       + Click to add new course
+    </h4>
+    <div style="position: relative;left: 22%" id="CourseAddPannel">
+        @using (Html.BeginForm()) {
+            @Html.ValidationSummary(true)
+
+
+            <div class="editor-label">
+                @Html.LabelFor(model => model.CourseCode)
+            </div>
+            <div class="editor-field">
+                @Html.TextBoxFor(model => model.CourseCode,new{id="courseCodeTextBoxId"})
+                @Html.ValidationMessageFor(model => model.CourseCode)
+            </div>
+
+            <div class="editor-label">
+                @Html.LabelFor(model => model.CourseTitle)
+            </div>
+            <div class="editor-field">
+                @Html.TextBoxFor(model => model.CourseTitle,new{id="courseTitleTextBoxId"})
+                @Html.ValidationMessageFor(model => model.CourseTitle)
+            </div>
+
+            <div class="editor-label">
+                @Html.LabelFor(model => model.Credit)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.Credit)
+                @Html.ValidationMessageFor(model => model.Credit)
+            </div>
+
+            <div class="editor-label">
+                @Html.LabelFor(model => model.YearTerm)
+            </div>
+            <div class="editor-field">
+                @Html.DropDownList("YearTerm",(SelectList) ViewBag.yearTerms,"Select Year Term")
+                @Html.ValidationMessageFor(model => model.YearTerm)
+            </div>
+            
+            <div class="editor-label">
+                @Html.LabelFor(model => model.Department)
+            </div>
+            <div class="editor-field">
+            
+            @Html.DropDownList("Department", (SelectList) ViewBag.Departments, "Select Department", new {id = "departNameSelectBoxId"})
+                 
+                @Html.ValidationMessageFor(model => model.Department)
+            </div>
+            
+            
+            <br/>
+            <p>
+                <input type="submit" value="Add Course" class="btn btn-large" style="color: black" />  <a href="@Url.Action("DisplayAdminHomePage")" class="button icon arrowright">Back</a>
+					
+            </p>
+   
+        }
+    </div>
+    <br/>
+    <table id="courseGrid">
+        <thead>
+        <tr>
+            <th >Course Code</th>
+            <th data-sortable="false" data-menuable="false" data-filterable="false">Course Title</th>
+            <th data-sortable="false" data-menuable="false" data-filterable="false">Credit</th>
+            <th data-sortable="false" data-menuable="false" data-filterable="false">Year Term</th>
+           <th data-sortable="false" data-menuable="false" data-filterable="false">Department</th>
+            
+            <th data-sortable="false" data-menuable="false" data-filterable="false">Actions</th>
+       
+             </tr></thead>
+        <tbody>
+            @foreach (var item in (IEnumerable<CourseViewModel>) ViewData["courses"])
+            {
+                var u = _db.YearTerms.FirstOrDefault(m => m.Id.Equals(item.YearTermId));
+                if (u != null)
+                {
+                    string yearTerm = u.YearTermName;
+                    @:<tr>
+                    <td>@Html.DisplayFor(m=>item.CourseCode)</td>
+                    <td>@Html.DisplayFor(m=>item.CourseTitle)</td>
+                    <td>@Html.DisplayFor(m=>item.Credit)</td>
+                
+                    @:<td>@yearTerm
+
+                }
+                @:</td>
+                           <td>@Html.DisplayFor(m=>item.Department)</td>
+                <td>
+                      
+                    <a href="@Url.Action("DeleteCourse","Admin",new{id=item.Id})" class="lnkDelete k-button">
+                        <img src='/Content/close.png' /> Delete
+                    </a>
+                </td>
+                @:</tr>
+            }
+       
+        
+        </tbody>
+    </table>
+</div>
+
+
+ 
+
+<input type="text" value="@ViewBag.successDialogId" id="successDiaValId" style="display: none"/>
+
+
+
+
+   
+    
+
+@section Scripts
+{
+
+           @Scripts.Render("~/bundles/jqueryval")
+
+    <script src="~/KendoUI/kendo.all.min.js"></script>
+<script>
+
+    $(function () {
+        $("#CourseAddPannel").hide();
+        $("h4").css({ 'text-decoration': 'underline', 'color': 'green' });
+        $("h4").hover(function () {
+            $("h4").css('cursor', 'pointer');
+        });
+        $("h4").click(function () {
+            if ($("#CourseAddPannel").is(":visible")) {
+                $("h4").text(" + Click to add new course").css('color', 'green');
+                $("#CourseAddPannel").hide();
+            } else {
+                $("h4").text(" - Close").css('color', 'red');
+                $("#CourseAddPannel").show();
+            }
+        });
+        $("#messageNotification").jqxNotification({
+            width: "30%", position: "top-left", opacity: 0.9,
+            autoOpen: false, animationOpenDelay: 800, autoClose: true, autoCloseDelay: 8000, template: "info", icon: { width: 35, height: 35, url: '/Content/1405880759_accepted_48.png', padding: 5 }
+        });
+        if ($("#successDiaValId").val() == 1) {
+
+            $("#messageNotification").jqxNotification("open");
+            $("#courseCodeTextBoxId").attr('value', "");
+            $("#courseTitleTextBoxId").attr('value', "");
+        }
+
+
+    });
+    $("#courseGrid").kendoGrid({
+
+
+        pageable: {
+            refresh: true,
+            pageSizes: true,
+            buttonCount: 5
+        }
+
+        , dataSource: { pageSize: 5 }
+        ,
+
+        scrollable: false
+        ,
+        sortable: true,
+        filterable: true,
+        columnMenu: false,
+        serverPaging: true,
+        type: "odata"
+    });
+</script>
+
+    }

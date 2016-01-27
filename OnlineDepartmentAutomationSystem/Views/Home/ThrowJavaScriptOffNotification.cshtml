@@ -1,0 +1,45 @@
+﻿@{
+    ViewBag.Title = "ThrowJavaScriptOffNotification";
+    Layout = null;
+}
+<script src="~/Scripts/jquery-1.7.1.js"></script>
+<h1 style="color: red;">
+    <img src="~/Images/face_angry.png" />
+    
+    
+    Sorry,Your Javascript is disabled/off in your Firefox .To continue
+    in our site you must enabled/on it manually as there are lots of 
+    works will be done using javascript.
+</h1>
+<br/>
+<div style="color:sandybrown;font-size: 1.4em ">
+    How to enable javascript?
+</div>
+
+<div style="color: green;font-size: 1.3em">
+    Your browser is : <span style="color: darkgray;font-size: 25px;font-family: Courier New;font-weight: bold">' @Request.Browser.Browser </span>'
+    <br/>
+    So,  Follow the following steps:
+    @if (Request.Browser.Browser== "Firefox")
+    {
+    
+            <ol style="font-size: 1.4em">
+                <li>Open Firefox</li>
+                <li>Write "about:config" in search bar</li>
+                <li> Click on "....I promise" button</li>
+                <li>Double click on "Javascript.enabled" </li>
+                      <li>Reload the page </li>
+            </ol> 
+        <div style="left: 10%;position: relative">
+      <br/>  <br/>Step 2.<br/>
+       <img src="~/Content/JavascriptEnabledProcess/Screenshot_2.png" width="50%"/>
+      <br/>   <br/>  <br/>Step 3.<br/><img src="~/Content/JavascriptEnabledProcess/Screenshot_3.png" width="50%"/>
+          <br/> <br/><br/> Step 4.<br/><img src="~/Content/JavascriptEnabledProcess/Screenshot_4.png" width="50%"/>
+    </div>
+    }
+
+</div>
+
+<script>
+    location.href = "/Home/Index";
+</script>

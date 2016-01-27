@@ -1,0 +1,167 @@
+﻿@model OnlineDepartmentAutomationSystem.Models.RegistrationDateAddModel
+
+@{
+    ViewBag.Title = "AddCourseRegistrationDate"; ViewBag.Title = "T"; Layout = "~/Views/Admin/_AdminLayout.cshtml";
+}
+<style>
+     #successNotification {
+        background-image: url("cancel.png");
+        display: none;
+        background-repeat: no-repeat;
+        position: absolute;
+        height: 60px;
+        width: 50%;
+        top: 5%;
+        right: 24%;
+        background-color: green;
+        color: white;
+        text-align: center;
+        font-family: Courier New;
+         font-size: 20px;
+    }
+     #successNotification h2 {
+            position: relative;
+            padding: 0PX;
+            margin: 0PX;
+            top: 25%;
+            font-size: 22px;
+        }             
+</style>
+<link href="~/Content/css/bootstrap.css" rel="stylesheet" />
+<link href="~/Chosen/chosen.css" rel="stylesheet" />
+<link href="~/KendoUI/kendo.common.min.css" rel="stylesheet" />
+
+
+
+<script src="~/Chosen/chosenMain.js"></script>
+<script src="~/Chosen/mootools-more-1.4.0.1.js"></script>
+<script src="~/Chosen/chosen.js"></script>
+
+<script src="~/KendoUI/jquery.min.js"></script>
+<script src="~/KendoUI/kendo.all.min.js"></script>
+
+<div class="prettyprint">
+    
+ 
+
+<h2>Add Course Registration Date</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+       
+    <table>
+        <tr>
+            <td>  <div class="editor-label">
+            @Html.LabelFor(model => model.StartDate)
+        </div></td>
+            <td style="text-align: left">      @Html.TextBoxFor(model => model.StartDate, new { id = "StartDateBoxId",style="width: 230px" })
+            
+</td>
+            <td style="text-align: left">
+            @Html.ValidationMessageFor(model => model.StartDate)
+       </td>
+        </tr>
+        
+        <tr>
+            <td>      @Html.LabelFor(model => model.EndDate)
+      </td>
+            <td style="text-align: left"> @Html.TextBoxFor(model => model.EndDate, new { id = "EndDateBoxId" ,style="width: 230px"})
+            
+</td>
+            <td style="text-align: left">      @Html.ValidationMessageFor(model => model.EndDate)</td>
+        </tr>
+        
+        <tr>
+            <td>       @Html.LabelFor(model => model.Department)</td>
+            <td>     
+                @Html.DropDownListFor(m => m.Department, (SelectList)ViewBag.departments, "Select Department", new { id = "yearTermSelectBox", @class = "chzn-select" })
+            </td>
+            <td style="text-align: left">  @Html.ValidationMessageFor(model => model.Department)
+       
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td style="text-align: left">     <button class="btn btn-info" style="width: 170px" id="CourseRegDateAddBtnId">
+                <i class="icon-plus icon-white"></i> Add 
+            </button></td>
+            <td></td>
+        </tr>
+    </table>
+    
+}
+ <div id="successNotification"></div>
+    <input type="hidden" value="@ViewBag.successNotificationId" id="SuccessNotificationTextBoxId"/>
+
+<script> $$(".chzn-select").chosen(); $$(".chzn-select-deselect").chosen({allow_single_deselect:true}); </script>
+  
+    
+    
+    <script>
+
+
+	        function startChange() {
+	            var startDate = start.value(),
+                    endDate = end.value();
+
+	            if (startDate) {
+	                startDate = new Date(startDate);
+	                startDate.setDate(startDate.getDate());
+	                end.min(startDate);
+	            } else if (endDate) {
+	                start.max(new Date(endDate));
+	            } else {
+	                endDate = new Date();
+	                start.max(endDate);
+	                end.min(endDate);
+	            }
+	        }
+
+	        function endChange() {
+	            var endDate = end.value(),
+                    startDate = start.value();
+
+	            if (endDate) {
+	                endDate = new Date(endDate);
+	                endDate.setDate(endDate.getDate());
+	                start.max(endDate);
+	            } else if (startDate) {
+	                end.min(new Date(startDate));
+	            } else {
+	                endDate = new Date();
+	                start.max(endDate);
+	                end.min(endDate);
+	            }
+	        }
+
+	        var start = $("#StartDateBoxId").kendoDatePicker({
+	            change: startChange, format: 'yyyy/MM/dd'
+	        }).data("kendoDatePicker");
+
+	        var end = $("#EndDateBoxId").kendoDatePicker({
+	            change: endChange, format: 'yyyy/MM/dd'
+	        }).data("kendoDatePicker");
+
+	        start.max(end.value());
+	        end.min(start.value());
+	        function showSuccessNotification(text) {
+	            $("#successNotification").html('<h2>' + text + '</h2>').fadeIn().delay(4000).fadeOut();
+	        }
+
+	      
+	        if ($("#SuccessNotificationTextBoxId").val()==1) {
+	            showSuccessNotification('<img src="/Content/1405880759_accepted_48.png" width="30"/> New Record  has been added Successfully');
+
+        }
+
+	        $("#CourseRegDateAddBtnId").click(function() {
+	            if ($("#StartDateBoxId").val() != "" && $("#EndDateBoxId").val() != "") {
+	                lodingFunction();
+	            }
+	        });
+    </script>
+	</div>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

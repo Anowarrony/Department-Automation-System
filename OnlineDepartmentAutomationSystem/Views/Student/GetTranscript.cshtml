@@ -1,0 +1,215 @@
+﻿@using OnlineDepartmentAutomationSystem.Models
+@model ExaminationDetailsViewMode
+@{
+    double termTotalCredit = 0;
+    ViewBag.Title = "GetTranscript";
+}
+<script src="~/Scripts/jquery-1.7.1.js"></script>
+<style>
+    th{text-align: left}
+    td{text-align: center}
+</style>
+
+
+
+<div class="prettyprint" id="dvContainer">
+    
+    
+    
+    
+
+    <div style="text-align: center">
+        <img src="~/Content/NSTU_Logo.jpg" width="65"/>  <span style="font-size: 21px;font-weight: bold;font-family: Arial">Noakhali Science and Technology University </span><br/>
+        <span style="text-align: center">Sonapur, Noakhali-3802, Bangladesh</span>
+    </div>
+    <table>
+        <tr>
+            <td style="text-align: left">
+                <div style="font-family: Arial;font-weight: bold">ACADEMIC TRANSCRIPT<br/><br/>
+        
+                    Session : @ViewBag.sessionId<br/><br/>
+                </div>
+                <div style="font-weight: bold;"><span style="font-size: 19px">Department Of @ViewBag.deptName</span><br
+                                                                                                                        /><br/>
+                    Name of Student :<span style="font-size: 21px;font-family: Arial;"> @ViewBag.studentName.ToString()</span><br/><br/>
+                    Roll No : <span style="font-size: 21px;font-family: Arial;">@ViewBag.studentRoll</span><br/><br/>
+                    <span>@ViewBag.yearTerm  Examination</span>       <br/>
+    
+
+
+                </div>
+    
+            </td>  <td>
+                       <div style="position: relative;left: 57%;top:35%">
+                           <table  >
+                               <tr><th>Numerical Grade</th>
+                                   <th>Letter Grade</th>
+                                   <th></th>
+                                   <th>Grade Point</th>
+
+                               </tr>
+                               <tr>
+                                   <td>80 Percent or above</td>
+                                   <td>A<sup>+</sup></td>
+                                   <td></td>
+                                   <td>4.00</td>
+                               </tr>
+                               <tr>
+                                   <td>75 Percent < 80 Percent</td>
+                                   <td>A</td>
+                                   <td></td>
+                                   <td>3.75</td>
+                               </tr>
+                               <tr>
+                                   <td>70 Percent < 75 Percent</td>
+                                   <td>A<sup>-</sup></td>
+                                   <td></td>
+                                   <td>3.50</td>
+                               </tr>
+                               <tr>
+                                   <td>65 Percent < 70 Percent</td>
+                                   <td>B<sup>+</sup></td>
+                                   <td></td>
+                                   <td>3.25</td>
+                               </tr>
+    
+                               <tr>
+                                   <td>60 Percent < 65 Percent</td>
+                                   <td>B</td>
+                                   <td></td>
+                                   <td>3.00</td>
+                               </tr>
+    
+                               <tr>
+                                   <td>55 Percent < 60 Percent</td>
+                                   <td>B<sup>-</sup></td>
+                                   <td></td>
+                                   <td>2.75</td>
+                               </tr>
+    
+                               <tr>
+                                   <td>50 Percent < 55 Percent</td>
+                                   <td>C<sup>+</sup></td>
+                                   <td></td>
+                                   <td>2.50</td>
+                               </tr>
+    
+                               <tr>
+                                   <td>45 Percent < 50 Percent</td>
+                                   <td>C</td>
+                                   <td></td>
+                                   <td>2.25</td>
+                               </tr>
+                               <tr>
+                                   <td>40 Percent < 45 Percent</td>
+                                   <td>D</td>
+                                   <td></td>
+                                   <td>2.00</td>
+                               </tr>
+    
+                               <tr >
+                                   <td style="text-align: left"><span><</span>40 Percent</td>
+                                   <td>F</td>
+                                   <td></td>
+                                   <td>0.00</td>
+                               </tr>
+                           </table>
+
+
+
+
+                       </div>
+                   </td>
+        </tr>
+    </table>
+    
+            
+  
+   
+    
+   
+    <div >
+     
+        Examination Details
+        <table class="table table-bordered">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.CourseCode)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CourseTitle)
+                </th>
+    
+                <th>
+                    @Html.DisplayNameFor(model => model.Credit)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.GradePoint)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.LetterGrade)
+                </th>
+     
+  
+            </tr>
+
+            @foreach (var item in (IEnumerable<ExaminationDetailsViewMode>)ViewData["ExmainationDetails"])
+            {
+                termTotalCredit += item.Credit;
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CourseCode)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CourseTitle)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Credit)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.GradePoint)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.LetterGrade)
+                    </td>
+       
+     
+                </tr>
+            }
+
+        </table>
+
+        <table style="font-family: Arial;font-weight: bold;position: relative;right: -60%">
+            <tr>
+                <td>Term Total Credit :  @termTotalCredit</td>
+        
+                   <td>TGPA : @foreach (var item in ViewBag.TermGPA)
+                              {
+                                 <span> @string.Format("{0:0.00}", item)</span>
+                              }</td>
+         
+            </tr>
+
+        </table>
+    </div>
+</div>
+<a href="#" class="btn btn-info"  id="btnPrint" style="color: white">
+    <img src="~/Content/printer.png" width="25"/>
+    
+    Print
+</a>
+ 
+
+          <script type="text/javascript">
+        $("#btnPrint").live("click", function () {
+            var divContents = $("#dvContainer").html();
+            var printWindow = window.open('', '', 'height=400,width=800');
+            //printWindow.document.write('<html><head><title>DIV Contents</title>');
+            printWindow.document.write('</head><body >');
+            printWindow.document.write(divContents);
+            printWindow.document.write('</body></html>');
+            printWindow.document.close();
+            printWindow.print();
+        });
+    </script>
+    

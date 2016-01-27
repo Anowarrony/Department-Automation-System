@@ -1,0 +1,37 @@
+﻿@model OnlineDepartmentAutomationSystem.Models.DepartUpdateViewModel
+
+@{
+    ViewBag.Title = "UpdateDepartment";
+}
+
+<h2>UpdateDepartment</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>DepartAddViewModel</legend>
+
+        <div class="editor-label">
+            Department
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.DepartmentShortName)
+            @Html.ValidationMessageFor(model => model.DepartmentShortName)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Faculty)
+        </div>
+
+        <div class="editor-field">
+                @Html.DropDownList("Faculty",(SelectList)ViewBag.faculties)
+            
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+

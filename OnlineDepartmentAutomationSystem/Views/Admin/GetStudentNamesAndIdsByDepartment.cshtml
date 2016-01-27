@@ -1,0 +1,77 @@
+﻿@using OnlineDepartmentAutomationSystem.Models
+
+@{
+    ViewBag.Title = "GetStudentNamesAndIdsByDepartment"; Layout = "~/Views/Admin/_AdminLayout.cshtml";
+}
+
+
+
+<div class="prettyprint">
+    
+    
+
+
+    <table id="kendoGrid">
+        <tr>
+            <th>
+                Student ID
+            </th>
+            <th>
+                Student  Name
+            </th>
+            <th>
+                Session
+            </th>
+        </tr>
+
+        @foreach (var item in (IEnumerable<StudentDetailsViewModel>)ViewBag.StudentNamesAndIdsByDepartment)
+        {
+            <tr>
+                <td>
+                
+                    <a style="background: none;color: green;text-decoration: underline;font-size:1.2em" href="@Url.Action("GetStudentResult",new{studentId=item.StudentUniversityId})">       @Html.DisplayFor(modelItem => item.StudentUniversityId)</a>
+       
+                </td>
+                <td style="font-size:1.5em">
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td style="font-size:1.5em">
+                    @Html.DisplayFor(modelItem => item.Session)
+                </td>
+            </tr>
+        }
+
+    </table>
+    <br/>    <button class="btn" onclick="LoadUrl();">
+        <i class="icon-backward"></i>   Back
+    </button>
+</div>
+
+@section scripts{
+    
+        @Scripts.Render("~/bundles/jqueryval")
+    <script src="~/KendoUI/kendo.all.min.js"></script>
+    <script>
+        $("#kendoGrid").kendoGrid({
+
+
+            pageable: {
+                refresh: true,
+                pageSizes: true,
+                buttonCount: 5
+            }
+
+          , dataSource: { pageSize: 5 }
+          ,
+
+            scrollable: false
+          ,
+            sortable: true,
+            filterable: true,
+            columnMenu: false,
+            serverPaging: true,
+            type: "odata"
+        });
+    </script>
+
+}

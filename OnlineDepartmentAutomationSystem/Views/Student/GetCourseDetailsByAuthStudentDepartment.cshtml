@@ -1,0 +1,53 @@
+﻿@using OnlineDepartmentAutomationSystem.Models
+@model IEnumerable<Course>
+
+@{
+    var sum = 0d;
+    ViewBag.Title = "GetCourseDetailsByAuthStudentDepartment";
+}
+
+
+<div class="prettyprint">
+    <h3 style="text-align: center">@ViewBag.yearTerm</h3>
+    <table class="table table-bordered">
+        <tr>
+            <th>
+                Course Code
+            </th>
+            <th>
+                Course Title
+            </th>
+            <th>
+                Credit
+            </th>
+     
+       
+        </tr>
+
+        @foreach (var item in (IQueryable<CourseViewModel>)ViewData["CourseDetailsByAuthStudentDepartmen"])
+        {
+            sum += item.Credit;
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CourseCode)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CourseTitle)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Credit)
+                </td>
+     
+   
+            </tr>
+        }
+       
+            
+         
+    </table>
+    <div style="text-align: right;font-size: 1.5em;font-weight: bold">Total Credit : @sum</div>
+     <button class="btn" onclick="LoadUrl();" style="color: black;height: 20px;">
+        <i class="icon-backward"></i>   Back
+    </button>
+
+</div>

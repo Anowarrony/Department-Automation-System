@@ -1,0 +1,80 @@
+﻿@using OnlineDepartmentAutomationSystem.Models
+@model IEnumerable<ExaminationDetailsViewMode>
+@{
+    ViewBag.Title = "GetResultDetails"; Layout = "~/Views/Admin/_AdminLayout.cshtml";
+}
+
+<script src="~/Scripts/jquery-1.7.1.js"></script>
+
+<div class="prettyprint">
+    
+    <span style="font-weight: bold;color: green">Name</span>   : <span style="font-family: Arial;font-size: 20px">@ViewBag.studentName </span>  <span style="font-weight: bold;color: green">ID</span> :  <span style="font-family: Arial;font-size: 20px">@ViewBag.studentID</span>
+    <table class="table table-bordered">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CourseCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CourseTitle)
+            </th>
+    
+            <th>
+                @Html.DisplayNameFor(model => model.Credit)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GradePoint)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LetterGrade)
+            </th>
+     
+  
+        </tr>
+
+        @foreach (var item in (IEnumerable<ExaminationDetailsViewMode>)ViewData["ExmainationDetails"])
+        {
+
+            
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CourseCode)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CourseTitle)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Credit)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.GradePoint)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LetterGrade)
+                </td>
+       
+               
+            </tr>
+        }
+
+    </table>
+
+    <div style="text-align: right">Running CGPA :    <span style="font-size: 22px">@string.Format("{0:0.00}", ViewData["runningCGPA"])
+                                                         
+                                                     </span></div>
+
+    <button class="btn" onclick="LoadUrl();">
+        <i class="icon-backward"></i>   Back
+    </button>
+    
+</div>
+  <div  id="divLoading" >        
+                     <img src="~/Images/ajax-loader.gif" style="background-position: center;position: relative;left: 40%;top: 10px"/>    
+     </div>
+<script>
+    function lodingFunction() {
+        $('#divLoading').dialog({ title: '<span style="font-family:Courier New;"> Please Wait..</span>', height: 120, width: 280 });
+
+    }
+
+   
+</script>

@@ -1,0 +1,123 @@
+﻿@using OnlineDepartmentAutomationSystem.Models
+@model StudentUpdateModel
+
+  <script src="~/Scripts/jquery-1.8.2.js"></script>    
+
+
+	   
+<style>
+    #s{display: none}
+    #d{display: none}
+</style>
+
+@{
+   
+    var scrollPositionX = string.Empty;
+    if (IsPost)
+    {
+        scrollPositionX = Request.Form["ScrollPositionX"];
+
+    }
+    
+}
+   <img src='data:image/jpg;base64,@Convert.ToBase64String(Model.Image)' class='img-circle' width='70px' height='60' style="position: absolute;right: 10%"/>
+       
+@using (Html.BeginForm(new { enctype = "multipart/form-data" }))
+{
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>StudentDetailsViewModel</legend>
+
+  
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Phone)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Phone)
+            @Html.ValidationMessageFor(model => model.Phone)
+        </div>
+        <br/>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Email)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Email)
+            @Html.ValidationMessageFor(model => model.Email)
+        </div>
+         <br/>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.PresentAddress)
+        </div>
+        <div class="editor-field">
+            @Html.TextAreaFor(model => model.PresentAddress)
+            @Html.ValidationMessageFor(model => model.PresentAddress)
+        </div>
+
+      
+        <br/>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.HallName)
+        </div>
+        @if (ViewBag.hallListShowId != 1)
+        {
+            ViewBag.selectBoxHideId= 2;
+          <input type="hidden" value="@ViewBag.selectBoxHideId" id="selectBoxHideId"/>  
+        <div class="editor-field">
+            <input type="checkbox"  id="ckeckboxId"/> <span style="font-family: Courier New;color: darkgray">(Check only if  student <b>staying</b> in hall.)</span>
+         
+        </div>
+        }
+        <br/>
+     <div class="editor-field" id="residentialId">
+        
+         
+@Html.DropDownList("HallName", (SelectList)ViewData["Halls"],"Select Hall" )
+        </div>
+          <br/>
+        <p>
+                   <button type="submit" class="btn btn-info" >
+                <i class="icon-edit  icon-white"></i> Save
+            </button>
+               <button type="button" class="btn btn-danger" onclick="closeDialog();">
+                <i class="icon-remove  icon-white"></i> Cancel
+            </button> 
+            
+            
+            <input type="hidden" id="ScrollPositionX" name="ScrollPositionX" value="@scrollPositionX" />
+      
+        </p>
+    </fieldset>
+}
+
+<input type="hidden" value="@ViewBag.hallListShowId" id="residentialHideShowId"/>
+
+
+
+<script>     $("input[type='text']").css('height', '35px');
+    function closeDialog() {
+        location.reload();
+    }
+    $(function () {
+        if ($("#selectBoxHideId").val() == 2) {
+            $("#residentialId").hide();
+        }
+       
+        var i = 0;
+        $("input[type='checkbox']").click(function () {
+            i += 1;
+
+            if (i % 2 != 0) {
+                $("input[type='checkbox']").attr("checked", true);
+                $("#residentialId").show();
+
+            } else {
+                $("input[type='checkbox']").attr("checked", false);
+                $("#residentialId").hide();
+                $("select").attr('value', c);
+            }
+        });
+        $('.cancel').css('background', 'red').css('color', 'white');
+    })
+</script>
+	

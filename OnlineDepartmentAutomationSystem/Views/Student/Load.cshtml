@@ -1,0 +1,56 @@
+﻿@using OnlineDepartmentAutomationSystem.Models
+@model YearTermViewModel
+
+
+@{
+    ViewBag.Title = "Load";
+}
+<link href="~/Bootstrape/sumoselect.css" rel="stylesheet" />
+
+
+
+<input type="text" value="@ViewBag.l" style="display: none" id="l" />
+<div class="post">
+    <h2 style="text-align: center">Select Year Term To See Backlok</h2>
+    <div style="position: relative;left: 23%">
+        <div id="ytvl" style=@((ViewData["op"] != null && Convert.ToInt32(ViewData["op"]) == 1) ? "display:block" : "display:none")>
+            @using (Html.BeginForm("Load", "Student"))
+            {
+                <table>
+                    <tr>
+                        <td>  @Html.LabelFor(model => model.YearTerm)</td>
+                        <td>  
+                            @Html.DropDownList("YearTerm", (MultiSelectList)ViewBag.yearTrms, "Select Year Term", new { id = "yearTermSelectBoxId" })
+                        </td>
+                        <td style="text-align: right"> 
+                            @Html.ValidationMessageFor(model => model.YearTerm)</td>
+                    </tr><tr><td></td></tr>
+                    <tr>
+                        <td></td>
+                        <td style="text-align: left">
+                            
+                            
+                
+                               <button type="submit" class="btn btn-danger" style="height: 35px" id="BacklogSelectBtn" onclick="lodingFunction();">
+                <i class="icon-hand-right  icon-white" ></i>  Click For Backloks
+            </button>    
+					
+                        </td>
+                        <td></td>
+                    </tr>
+                </table>
+     
+         
+            }
+        </div></div>
+</div>
+              
+                    @section scripts{
+                        
+                        @Scripts.Render("~/bundles/jqueryval")
+<script src="~/Bootstrape/jquery.sumoselect.js"></script>
+<script>
+    $('#yearTermSelectBoxId').SumoSelect({ placeholder: 'Select Grades' });
+</script>
+                    }
+

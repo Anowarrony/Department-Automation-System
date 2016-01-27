@@ -1,0 +1,147 @@
+﻿
+    
+    @using OnlineDepartmentAutomationSystem.Models
+    @model DepartAddViewModel
+
+    @{
+        ViewBag.Title = "T"; Layout = "~/Views/Admin/_AdminLayout.cshtml";
+        ViewBag.Title = "Add Department";
+    }
+
+   
+
+    <div  class="prettyprint">
+	
+        <table class="table">
+            <thead>
+                <tr >
+                    <th style="font-size: 16px;width: 35%" >Department Fullname</th>
+                    <th style="font-size: 16px;">Department Shortname</th>
+                    <th style="font-size: 16px;font-weight: bold" data-sortable="false" data-menuable="false" data-filterable="false">Faculty</th>
+                    <th style="font-size: 16px;font-weight: bold" data-sortable="false" data-menuable="false" data-filterable="false">Actions</th>
+                </tr></thead>
+            <tbody>
+                @foreach (var i in (IEnumerable<DepartViewModel>)ViewData["Depts"])
+                {
+                    <tr>
+                        <td>@Html.DisplayFor(m=>i.DepartmentFullName)</td>
+                        <td>@Html.DisplayFor(m=>i.DepartmentShortName)</td>
+                        <td>@Html.DisplayFor(m=>i.Faculty)</td>
+                        <td>   @Html.ActionLink("Delete", "DeleteDepartment", new { id=i.DeptId},new{@class="lnkDelete button danger icon trash"})  @Html.ActionLink("Update", "UpdateDepartment", new { id=i.DeptId},new { @class = "lnkEdit button icon edit" })</td>
+        
+       
+ 
+                    </tr>
+                }</tbody>
+        </table>
+        <h2 style="text-align: center">
+            <img src="~/Content/1405880856_add_48.png" width="25"/>
+            Add New Department
+        </h2>
+
+        @using (Html.BeginForm()) {
+ 
+            <span style="text-align: center">@Html.ValidationSummary(true)</span> 
+            <table style="position: relative;left: 18%">
+                <tr>
+                    <td  style="text-align: right">       @Html.LabelFor(model => model.Faculty)</td>
+                    <td  style="text-align: left">    @Html.DropDownList("Faculty", (MultiSelectList)ViewBag.faculties, "Select Faculty", new { id = "g" })
+        
+                        @Html.ValidationMessageFor(model => model.Faculty)</td>
+                </tr>
+                <tr><td></td></tr>     <tr><td></td></tr>
+                <tr>
+                    <td style="text-align: left">@Html.LabelFor(model => model.DepartmentFullName)</td>
+                    <td style="text-align: left">    @Html.TextBoxFor(model => model.DepartmentFullName,new{@class="empty" })
+                        @Html.ValidationMessageFor(model => model.DepartmentFullName)
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: left">@Html.LabelFor(model => model.DepartmentShortName)</td>
+                    <td style="text-align: left">    @Html.TextBoxFor(model => model.DepartmentShortName,new{@class="empty" })
+                        @Html.ValidationMessageFor(model => model.DepartmentShortName)
+                    </td>
+                </tr>
+                <tr><td></td></tr>     <tr><td></td></tr>
+                <tr>
+                    <td></td>
+                    <td  style="text-align: left">
+                        <input type="submit" value="Add Department" class="btn btn-info"/>
+     
+					
+                    </td>
+                </tr>
+            </table>
+
+  
+      
+    
+    
+       
+        }
+        <input type="text" value="@ViewBag.empt" id="emptyDivId" style="display: none"/>
+    </div>
+
+
+    <div id="dialog-alert" style="display: none">
+        <p>
+            @TempData["msg"]!
+        </p>
+    </div>
+ 
+    <div id="dialog-confirm" style="display: none">
+        <p style="font-family: Courier New;font-size: 19px">
+            <span  style="float: left; margin: 0 7px 20px 0;"></span>
+
+            <img src="~/Content/1405880767_warning_48.png" width="35"/>
+            Are you sure to <b>delete</b> this <b>department</b>?.It will be deleted parmanently.
+        </p>
+    </div>
+ 
+    <div id="dialog-edit" style="display: none">
+    </div>
+    <div id="dialog-detail" style="display: none">
+    </div>
+
+
+    <div id="loadingDialog"></div>
+
+    
+
+    @section Scripts
+    {
+
+        @Scripts.Render("~/bundles/jqueryval")
+ 
+<script src="~/KendoUI/kendo.all.min.js"></script>
+<script src="~/Scripts/DialogEditDeleteDetails.js"></script>
+        <script>
+            if ($("#emptyDivId").val() == 1) {
+
+                $(".empty").attr('value', "");
+            }
+            $(".table").kendoGrid({
+
+
+                pageable: {
+                    refresh: true,
+                    pageSizes: true,
+                    buttonCount: 5
+                }
+
+                , dataSource: { pageSize: 5 }
+                ,
+
+                scrollable: false
+                ,
+                sortable: true,
+                filterable: true,
+                columnMenu: false,
+                serverPaging: true,
+                type: "odata"
+            });
+
+    </script>
+
+
+    }

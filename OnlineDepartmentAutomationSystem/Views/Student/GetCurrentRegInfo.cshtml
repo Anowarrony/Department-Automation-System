@@ -1,0 +1,23 @@
+﻿@using MvcApplication8.Models
+@{
+    ViewBag.Title = "GetCurrentRegInfo";
+}
+
+<h2>GetCurrentRegInfo</h2>
+
+
+@foreach (var v in (IEnumerable < StudentRegInfoViewModel >)ViewData["RegInfo"])
+{
+    <text>You are a student of <b>@Html.DisplayFor(m=>v.DepartmentName)</b>. You are continuing in @Html.DisplayFor(m=>v.YearTerm) and
+        in current semister you have taken total @Html.DisplayFor(m=>v.TotlaCreditTaken) and in current semister you have registered the following courses:
+
+    </text>
+}
+
+
+@foreach (var v in (IEnumerable<StudentRegInfoViewModel>)ViewData["coursesOnCurrentSemister"])
+{
+    <text>
+      
+    </text>
+}

@@ -1,0 +1,79 @@
+﻿@model OnlineDepartmentAutomationSystem.Models.UpdateAccount
+
+@{
+    ViewBag.Title = "UpdateAccount";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}    
+
+
+<link href="~/Content/css/bootstrap.css" rel="stylesheet" />
+<script src="~/Scripts/jquery-1.7.1.js"></script>
+<style>.size{width: 450px}  </style>
+ <div class="post">
+     <h2 style="text-align: center">
+         <img src="~/Content/system_software_update.png" width="35"/>
+         Update Account
+     </h2>
+     <div style="position: relative;left: 17%">
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+   
+     
+     
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Email)
+        </div>
+        <div class="editor-field">
+            @Html.TextBoxFor(model => model.Email,new{@class="form-control size",style="height: 35px"})
+            @Html.ValidationMessageFor(model => model.Email)
+        </div>
+    <br/>
+        <div class="editor-label">
+            @Html.Label("Phone Number")
+        </div>
+        <div class="editor-field">
+            @Html.TextBoxFor(model => model.PhoneNumber,new{@class="form-control size",style="height: 35px"})
+            @Html.ValidationMessageFor(model => model.PhoneNumber)
+        </div>
+      <br/>
+        <div class="editor-label">
+            @Html.Label("Present Address")
+        </div>
+        <div class="editor-field">
+            @Html.TextAreaFor(model => model.PresentAddress,new{@class="form-control size"})
+            @Html.ValidationMessageFor(model => model.PresentAddress)
+        </div>
+      <br/>
+        <p>
+      
+            <button type="submit" class="btn btn-success" id="accountUpdateBtnId">
+                <i class="icon-edit icon-white" ></i>  Update
+            </button>            
+        </p>
+    
+}
+</div>
+     </div>
+<input type="hidden" value="@ViewBag.successNotificationId" id="successnotificationCheckId"/>
+<div style="display: none" id="messageNotification">
+     Your account has been updated successfully 
+</div>
+<script>
+
+    $(function() {
+        $("#messageNotification").jqxNotification({
+            width: "30%", position: "top-left", opacity: 0.9,
+            autoOpen: false, animationOpenDelay: 800, autoClose: true, autoCloseDelay: 8000, template: "info", icon: { width: 35, height: 35, url: '/Content/1405880759_accepted_48.png', padding: 5 }
+        });
+        if ($("#successnotificationCheckId").val() == 1) {
+            $("#messageNotification").jqxNotification("open");
+        }
+        $(".btn").css('color', 'white');
+    });
+    $("#accountUpdateBtnId").click(function () {
+       lodingFunction();    
+    });
+     
+</script>

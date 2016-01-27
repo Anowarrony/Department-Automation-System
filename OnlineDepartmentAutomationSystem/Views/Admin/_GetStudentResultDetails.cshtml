@@ -1,0 +1,46 @@
+﻿@model OnlineDepartmentAutomationSystem.Models.SudentResultViewModel
+
+@{
+    ViewBag.Title = "Student Result Details";
+}
+
+<h2 style="text-align: center">Student Result Details</h2>
+
+
+
+    <div style="background: #fff;">
+    <div class="display-label">
+        <span style="font-weight: bold"> @Html.DisplayNameFor(model => model.Name)</span>:   @Html.DisplayFor(model => model.Name)
+    </div>
+  
+
+    <div class="display-label">
+        <span style="font-weight: bold">  @Html.DisplayNameFor(model => model.DepartmentName)</span>:         @Html.DisplayFor(model => model.DepartmentName)
+    </div>
+  
+
+    <div class="display-label">
+       <span style="font-weight: bold">   @Html.DisplayNameFor(model => model.StudentId)</span>: @Html.DisplayFor(model => model.StudentId)
+    </div>
+
+
+    <div class="display-label">
+        <span style="font-weight: bold">  @Html.DisplayNameFor(model => model.YearTermName)</span> :  @Html.DisplayFor(model => model.YearTermName)
+    </div>
+   
+    <div class="display-label">
+       <span style="font-weight: bold">  Credit </span>:  @Html.DisplayFor(model => model.TotalCompletedCredit)
+    </div>
+
+
+ 
+
+    <div class="display-label">
+       <span style="font-weight: bold">   @Html.DisplayNameFor(model => model.Cgpa)</span>:   @Html.DisplayFor(model => model.Cgpa)
+    </div>
+  
+    <div>
+       <span style="font-weight: bold">  Running CGPA </span>: @ViewData["r"]
+    </div></div>
+
+

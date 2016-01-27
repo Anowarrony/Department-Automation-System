@@ -1,0 +1,97 @@
+﻿
+@using OnlineDepartmentAutomationSystem.Models
+
+
+@{
+    ViewBag.Title = "_Result";
+}
+<style>th{background: green;color: #fff}
+
+</style>
+<h2> Result</h2>
+
+@{   
+    
+    var rdb = new StudentsResultDbContext();
+  
+    var db = new DeptAutDbContext();
+  
+    var authUsrId = db.Logins.Single(x => x.Username.Equals(User.Identity.Name)).UniversityId;
+    double runningCgpaForEachStudent = 0;
+   
+    try
+    {
+        var countYearTerm = rdb.StudentResultDetails.Where(m => m.StudentId.Equals(authUsrId)).Select(m => m.YearTermName).Count();
+
+        var sum = rdb.StudentResultDetails.Where(m => m.StudentId.Equals(authUsrId)).Select(m => m.Cgpa).Sum();
+        if (sum != null)
+        {
+            var totalCgpa = sum.Value;
+
+            var runningTotal = totalCgpa / countYearTerm;
+            runningCgpaForEachStudent += runningTotal;
+        }
+    }
+    catch (Exception)
+    {
+  
+        
+    }
+  
+}
+<table class="table table-bordered">
+    <tr>
+        <th>
+            Year Term 
+        </th>
+        <th>
+            Year Term CGPA
+        </th>
+        <th>
+            Term Credit
+        </th>
+
+    </tr>
+
+           
+            
+    @foreach (var item in (IEnumerable<ResultDisplaywModel>)ViewData["studentResult"])
+    {
+       
+        var i = db.YearTerms.Single(m => m.YearTermName == item.YearTerm).Id;
+     
+        <tr>
+         <td>
+              <a href="@Url.Action("GetTranscript", "Student", new { id =i})"  class="quesLink" style="color: green;">
+                               
+                     @Html.DisplayFor(modelItem => item.YearTerm)
+     @Html.HiddenFor(modelItem => i)
+
+
+                            </a>
+
+            </td>
+            <td>
+                @string.Format("{0:0.00}",item.YearTermCgpa)
+   
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CurrentYearTermsTotalCredit)
+            </td>
+                         
+ 
+        </tr>
+    }
+  
+<tr><td colspan="3" style="text-align: center;background: darkcyan;color: white">Running CGPA = <span style="font-family: Courier New;font-size: 22px;font-weight: bold">@string.Format("{0:0.00}",runningCgpaForEachStudent)</span> </td></tr>
+
+    
+
+</table >
+<img src="~/Images/ajax-loader.gif" style="display: none" id="FeedBackImgId"/>
+<script>
+    $(".quesLink").css('background', 'none').css('text-decoration', 'underline');
+    $(".quesLink").click(function() {
+        lodingFunction();
+    });
+</script>

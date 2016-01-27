@@ -1,0 +1,97 @@
+﻿@model IEnumerable<OnlineDepartmentAutomationSystem.Models.StudentResultDetail>
+
+
+
+
+<script src="~/KendoUI/kendo.all.min.js"></script>
+
+<table id="tblStudentResults" class="f" >
+    <thead>
+        <tr>
+            <th data-sortable="false" data-menuable="false" data-filterable="false">
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th data-sortable="false" data-menuable="false" data-filterable="false">
+                @Html.DisplayNameFor(model => model.DepartmentFullName)
+            </th>
+            <th data-sortable="false" data-menuable="false" data-filterable="false">
+                @Html.DisplayNameFor(model => model.StudentId)
+            </th>
+            <th data-sortable="false" data-menuable="false" data-filterable="false">
+                @Html.DisplayNameFor(model => model.YearTermName)
+            </th>
+            <th data-sortable="false" data-menuable="false" data-filterable="false">
+                @Html.DisplayNameFor(model => model.TotalCompletedCredit)
+            </th>
+ 
+            <th  data-sortable="false" data-menuable="false" data-filterable="false">
+                @Html.DisplayNameFor(model => model.Cgpa)
+            </th>
+       
+        </tr></thead>
+    <tbody>
+
+    @foreach (var item in Model)
+    {
+        var cgpa = item.Cgpa;
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DepartmentFullName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StudentId)
+            </td>
+            <td>
+            
+        
+            
+                <a  href="@Url.Action("GetResultDetails", "Admin", new { yearTerm =item.YearTermName,studentId=item.StudentId})"  class="quesLin" style="color: green;background: none;text-decoration: underline">
+                               
+                                 
+                    @Html.DisplayFor(modelItem => item.YearTermName)
+
+
+                </a>
+
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TotalCompletedCredit)
+            </td>
+ 
+            <td>
+       
+                @string.Format("{0:0.00}", cgpa)
+            </td>
+      
+        </tr>
+    }
+</tbody>
+</table>
+ <script>
+  
+     
+     $(".f").kendoGrid({
+
+
+         pageable: {
+             refresh: true,
+             pageSizes: true,
+             buttonCount: 5
+         }
+
+          , dataSource: { pageSize: 5 }
+          ,
+
+         scrollable: false
+          ,
+         sortable: true,
+         filterable: true,
+         columnMenu: false,
+         serverPaging: true,
+         type: "odata"
+     });
+  
+    </script>

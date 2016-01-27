@@ -1,0 +1,141 @@
+﻿@using OnlineDepartmentAutomationSystem.Models
+@model IEnumerable<OnlineDepartmentAutomationSystem.Models.StudentFeeViewModel>
+
+
+<table class="table table-bordered">
+    
+  
+     
+  
+
+@foreach (var item in (IEnumerable<StudentFeeViewModel>)ViewData["feeDetails"])
+{
+    <tr>
+        <td style="font-size: 20px;font-weight: bold;background: forestgreen;color: white">Sectors</td><td style="font-size: 20px;font-weight: bold;background: forestgreen;color: white">Taka</td>
+    </tr>
+    
+    <tr>
+        <td>   @Html.DisplayNameFor(model => model.AdmissionFee) <span style="color: darkgray">(Yearly)</span></td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AdmissionFee)
+        </td> 
+
+    </tr> 
+    <tr>
+        
+          <td>
+            @Html.DisplayNameFor(model => model.CreditHourFee) <span style="color: darkgray">(Per Course)</span>
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CreditHourFee)
+        </td> 
+
+    </tr> 
+    <tr>
+         <td>
+            @Html.DisplayNameFor(model => model.StudentTrustFund) <span style="color: darkgray">(Yearly)</span>
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StudentTrustFund)
+        </td> 
+
+    </tr> 
+    <tr>
+        <td>
+                          @Html.DisplayNameFor(model => model.HallRent) <span style="color: darkgray">(Yearly)</span>
+                      </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HallRent)
+        </td>  
+
+    </tr> 
+     <tr>  <td>
+            @Html.DisplayNameFor(model => model.CentralLibraryFee) <span style="color: darkgray">(Yearly)</span>
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CentralLibraryFee)
+        </td> 
+
+     </tr> 
+    <tr>
+          <td>
+            @Html.DisplayNameFor(model => model.SeminarLibraryFee) <span style="color: darkgray">(Yearly)</span>
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SeminarLibraryFee)
+        </td>  
+
+    </tr> 
+    
+    <tr>
+           <td>
+            @Html.DisplayNameFor(model => model.NonResidentialTransfortFee) 
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NonResidentialTransfortFee)
+        </td> 
+
+    </tr> 
+    
+    <tr>
+          <td>
+            @Html.DisplayNameFor(model => model.ResidentialTransfortFee)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ResidentialTransfortFee)
+        </td> 
+
+    </tr> 
+    
+     <tr>   <td>
+            @Html.DisplayNameFor(model => model.LateFee)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LateFee)
+        </td>  
+
+     </tr>  
+    <tr>    <td>
+                          @Html.DisplayNameFor(model => model.Others)
+                      </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Others)
+        </td> 
+
+    </tr>
+      <tr>     <td>
+            @Html.DisplayNameFor(model => model.BacklogFeePerCourse) <span style="color: darkgray">(Per Course)</span>
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BacklogFeePerCourse)
+        </td> 
+
+      </tr> 
+   
+    <tr>
+         @if (ViewBag.hide!= 1)
+     {
+         <td style="text-align: center">
+            <a href="@Url.Action("UpdateStudentFee","Admin",new{id=item.Id})" class="lnkEdit k-button ">
+          
+                <img src="~/Content/icon-edit.png" />
+                Edit
+            </a>
+            <a href="@Url.Action("DeleteStudentFee","Admin",new{id=item.Id})" class="lnkDelete  k-button">
+                <img src="~/Content/icon-delete.png" />
+                 
+                Delete
+            </a>
+                          
+            
+
+        
+        </td> 
+     }
+        
+
+    </tr>
+  
+}
+
+</table>

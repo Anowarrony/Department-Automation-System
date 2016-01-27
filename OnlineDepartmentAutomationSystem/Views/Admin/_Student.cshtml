@@ -1,0 +1,77 @@
+﻿@using OnlineDepartmentAutomationSystem.Models
+@using OnlineDepartmentAutomationSystem.Models
+@model IEnumerable<OnlineDepartmentAutomationSystem.Models.StudentDetailsViewModel>
+ 
+
+<table id="studentGrid">
+    <thead> <tr>
+                <th data-sortable="false" data-menuable="false" data-filterable="false">Image</th>
+                <th >
+                    @Html.DisplayNameFor(model => model.StudentUniversityId)
+                </th>
+                <th data-sortable="false" data-menuable="false" data-filterable="false">
+                    @Html.DisplayNameFor(model => model.Name)
+                </th>
+              
+                <th data-sortable="false" data-menuable="false" data-filterable="false">
+                    Department
+                </th>
+                <th data-sortable="false" data-menuable="false" data-filterable="false">
+                    Session
+                </th>
+                <th data-sortable="false" data-menuable="false" data-filterable="false">
+                    @Html.DisplayNameFor(model => model.Phone)
+                </th>
+                <th data-sortable="false" data-menuable="false" data-filterable="false">
+                    @Html.DisplayNameFor(model => model.Email)
+                </th>
+           
+                
+                <th data-sortable="false" data-menuable="false" data-filterable="false">Actions</th>
+            </tr></thead>
+    <tbody>
+
+@foreach (var item in (IEnumerable<StudentDetailsViewModel>)ViewData["studentDetails"])
+{
+    <tr>
+        <td>
+            
+            <img src="data:image/jpg;base64,@Convert.ToBase64String(item.Image)" class="img-circle" width="70px" height="60"/>
+        
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StudentUniversityId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+      
+        <td>
+    
+            @Html.DisplayFor(modelItem => item.Department)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Session)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Phone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+        <td>
+
+            <span>   @Html.ActionLink("Delete", "DeleteStudent", new { id=item.Id },new{@class="lnkDelete button danger icon trash"})
+            </span> 
+          
+            <span>   @Html.ActionLink("Edit", "UpdateStudent", new { id=item.Id },new { @class = "lnkEdit button icon edit" }) 
+            </span>
+             <span>   @Html.ActionLink("Details", "Details", new { id=item.Id },new { @class = "lnkDetail button v" }) 
+             </span>
+         
+        
+        </td>
+    </tr>
+}
+        </tbody>
+</table>

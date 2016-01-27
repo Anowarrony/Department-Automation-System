@@ -1,0 +1,300 @@
+﻿
+
+@model OnlineDepartmentAutomationSystem.Models.StudentResultInsertViewModel
+
+@{
+    ViewBag.Title = "InsertStudentResult"; ViewBag.Title = "T"; Layout = "~/Views/Admin/_AdminLayout.cshtml";
+}
+
+
+<div  class="prettyprint">
+    
+
+    <h2 style="position: relative;left: 25%">
+        <img src="~/Content/1405880856_add_48.png" width="25"/>
+        Add Student Result
+    </h2>
+    
+    @using (Html.BeginForm())
+    {
+        @Html.ValidationSummary(true)
+        <div style="position: relative; left: 23%">
+
+    
+              
+            <div class="editor-label">
+                @Html.LabelFor(model => model.DepartmentName)
+            </div>
+               @Html.DropDownList("DepartmentName", (SelectList) ViewBag.Departments, "Select Department", new {id = "departNameSelectBoxId"})
+                  @Html.ValidationMessageFor(model => model.DepartmentName)
+          
+            
+            <span id="departmentErrorMessage" style="color: red;"></span>
+      
+            <br/>   <br/>  
+        
+            <div class="editor-label">
+                @Html.LabelFor(model => model.YearTerm)
+            </div>
+            <div class="editor-field">
+                @Html.DropDownListFor(m=>m.YearTerm, (SelectList) ViewBag.yearTerms, "Select Year Term", new {id = "yearTermSelectBox"})
+               
+                
+                <span id="yearTermErrorMessage" style="color: red;"></span>     @Html.ValidationMessageFor(m=>m.YearTerm)
+            </div>
+            <br/> <div class="editor-label">
+                      Course Code
+                  </div>
+            <div class="editor-field">
+                <select id="courseCodeSelectBox"   multiple="multiple"></select>
+               
+                <span>
+               
+                    
+                    <select id="codeTextBoxId" name="courseCode"  multiple="multiple" ></select>
+               
+                </span>
+                <span style="color: red"> @ViewBag.errorMsg</span>
+                <span id="courseCodeErrorMessage" style="color: red;"></span>
+            </div>
+            <br/>
+            <div class="editor-label">
+                @Html.LabelFor(model => model.StudentId)
+            </div>
+            <div class="editor-field">
+                @Html.TextBoxFor(model => model.StudentId, new {@class = "empty ", id = "studentIdTextBoxId"})
+                @Html.ValidationMessageFor(m=>m.StudentId)
+                <span id="studentIdErrorMessage" style="color: red;"></span>
+            </div>
+
+           
+            <br/>
+            
+            <div class="editor-label">
+                Gpa
+            </div>
+            <div class="editor-field">
+              
+                @Html.DropDownList("g", (SelectList) ViewBag.gpas, "Select GPA", new {id = "gpaList"})
+               
+                <select id="gpaSelectBoxId" name="gpa"  multiple="multiple" ></select>
+               
+
+                <span id="gpaErrorMessage" style="color: red;">@ViewBag.errorMsg</span>
+            </div>
+            <br/>
+        
+            <p>
+                <input type="submit" value="Add Result"  class="btn btn-info" />
+        
+         
+      
+            </p>
+     
+        </div>
+    }
+</div>
+
+
+
+<div id="f"></div>
+<script id="successTemplate" type="text/x-kendo-template">
+                <div class="insert-success">
+                 
+ 
+     <h3>#= message #</h3>
+                </div>
+            </script>
+
+  <span id="notification" style="display:none;"></span>
+
+<input type="text" value="@ViewBag.successMsgId" style="display: none" id="successId"/>
+
+
+@section Scripts
+{
+
+           @Scripts.Render("~/bundles/jqueryval")
+
+ 
+<script src="~/Bootstrape/jquery.sumoselect.js"></script>
+<script src="~/KendoUI/kendo.all.min.js"></script>
+
+
+<script type="text/javascript">
+
+
+ 
+    $("#codeTextBoxId").click(function () {
+
+
+        var obj = ($("#codeTextBoxId option:selected"));
+        $.each(obj, function (index, item) {
+            $("#courseCodeSelectBox").append($(this));
+        });
+    });
+
+
+
+    $("#courseCodeSelectBox").click(function () {
+        var obj = ($("#courseCodeSelectBox option:selected"));
+        $.each(obj, function (index, item) {
+            $("#codeTextBoxId").append($(this));
+        });
+    });
+
+
+    $("#gpaList").change(function () {
+        var obj = ($("#gpaList option:selected"));
+        $.each(obj, function (index, item) {
+            $("#gpaSelectBoxId").append($(this));
+        });
+    });
+    $("#gpaSelectBoxId").change(function () {
+        var obj = ($("#gpaSelectBoxId option:selected"));
+        $.each(obj, function (index, item) {
+            $("#gpaList").append($(this));
+        });
+    });
+
+    $('#departNameSelectBoxId').SumoSelect();
+    $('#yearTermSelectBox').SumoSelect();
+ 
+    $('#gpaList').SumoSelect({ placeholder: 'Select Grades' });
+    $("#codeTextBoxId").css('width', '290px');
+
+
+    $("#departNameSelectBoxId").change(function () {
+        if ($("#departNameSelectBoxId").val() == "") {
+            $("#departmentErrorMessage").html(" Required!");
+        } else {
+            $("#departmentErrorMessage").html(" ");
+        }
+    });
+
+
+    $("#yearTermSelectBox").change(function () {
+        if ($("#yearTermSelectBox").val() == "") {
+            $("#yearTermErrorMessage").html(" Required!");
+        } else {
+            $("#yearTermErrorMessage").html(" ");
+        }
+    });
+
+    $("#codeTextBoxId").click(function () {
+        if ($("#codeTextBoxId").val() == "") {
+            $("#courseCodeErrorMessage").html(" Required!");
+        } else {
+            $("#courseCodeErrorMessage").html(" ");
+        }
+    });
+
+    $("#studentIdTextBoxId").keyup(function () {
+        if ($("#studentIdTextBoxId").val() == "") {
+            $("#studentIdErrorMessage").html(" Required!");
+        } else {
+            $("#studentIdErrorMessage").html(" ");
+        }
+
+        if ($("#codeTextBoxId").val() == "") {
+            $("#courseCodeErrorMessage").html(" Required!");
+        } else {
+            $("#courseCodeErrorMessage").html(" ");
+        }
+    });
+
+   
+
+    function submitResult() {
+
+        if ($("#departNameSelectBoxId").val() == "") {
+            $("#departmentErrorMessage").html(" Required!");
+        } else {
+            $("#departmentErrorMessage").html(" ");
+        }
+
+        if ($("#yearTermSelectBox").val() == "") {
+            $("#yearTermErrorMessage").html(" Required!");
+        } else {
+            $("#yearTermErrorMessage").html(" ");
+        }
+        if ($("#codeTextBoxId").val() == "") {
+            $("#courseCodeErrorMessage").html(" Required!");
+        } else {
+            $("#courseCodeErrorMessage").html(" ");
+        }
+        if ($("#studentIdTextBoxId").val() == "") {
+            $("#studentIdErrorMessage").html(" Required!");
+        } else {
+            $("#studentIdErrorMessage").html(" ");
+        }
+        if ($("#gpaList").val() == null) {
+            $("#gpaErrorMessage").html(" Required!");
+        } else {
+            $("#gpaErrorMessage").html(" ");
+        }
+
+      
+    }
+</script>
+
+ <script> $('#yearTermSelectBox').on('change', function () {
+    var courseCodeDropdown = $('#courseCodeSelectBox');
+    courseCodeDropdown.prop('disabled', 'disabled');
+    courseCodeDropdown.empty();
+    var departmentId = $("#departNameSelectBoxId").val();
+    var yearTermId = $(this).val();
+    if (departmentId.length > 0) {
+
+        $.getJSON('@Url.Action("GetCoursesByDepartmentAndYearTerm")', {
+                DepartmentName: departmentId, YearTerm: yearTermId
+            })
+            .done(function (data) {
+
+                courseCodeDropdown.removeProp('disabled');
+
+                $.each(data, function (i, state) {
+
+                    var option = $('<option />').html(state);
+
+                    courseCodeDropdown.append(option);
+                });
+            })
+            .fail(function (jqxhr, textStatus, error) {
+                var err = textStatus + ", " + error;
+                console.log("Request Failed: " + err);
+            });
+    }
+});</script>
+    
+<script>
+ 
+        var notification = $("#notification").kendoNotification({
+            position: {
+                pinned: true,
+                top: 30,
+                left: 500
+            },
+            autoHideAfter: 4000,
+            stacking: "down",
+            templates: [
+                {
+                    type: "insert-success",
+                    template: $("#successTemplate").html()
+                }
+            ]
+
+        }).data("kendoNotification");
+
+        if ($("#successId").val() == 1) {
+            
+            notification.show({
+                message: "<img src='/Content/button_ok.png' />  Result Inserted Successfully  "
+            }, "insert-success");
+
+
+        }
+
+
+    </script>
+    }

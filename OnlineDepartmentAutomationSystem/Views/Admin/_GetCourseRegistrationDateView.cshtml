@@ -1,0 +1,48 @@
+﻿@using OnlineDepartmentAutomationSystem.Models
+@model CourseRegistrationDateViewModel
+@{        var db = new DeptAutDbContext();
+    int? allowRegId = 0; 
+   }
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th >Department</th>
+            <th>Start Date</th>
+            <th>Last Date</th>
+             <th>Days Left</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+        @foreach (var item in (IEnumerable<CourseRegistrationDateViewModel>)
+            ViewData["getCourseRegDateDetails"])
+        {
+            var d1 =Convert.ToDateTime( item.LastDate.ToShortDateString());
+            var d2 = Convert.ToDateTime(DateTime.Now.ToShortDateString());
+            var daysLeft = (d1 - d2).TotalDays;
+            var getRegAllowId = db.RegistrationDates.Find(item.Id).AllowReg;
+             <tr>
+                <td style="text-align: center">@Html.DisplayFor(m=>item.Department)</td> 
+                <td style="text-align: center">@Html.DisplayFor(m=>item.StartDate)</td> 
+                <td style="text-align: center">@Html.DisplayFor(m=>item.LastDate)</td> 
+                 <td style="text-align: center">
+                     @if (ViewBag.displayDaysLeftId == 1)
+                     {
+                         @daysLeft
+                     }
+                     else
+                     {
+                         <span>Not available now</span>
+                     }
+                 </td> 
+                <td style="text-align: center"><i class="icon-trash"></i> @Html.ActionLink("Delete ","DeleteCourseRegistrationDate",new{id=item.Id},new{@class="lnkDelete"})</td>
+            </tr>
+        }
+
+    </tbody>
+</table>
+
+<script>
+    $(".lnkDelete").css('background', 'none');
+</script>

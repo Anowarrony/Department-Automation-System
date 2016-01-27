@@ -1,0 +1,123 @@
+﻿
+@using OnlineDepartmentAutomationSystem.Models
+@model StudentSearchModel
+@{Layout = "~/Views/Admin/_AdminLayout.cshtml";
+    ViewBag.Title = "GetStudentsDetailsByDepartment";
+}
+
+<div class="prettyprint">
+    
+    
+
+    @using (Html.BeginForm())
+    {
+    
+        <table>
+            <tr>
+                <td>Search By StudentId</td>
+                <td>      @Html.TextBoxFor(m=>m.SearchTerm,new{id="serBox"}) </td>
+                <td>            <button type="submit" id="btnSearch"  class="btn btn-large" style="color: black">
+                                    <i class="icon-search">
+                                    </i>  Search
+                                </button>
+
+                </td>
+                <td>
+                                             
+       
+                </td>
+                <td>
+                    <span style="display: none" id="loadingId">                       
+                        <img src="~/Images/495.GIF" alt=""/>
+                    </span> 
+                </td>
+            </tr>
+        </table>
+
+                                 
+        <br/>@Html.ValidationMessageFor(m=>m.SearchTerm)
+    }
+               
+    <input type="text" value="@ViewBag.s" id="gv" style="display: none"/>
+   
+<table   id="studentDetailsKedoGrid" >
+               
+    <thead> <tr>
+                <th data-sortable="false" data-menuable="false" data-filterable="false">Image</th>
+                <th data-sortable="false" data-menuable="false" data-filterable="false">Name</th>
+                <th data-sortable="false" data-menuable="false" data-filterable="false">Student ID</th>
+                <th >Department</th>
+                <th data-sortable="false" data-menuable="false" data-filterable="false">Session</th>
+                         
+                         
+                    
+                
+                       
+                <th data-sortable="false" data-menuable="false" data-filterable="false">Actions</th>
+            </tr></thead>
+    <tbody>
+        @foreach (var item in (IEnumerable<StudentDetailsViewModel>)ViewData["studentDetails"])
+        {
+    
+            <tr class="success">
+                <td><img src="data:image/jpg;base64,@Convert.ToBase64String(item.Image)" width="70px" height="60"/></td>
+                <td >@Html.DisplayFor(m=>item.Name)</td>
+                <td>@Html.DisplayFor(m=>item.StudentUniversityId)</td>
+                <td>@Html.DisplayFor(m=>item.Department)</td>
+                <td>@Html.DisplayFor(m=>item.Session)</td>
+                              
+       
+                       
+                            
+                              
+                <td>
+                                    
+                   @Html.ActionLink("Delete","DeleteStudent","Admin",new{id=item.StudentId},new{@class="lnkDelete",style="text-decoration: underline;background: none"})
+                    @Html.ActionLink("Details","GetStudentDetails",new{id=item.StudentId},new{@class="lnkDetail",style="text-decoration: underline;background: none"})
+                    @Html.ActionLink("Edit","UpdateStudent","Admin",new{id=item.StudentId},new{@class="lnkEdit",style="text-decoration: underline;background: none"})
+        
+                 
+                          
+                  
+                </td>
+                            
+                            
+                                
+                            
+                            
+            </tr>
+        }
+
+    </tbody>
+</table>
+    <input type="button" value="Reload" id="btnLoadAllData"  onclick="getAllData();" class="btn btn-info" style="color: white"/>             
+</div>
+
+@section scripts{
+    
+    <script src="~/KendoUI/kendo.all.min.js"></script>
+    
+    <script>
+        function getAllData() {
+
+            window.location.href = window.location.href;
+         
+        }
+
+        $("#studentDetailsKedoGrid").kendoGrid({
+            pageable: {
+                refresh: true,
+                pageSizes: true,
+                buttonCount: 5
+            },
+            dataSource: { pageSize: 5 },
+
+            scrollable: false,
+            sortable: true,
+            filterable: true,
+            columnMenu: false,
+            serverPaging: true,
+            type: "odata"
+        });
+    </script>
+}

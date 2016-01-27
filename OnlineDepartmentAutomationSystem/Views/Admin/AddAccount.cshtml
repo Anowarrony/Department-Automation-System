@@ -1,0 +1,387 @@
+﻿@using MvcApplication8.Models
+@model OnlineDepartmentAutomationSystem.Models.AccountAddModel
+
+@{
+    ViewBag.Title = "AddAccount"; ViewBag.Title = "T"; Layout = "~/Views/Admin/_AdminLayout.cshtml";
+}
+<style>
+    .ui-dialog-titlebar-close{background: red}
+</style>
+
+<script src="~/jqwidgets/jquery-1.11.1.min.js"></script>
+
+  
+
+<div  class="prettyprint">
+    <div id='jqxWidget' style="font-size: 13px;position: relative;left: 15%; font-family: Verdana;">
+        <div id="grid"></div>
+        
+        <div id="jqxwindow">
+            <h2 style="text-align: center">
+                <img src="~/Content/search(1).png" width="28"/>
+                Search Account 
+            </h2>
+            <div style="overflow: hidden;">
+                <div>
+                    Find what:</div>
+                <div style='margin-top:5px;'>
+                    <input id='inputField' type="text" class="jqx-input" style="width: 200px; height: 23px;" />
+                    <span id="requiredMsg">
+                        
+                    </span>
+                </div>
+                <div style="margin-top: 7px; clear: both;">
+                    Look in:</div>
+                <div style='margin-top:5px;'>
+                    <div id='dropdownlist'>
+                    </div>
+                </div><br/>
+                <div>
+                    <input type="button" class="btn btn-large" style='margin-top: 15px; margin-left: 50px; float: left;' value="Search" id="findButton" />
+                    <input type="button" class="btn btn-danger" style='margin-left: 5px; margin-top: 15px; float: left;' value="Clear" id="clearButton" />
+                </div>
+            </div>
+        </div>
+      
+    </div>
+
+    <br/>
+    <h2 style="text-align: center">
+        <img src="~/Content/1405880856_add_48.png" width="25"/>
+        Add New Account for Registered Student
+    </h2>
+    @using (Html.BeginForm())
+    {
+        <div style="position: relative;left: 16%">
+            @Html.ValidationSummary(true)
+
+            <div class="editor-label">
+                @Html.LabelFor(model => model.Username)
+            </div>
+            <div class="editor-field">
+                @Html.TextBoxFor(model => model.Username, new { @class = "empty" })
+                @Html.ValidationMessageFor(model => model.Username)
+            </div>
+            <br/>
+            <div class="editor-label">
+                @Html.LabelFor(model => model.Password)
+            </div>
+            <div class="editor-field">
+                @Html.TextBoxFor(model => model.Password, new { @class = "empty" })
+                @Html.ValidationMessageFor(model => model.Password)
+            </div>
+            <br/>
+            <div class="editor-label">
+                @Html.LabelFor(model => model.UserId)
+            </div>
+            <div class="editor-field">
+                @Html.TextBoxFor(model => model.UserId, new { @class = "empty" })
+                @Html.ValidationMessageFor(model => model.UserId)
+            </div>
+            <br/>
+            <p>
+                <input type="submit" value="Add Account" class="button pill" id="btnSubmit"/>
+            
+
+            </p>
+        </div>
+    }
+    <div id="successMessageDisplayId">
+     
+    </div>
+    <div id="jqxErrorDialog" style="font-family: Courier New;font-size: 19px;display: none">
+        <img src="~/Content/cancel(1).png" width="29"/>
+        Please select a <b>row </b>to delete.
+    </div>
+    <div id="jqxDelete" style="font-family: Courier New;font-size:19px;display: none">
+        <img src="~/Content/1405880767_warning_48.png" width="30" />
+        Are you sure to <b>delete</b> this <b>account</b>? This will <b>delete</b> the account <b>permanently</b>.
+    </div>
+    <input type="text" value="@ViewBag.successMessageShowId " style="display: none" id="successMessageCheckId"/>
+   
+    <script type="text/javascript">
+    
+  
+   
+
+        function SuccessMsgShow(message) {
+            $("#successMessageDisplayId").html('<p id="sucessMsgAlignId">' + ' <img src="/Content/1405880759_accepted_48.png" />' + " " + "<span>" + message + "</span>" + "</p>").slideDown().delay(3000).slideUp();
+
+        }
+  
+   
+        if ($("#successMessageCheckId").val()==1) {
+            SuccessMsgShow('An account has been added successfully.');
+
+            $(".empty").attr('value',"");
+
+        }
+
+
+        $(document).ready(function () {
+
+
+     
+        
+
+            
+
+            var source =
+            {
+                datatype: "json",
+                datafields: [
+                    { name: 'Id' },
+                    { name: 'Username' },
+                    { name: 'Password' },
+                    { name: 'UserId' }
+              
+           
+                ],
+                id: 'Id',
+                url: '/Admin/GetAccounts' ,       deleterow: function (rowid) {
+                    // synchronize with the server - send delete command
+                    var data = "Id=" + rowid;
+                    $.ajax({
+                        dataType: 'json',
+                        url: '/Admin/Delete',
+                        data: data,
+                        success: function (data, status, xhr) {
+                            // delete command is executed.
+                        }
+                    });
+                },
+
+                updaterow: function (rowid, rowdata) {
+                    // synchronize with the server - send update command
+                    var data = $.param(rowdata);
+                    $.ajax({
+                        dataType: 'json',
+                        url: '/Admin/Update',
+                        data: data,
+                        success: function (data, status, xhr) {
+                            // update command is executed.
+                        }
+                    });
+                }
+
+
+            };
+        
+
+            var initrowdetails = function (index, parentElement, gridElement, datarecord) {
+                var tabsdiv = null;
+                var information = null;
+           
+                tabsdiv = $($(parentElement).children()[0]);
+                if (tabsdiv != null) {
+                    information = tabsdiv.find('.information');
+               
+                    var title = tabsdiv.find('.title');
+                    title.text(datarecord.Username+"'s Details");
+
+                    var container = $('<div style="margin: 5px;"></div>');
+                    container.appendTo($(information));
+                    var photocolumn = $('<div style="float: left; width: 15%;"></div>');
+                    var leftcolumn = $('<div style="float: left; width: 45%;"></div>');
+                    var rightcolumn = $('<div style="float: left; width: 40%;"></div>');
+                    container.append(photocolumn);
+                    container.append(leftcolumn);
+                    container.append(rightcolumn);
+
+
+                    var username = "<div style='margin: 10px;'><b>User Name:</b> " + datarecord.Username + "</div>";
+                    var password = "<div style='margin: 10px;'><b>Password:</b> " + datarecord.Password + "</div>";
+                    var universityId = "<div style='margin: 10px;'><b>User ID:</b> " + datarecord.UserId + "</div>";
+             
+                    $(leftcolumn).append(username);
+                    $(leftcolumn).append(password);
+                    $(leftcolumn).append(universityId);
+       
+
+           
+
+               
+                    $(tabsdiv).jqxTabs({ width: 750, height: 170 });
+                }
+            }
+            var imagerenderer = function (row, datafield, value) {
+                return '<img style="margin-left: 5px;" height="60" width="50" src="Image"/>';
+            }
+            $("#grid").jqxGrid(
+            {
+          
+                source: source,
+        
+                sortable: true,
+                autorowheight: true,
+                autoheight: true, columnsresize: true, rowdetails: true,
+
+                rowdetailstemplate: { rowdetails: "<div style='margin: 10px;'><ul style='margin-left: 30px;'><li class='title'></li><li></li></ul><div class='information'></div><div class='notes'></div></div>", rowdetailsheight: 150 },         
+                initrowdetails: initrowdetails, showstatusbar: true,
+
+                renderstatusbar: function (statusbar) {
+                    // appends buttons to the status bar.
+                    var container = $("<div style='overflow: hidden; position: relative; margin: 5px;'></div>");
+          
+                    var deleteButton = $("<div style='float: left; margin-left: 5px;'><img style='position: relative; margin-top: 2px;' src='/Content/close.png'/><span style='margin-left: 4px; position: relative; top: 2px;'>Delete</span></div>");
+                    var reloadButton = $("<div style='float: left; margin-left: 5px;'><img style='position: relative; margin-top: 2px;' src='/Content/refresh.png'/><span style='margin-left: 4px; position: relative; top: 2px;'>Reload</span></div>");
+                    var searchButton = $("<div style='float: left; margin-left: 5px;'><img style='position: relative; margin-top: 2px;' src='/Content/search.png'/><span style='margin-left: 4px; position: relative; top: 2px;'>Find</span></div>");
+            
+                    container.append(deleteButton);
+                    container.append(reloadButton);
+                    container.append(searchButton);
+                    statusbar.append(container);
+           
+                    deleteButton.jqxButton({  width: 65, height: 20 });
+                    reloadButton.jqxButton({  width: 65, height: 20 });
+                    searchButton.jqxButton({  width: 50, height: 20 });
+                    // add new row.
+         
+               
+
+                    // delete selected row.
+                    deleteButton.click(function (event) {
+                        var selectedrowindex = $("#grid").jqxGrid('getselectedrowindex');
+                        var rowscount = $("#grid").jqxGrid('getdatainformation').rowscount;
+                        if (selectedrowindex >= 0 && selectedrowindex < rowscount) {
+
+
+                            $("#jqxDelete").dialog({
+                                width: 600, modal: true,
+                                title: 'Account delete warning dialog',
+                                buttons: {
+                                    "Yes": function () {
+                             
+                                        var id = $("#grid").jqxGrid('getrowid', selectedrowindex);
+                                        $("#grid").jqxGrid('deleterow', id);
+
+                                        $("#grid").jqxGrid({ source: source });
+                                        $(this).dialog('close');
+                                    }, "No": function () {
+                                        $(this).dialog('close');
+                                        $("#grid").jqxGrid({ source: source });
+                                    }
+                                }
+                            });
+
+                     
+                        } else {
+                            $("#jqxErrorDialog").dialog({title:'Error',width:420,buttons:{"Ok":function (){$(this).dialog('close');}}});
+                        }
+
+                    });
+                    // reload grid data.
+                    reloadButton.click(function (event) {
+                        $("#grid").jqxGrid({ source: source });
+                    });
+                    // search for a record.
+                    searchButton.click(function (event) {
+                        var offset = $("#grid").offset();
+           
+                        $("#jqxwindow").dialog('open');
+                        $("#jqxwindow").dialog('move', offset.left + 120, offset.top + 30);
+
+
+                    });
+                },
+
+                pageable: true, filterable: true, showtoolbar: true, enabletooltips: true, theme: 'darkblue', pagesize: 5,
+        
+       
+                columns: [
+                    { text: ' ID', dataField: 'Id', cellsalign: 'center', align: 'center' },
+                    { text: 'Account Name', dataField: 'Username', cellsalign: 'center', align: 'center' },
+                    { text: 'Password', dataField: 'Password', cellsalign: 'center', align: 'center' },
+                    { text: 'User ID', dataField: 'UserId', cellsalign: 'center', align: 'center' }
+   
+
+                ]
+            });
+            $("#dropdownlist").jqxDropDownList({
+                autoDropDownHeight: true, selectedIndex: 0, width: 200, height: 23,
+                source: [
+                    'User Name', 'User ID'
+                ]
+            });
+
+            $("#updaterowbutton").bind('click', function () {
+          
+                var selectedrowindex = $("#grid").jqxGrid('getselectedrowindex');
+                var rowscount = $("#grid").jqxGrid('getdatainformation').rowscount;
+                if (selectedrowindex >= 0 && selectedrowindex < rowscount) {
+                    var id = $("#grid").jqxGrid('getrowid', selectedrowindex);
+       
+
+          
+                    $.ajax({
+                        dataType: 'json',
+                        url: '/Admin/UpdateAccount',
+                        data: id,
+                        success: function (data, status, xhr) {
+                            // delete command is executed.
+                        }
+                    });
+                }
+            });
+
+            $("#clearButton").click(function () {
+                $("#grid").jqxGrid('clearfilters');
+            });
+
+            // find records that match a criteria.
+            $("#findButton").click(function () {
+
+                if ($("#inputField").val() == "") {
+                    $("#requiredMsg").html('* Required!').css('color','red');
+                }
+                $("#inputField").keyup(function () {
+                    if ($("#inputField").val() == "") {
+                        $("#requiredMsg").html('* Required!').css('color', 'red');
+                    } else {
+                        $("#requiredMsg").html('');
+                    }
+               
+                });
+                $("#grid").jqxGrid('clearfilters');
+                var searchColumnIndex = $("#dropdownlist").jqxDropDownList('selectedIndex');
+                var datafield = "";
+                switch (searchColumnIndex) {
+                case 0:
+                    datafield = "Username";
+                    break;
+             
+                case 1:
+                    datafield = "UserId";
+                    break;
+             
+              
+                }
+
+                var searchText = $("#inputField").val();
+                var filtergroup = new $.jqx.filter();
+                var filter_or_operator = 1;
+                var filtervalue = searchText;
+                var filtercondition = 'contains';
+                var filter = filtergroup.createfilter('stringfilter', filtervalue, filtercondition);
+                filtergroup.addfilter(filter_or_operator, filter);
+                $("#grid").jqxGrid('addfilter', datafield, filtergroup);
+            
+                $("#grid").jqxGrid('applyfilters');
+            });
+    
+            $("#jqxwindow").dialog({ resizable: false, autoOpen: false, width: 320, height: 320 });
+
+        });
+
+
+  
+    </script>
+</div>
+
+    @section Scripts
+{
+
+           @Scripts.Render("~/bundles/jqueryval")
+
+
+    }

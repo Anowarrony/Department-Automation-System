@@ -1,0 +1,140 @@
+﻿@using OnlineDepartmentAutomationSystem.Models
+@model HallAddViewModel
+
+@{
+    ViewBag.Title = "AddHall";
+}
+
+<div class="prettyprint">
+<table id="hallGridView">
+    <thead>
+        <tr>
+            <th style="text-align: center">Hall Name</th>
+            <th style="text-align: center;">Actions</th>
+        </tr>
+    </thead>
+    
+    <tbody>
+        @foreach (var item in (IQueryable<HallDetailsModel>) ViewBag.hallDetails)
+        {
+             <tr>
+            <td>
+                @Html.DisplayFor(m=>item.HallName)
+            </td>
+            <td>@Html.ActionLink("delete","DeleteHall",new{id=item.HallId},new{style="text-decoration: underline;background: none;"})</td>
+        </tr>
+        }
+
+       
+        
+
+    </tbody>
+</table>
+    <h2 id="HallAddId" style="cursor: pointer">+Add Hall</h2>
+    <div id="HallInsertBoxHideShowId">
+        
+    
+    @using (Html.BeginForm())
+{
+    
+   
+
+    <fieldset >
+     
+        <legend>HallAddViewModel</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.HallName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.HallName)
+            @Html.ValidationMessageFor(model => model.HallName)
+          @Html.ValidationSummary(true)
+        </div>
+
+        <p>
+            <input type="submit" value="Add Hall" class="btn btn-success" />
+        </p>
+    </fieldset>
+}
+    </div>
+    
+    
+    
+    
+    
+  
+
+</div>
+<div style="display: none;font-size: 21px;font-weight: bold" id="messageNotification">
+    New Hall Has been added successfully
+</div>
+
+<input type="hidden" id="AddSuccessIdTextBox" value="@ViewBag.addSuccessId"/>
+@section scripts{
+    <script src="~/KendoUI/kendo.all.min.js"></script>
+    <script>
+
+        $(function() {
+            $("#messageNotification").jqxNotification({
+                width: "50%",
+                position: "top-right",
+                opacity: 0.9,
+                autoOpen: false,
+                animationOpenDelay: 800,
+                autoClose: true,
+                autoCloseDelay: 8000,
+                template: "info",
+                icon: { width: 35, height: 35, url: '/Content/1405880759_accepted_48.png', padding: 5 }
+            });
+            if ($("#AddSuccessIdTextBox").val() == 1) {
+                $("#messageNotification").jqxNotification("open");
+            }
+            $(".btn").css('color', 'white');
+        });
+        $("#hallGridView").kendoGrid({
+            pageable: {
+                refresh: true,
+                pageSizes: true,
+                buttonCount: 5
+            }
+
+            , dataSource: { pageSize: 5 }
+            ,
+
+            scrollable: false
+            ,
+            sortable: true,
+            filterable: true,
+            columnMenu: false,
+            serverPaging: true,
+            type: "odata"
+        });
+
+        $(function() {
+            $("#HallInsertBoxHideShowId").hide();
+        });
+        $("#HallAddId").click(function () {
+            if ($('#HallInsertBoxHideShowId').is(':hidden')) {
+                $('#HallInsertBoxHideShowId').show();
+                $("#HallAddId").text(" -Close").css('color','red');
+            } else {
+                $("#HallInsertBoxHideShowId").hide();
+                $("#HallAddId").text("+Add Hall").css('color','green');
+            }
+        });
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+}

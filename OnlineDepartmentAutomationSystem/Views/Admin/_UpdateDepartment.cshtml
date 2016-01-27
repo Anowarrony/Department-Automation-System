@@ -1,0 +1,116 @@
+﻿@model OnlineDepartmentAutomationSystem.Models.DepartUpdateViewModel
+
+@{
+    ViewBag.Title = "UpdateDepartment";
+}
+
+
+<script src="~/jqwidgets/jquery-1.11.1.min.js"></script>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+    <table>
+        <tr>
+            <td style="text-align: right">  @Html.LabelFor(model => model.DepartmentShortName)</td>
+            <td style="text-align: left">      @Html.EditorFor(model => model.DepartmentShortName)
+                @Html.ValidationMessageFor(model => model.DepartmentShortName)</td>
+        </tr>
+           <tr>
+            <td style="text-align: right">  @Html.LabelFor(model => model.DepartmentFullName)</td>
+            <td style="text-align: left">      @Html.EditorFor(model => model.DepartmentFullName)
+                @Html.ValidationMessageFor(model => model.DepartmentFullName)</td>
+        </tr>
+        <tr><td></td></tr>     <tr><td></td></tr>
+        <tr>
+            <td style="text-align: right">  @Html.LabelFor(model => model.Faculty)</td>
+            <td style="text-align: left">
+                
+             
+                @Html.DropDownList("Faculty", (SelectList)ViewData["faculties"],"Select Faculty" )
+         
+                @Html.ValidationMessageFor(model => model.Faculty)
+                                
+            </td>
+       
+        </tr>
+        
+        <tr>
+            <td></td>
+         
+        </tr>       <tr>
+            <td></td>
+         
+        </tr>       <tr>
+            <td></td>
+         
+        </tr>
+             <tr>
+            <td></td>
+                 <td style="text-align: left">
+                     
+                      <button type="submit" class="btn btn-info" >
+                <i class="icon-edit  icon-white"></i> Save
+            </button>
+               <button type="button" class="btn btn-danger" onclick="closeDialog();">
+                <i class="icon-remove  icon-white"></i> Cancel
+            </button> 
+                 </td>
+        </tr>
+    </table>
+   
+    
+}
+
+
+
+<script>
+    function closeDialog() {
+        location.reload();
+    }
+
+
+    $('.btn').css('color', '#fff');
+    $('.cancel').css('color', 'white').css('background','red');
+    function onShow(e) {
+        kendoConsole.log("event :: show");
+    }
+
+    function onHide(e) {
+        kendoConsole.log("event :: hide");
+    }
+
+
+    $(function () {
+      
+      
+        
+        $("#facultySelectBox").css('visibility', 'hidden');
+        var t = $("#facultyselectId").kendoTooltip({
+            content: "<img src='/Content/info_blue.png' width='23'/> Faculty is  : " + "<span style='color:#489812;font-size:20px;font-family:Courier New;font-weight:bold'>" + $("#facultySelectBox").val() + "</span> in database now.You can update it",
+            autoHide: true,
+            show: onShow,
+            hide: onHide,
+            position: "right",
+           
+            width: 300
+        });
+    
+        
+    });
+
+    $("#facultyselectId").change(function () {
+
+        $("#facultySelectBox").attr('value', $("#facultyselectId").val());
+      
+
+    });
+</script>
+
+
+    @section Scripts
+    {
+
+        @Scripts.Render("~/bundles/jqueryval")
+
+
+    }

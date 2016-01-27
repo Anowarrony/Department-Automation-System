@@ -1,0 +1,106 @@
+﻿
+@using OnlineDepartmentAutomationSystem.Models
+@model StudentImageUploadViewModel
+
+@{
+    ViewBag.Title = "T";
+}
+
+<style>  
+ #error{color: red;font-family: Arial;font-size: 19px}
+</style>
+
+<link href="~/Content/css/bootstrap.css" rel="stylesheet" />
+<script src="~/Scripts/jquery-1.7.1.js"></script>
+<script src="~/Scripts/jquery-ui-1.8.20.js"></script>
+<div class="post">
+    <h2 style="text-align: center">
+     <img src="~/Content/system_software_update.png" width="35"/>
+         Update Your Image
+     </h2>
+    <div style="position: relative;left: 23%;font-family: Arial;">
+        @using(Html.BeginForm("UpdateStudentImage","Student",FormMethod.Post, new { enctype = "multipart/form-data" }))
+
+        {
+            <table>
+                <tr>
+                    <td style="text-align: right">Select Image</td>
+                    <td> @Html.FileFor(model => model.File)</td>
+                    <td style="text-align: left">          @Html.ValidationMessageFor(model => model.File)</td>
+                </tr>
+                <tr><td></td></tr>     
+                <tr>
+                    <td></td>
+                    <td style="text-align: left">
+                        
+                     <button type="submit" class="btn btn-success" id="imageUpdateButtonId">
+                <i class="icon-edit icon-white" ></i>  Update
+            </button>       
+    
+                    
+                    </td>
+                    <td>  
+                    </td>
+                </tr>
+            </table>
+       
+      
+        }
+    </div>
+</div>
+<input type="hidden" value="@ViewBag.successDialogId" id="successDiaValId"/>
+
+<div id="messageNotification" style="display: none">
+    @ViewBag.successMsg
+</div>
+<div  id="divLoading" >        
+                     <img src="~/Images/ajax-loader.gif" style="background-position: center;position: relative;left: 40%;top: 10px"/>    
+     </div>
+
+@section Scripts
+{
+
+<script src="~/Scripts/jquery-1.8.2.js"></script>
+
+    <script>
+        var t = $("#setDpt").val();
+    
+        $(function () {
+            $("#messageNotification").jqxNotification({ width: "auto", position: "top-left", opacity: 0.9, template: null, icon: { width: 50, url: '/Content/clear_green_button.png', padding: 5 } });
+
+            if ($("#successDiaValId").val() == 1) {
+
+                $("#messageNotification").jqxNotification("open");
+            }
+     
+
+
+        });
+
+
+        var c = "";
+        if ($("#EmptyFieldId").val() == 1) {
+       
+            $(".empty").attr('value',c);
+          
+        }
+        
+        $(function () {
+            initSelect();
+        });
+
+
+      
+
+        $("#imageUpdateButtonId").click(function () {
+            if ($("#File").val() != "") {
+                lodingFunction();
+            }
+
+        });
+       
+    </script>
+}
+<script>
+  
+</script>

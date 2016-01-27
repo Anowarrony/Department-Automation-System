@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewBag.Title = "ProcessingError";
+}
+<script src="~/Scripts/jquery-1.7.1.js"></script>
+<h2 style="color: red;">We cann't process your request now .It's just a technical problem.If your javascript is off then on it manally to your firefox and  try again .</h2>
+<br /><h3 style="font-size: 20px;color: black">
+The problem can be caused for the following reasons:<br/>
+1. You click the <b>Update </b> button <b>randomly(again and agin)</b><br/>
+
+2.Javascript is off in your Firefox<br/>
+
+3.You click the <b>Update </b> button before the page loaded fully.<br/>
+
+So,make sure that the above mentioned reasons won't be happen any more<br/>
+@Html.ActionLink("Go Back To Previous Page","AddDepartment","Admin",new{id="ProcessingErrorBackButtonId"})
+</h3>
+<script>
+    $("#ProcessingErrorBackButtonId").css({ 'text-decoration': 'underline', 'background': 'none' });
+    $("#ProcessingErrorBackButtonId").hover(function() {
+        $("#ProcessingErrorBackButtonId").css({ 'color': 'green', 'font-weight': 'bold' });
+    },function() {
+        $("#ProcessingErrorBackButtonId").css({ 'color': 'black', 'font-weight': 'normal' });
+    });
+</script>

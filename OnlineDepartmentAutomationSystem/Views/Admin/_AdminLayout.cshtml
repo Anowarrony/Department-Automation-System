@@ -1,0 +1,230 @@
+﻿
+@using OnlineDepartmentAutomationSystem.Models
+<!DOCTYPE html>
+<html lang="en" class="loading">
+    <head>
+        <meta charset="utf-8" />
+        <title>@ViewBag.Title - My ASP.NET MVC Application</title>
+       
+         <meta name="viewport" content="width=device-width" />
+        @Styles.Render("~/Content/css")
+        
+              <link href="~/Content/css/loading.css" rel="stylesheet" />
+ <link href="~/Content/all.css" rel="stylesheet" />
+ <link href="~/jqwidgets/jqx.base.css" rel="stylesheet" />
+ <link href="~/Content/Site.css" rel="stylesheet" />
+ <link href="~/Content/Al.css" rel="stylesheet" />
+ <link href="~/Content/jquery-ui-1.9.2.custom.css" rel="stylesheet" />   
+<link href="~/jqwidgets/jqx.arctic.css" rel="stylesheet" />
+<link href="~/Bootstrape/sumoselect.css" rel="stylesheet" />
+<link href="~/Content/styles.css" rel="stylesheet" />
+<link href="~/KendoUI/kendo.common.min.css" rel="stylesheet" />
+<link href="~/KendoUI/kendo.dataviz.default.min.css" rel="stylesheet" />
+<link href="~/KendoUI/kendo.dataviz.min.css" rel="stylesheet" />
+<link href="~/KendoUI/kendo.default.min.css" rel="stylesheet" />
+<link href="~/KendoUI/kendo.rtl.min.css" rel="stylesheet" />
+<link href="~/Content/gh-buttons.css" rel="stylesheet" /> 
+<link href="~/Accordion/css/jquery-ui-1.10.3.custom.css" rel="stylesheet" />    
+<link href="~/Content/css/bootstrap.css" rel="stylesheet" />
+        <style>
+           .ui-dialog-titlebar{background: white}
+           .ui-dialog{background: white}
+             #logo{color: white;background: none;}
+        </style> 
+
+        @Scripts.Render("~/bundles/modernizr")
+    </head>
+    <body>
+    
+               
+    
+        <div id="header"> <img src="~/Content/NSTU_Logo.jpg" width="66"/>
+            
+            <span>
+                  @if (Request.IsAuthenticated)
+                  {
+                      using (Html.BeginForm("LogOff", "Login", FormMethod.Post, new { id = "logoutForm", @class = "" }))
+                      {
+                                            @Html.AntiForgeryToken()
+                                        
+                   <a id="logOffLink" style="color: white;text-decoration: underline;font-weight: bold" href="javascript:document.getElementById('logoutForm').submit()">   Log off</a> 
+                      }
+                  }  
+            </span>
+            <span>    <a id="logo" href="@Url.Action("Index", "Home")"  title="Home" style="position: relative;left: 92%;">
+     
+         
+                HOME
+        
+        
+            </a></span>
+      
+            <div id="header-menu">
+                <ul class="menu clearfix">
+                
+             
+                 
+            
+                </ul>
+            </div>
+        </div>
+        <div id="body" >
+            <div id="dialog-alert" style="display: none">
+        <p>
+            @TempData["msg"]!
+        </p>
+    </div>
+ 
+    <div id="dialog-confirm" style="display: none">
+        <p style="font-family: Courier New;font-size: 19px">
+
+            <img src="~/Content/1405880767_warning_48.png" width="35"/>
+            Are you sure to <b>delete</b> this Record <b>permanently</b>?
+        </p>
+    </div>
+  
+    <div id="dialog-edit" style="display: none">
+    </div>
+    <div id="dialog-detail" style="display: none">
+    </div>
+
+            <div class="navigation" id="navigation" style="position: absolute;top: 18%;left:0%">
+                <a class="nav-toggler" href="#" id="navToggler">
+                    <span class="show-nav">&#9776;</span>
+                    <span class="hide-nav">&times;</span>
+                </a>
+                @if (Request.IsAuthenticated)
+                {
+  
+                
+                    <div class="navigation__inner">
+                        <ul>
+                            <li>
+                                <h2>All Task</h2>
+                            </li>
+    
+                        
+                            <li style="font-family: Arial;font-size: 21px;">
+                                @Html.ActionLink("Main Page", "DisplayAdminHomePage", "Admin", new { id = "MainPageLinkId" })       
+                            </li>
+
+                            <li style="font-family: Arial;font-size: 14px;">
+                                @Html.ActionLink("Add New Student", "AddNewStudent", "Admin", new { @class = "link", id = "NewStudentAddLinkId" })                             
+                            </li>
+        
+                            <li style="font-family: Arial;font-size: 14px;">
+                                @Html.ActionLink("Add New Department", "AddDepartment", "Admin", new { @class = "link", id = "DepartmentAddLinkId" })
+                   
+                            </li>
+                            <li style="font-family: Arial;font-size: 14px;">
+                                @Html.ActionLink("Add New Accounts", "AddAccount", "Admin", new { @class = "link", id = "AccountAddLinkId" })
+                    
+                            </li>
+                        
+                            <li style="font-family: Arial;font-size: 14px;">
+                                @Html.ActionLink("Add New Session", "AddSession", "Admin", new { @class = "link", id = "SessionAddLinkId" })
+                   
+                            </li>
+                            <li style="font-family: Arial;font-size: 14px;">
+                                @Html.ActionLink("Add New Faculty", "AddFaculty", "Admin", new { @class = "link", id = "FacultyAddLinkId" })
+                    
+                            </li>
+
+                            <li style="font-family: Arial;font-size: 14px;">
+                                @Html.ActionLink("Add Current Semister", "AddCurrentSemister", "Admin", new { @class = "link", id = "CurrentSemisterAddLinkId" })
+                  
+                            </li>
+                            <li style="font-family: Arial;font-size: 14px;">
+                                @Html.ActionLink("Add Student Result", "InsertStudentResult", "Admin", new { @class = "link", id = "ResultAddLinkId" })
+                   
+                            </li>
+                            <li style="font-family: Arial;font-size: 14px;">
+                                @Html.ActionLink("Add Course", "AddCourse", "Admin", new { @class = "link", id = "CourseAddLinkId" })
+                   
+                            </li>
+                      
+                        
+                            <li style="font-family: Arial;font-size: 14px;">
+                                @Html.ActionLink("Add Student Fee", "AddStudentFee", "Admin", new { @class = "link", id = "FeeAddLinkId" })
+                   
+                            </li>
+                            <li style="font-family: Arial;font-size: 14px;">
+                                @Html.ActionLink("Add Student Backlok", "AddStudentBacklog", "Admin", new { @class = "link", id = "BacklogAddLinkId" })
+                    
+                            </li>
+        
+                            <li style="font-family: Arial;font-size: 14px;">
+                                @Html.ActionLink("Add Course Registration Date", "AddCourseRegistrationDate", "Admin", new { @class = "link", id = "CourseRegDateAddLinkId" })
+                    
+                            </li>
+        
+                            <li style="font-family: Arial;font-size: 14px;">
+                                @Html.ActionLink("Student Result Info", "GetStudentResult", "Admin", new { id = "ResultLinkId" })     
+                            </li>
+        
+                            <li style="font-family: Arial;font-size: 14px;">
+                                @Html.ActionLink("Registered Backlogs Info", "GetBacklogRegistrationDetails", "Admin", new { id = "RegBacklogInfo" })    
+                            </li>
+       
+                        </ul>
+                    </div>}
+            </div>
+            
+            
+
+            <div  class="prettyprint">
+                @RenderSection("featured", required: false)
+                <section class="content-wrapper main-content clear-fix">
+                    @RenderBody()
+                    <div  id="divLoading" >        
+                        <img src="~/Images/ajax-loader.gif" style="background-position: center;position: relative;left: 40%;top: 10px"/>    
+                    </div>
+                </section>
+                
+            </div>
+            
+        
+        </div>
+      
+
+    @Scripts.Render("~/bundles/jquery")
+    @RenderSection("scripts", required: false)
+    @Scripts.Render("~/bundles/kendo")
+    @Scripts.Render("~/bundles/bootstrap")
+         <script src="~/Scripts/jquery-1.7.1.js"></script>
+      
+        <script src="~/Accordion/jquery-ui-1.8.16.custom.min.js"></script>
+<script src="~/Scripts/DialogEditDeleteDetails.js"></script>
+        <script type="text/javascript" src="~/jqwidgets/jqxcore.js"></script>  
+        <script type="text/javascript" src="~/jqwidgets/jqxdata.js"></script>  
+        <script type="text/javascript" src="~/jqwidgets/jqxbuttons.js"></script>  
+        <script type="text/javascript" src="~/jqwidgets/jqxscrollbar.js"></script>  
+        <script type="text/javascript" src="~/jqwidgets/jqxlistbox.js"></script>  
+        <script type="text/javascript" src="~/jqwidgets/jqxdropdownlist.js"></script>  
+        <script type="text/javascript" src="~/jqwidgets/jqxmenu.js"></script>  
+        <script type="text/javascript" src="~/jqwidgets/jqxgrid.js"></script>  
+        <script type="text/javascript" src="~/jqwidgets/jqxgrid.filter.js"></script>  
+        <script type="text/javascript" src="~/jqwidgets/jqxgrid.sort.js"></script>  
+        <script type="text/javascript" src="~/jqwidgets/jqxgrid.selection.js"></script>  
+        <script type="text/javascript" src="~/jqwidgets/jqxpanel.js"></script> 
+        <script src="~/jqwidgets/jqxgrid.columnsresize.js"></script>
+        <script src="~/jqwidgets/jqxnotification.js"></script>
+        <script src="~/jqwidgets/jqxcheckbox.js"></script>
+        <script src="~/jqwidgets/jqxwindow.js"></script>
+        <script src="~/jqwidgets/jqxtabs.js"></script>
+        <script type="text/javascript" src="~/jqwidgets/jqxgrid.pager.js"></script> 
+        <script type="text/javascript" src="~/jqwidgets/jqxpanel.js"></script>
+   <script src="@Url.Content("~/Scripts/jquery.imgareaselect.js")"></script>
+   <script src="@Url.Content("~/Scripts/jquery.validate.min.js")"></script>
+        <script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")"></script>
+        
+       <script src="~/Scripts/loading.js"></script>
+         <script src="~/Scripts/AdminLayout.js"></script>
+ 
+   
+    
+        
+
+    </body>
+     
+</html>

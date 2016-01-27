@@ -1,0 +1,29 @@
+﻿@model IEnumerable<OnlineDepartmentAutomationSystem.Models.StudentResultDetail>
+@{
+    ViewBag.Title = "Student Result"; Layout = "~/Views/Admin/_AdminLayout.cshtml";
+}
+
+
+<script src="~/Scripts/jquery-1.8.2.js"></script>
+
+
+<div class="prettyprint">
+
+   
+    <br />
+    <span id="dErrorMsg"></span>
+    <br />
+    <span id="yErrorMsg"></span>
+    <br />
+    <div id="tblStudentResults">
+    
+        @Html.Partial("_studentResultDetails")
+    </div>
+
+    
+    <br/>
+        <button class="btn" onclick="LoadUrl();">
+        <i class="icon-backward"></i>   Back
+    </button>
+
+</div>

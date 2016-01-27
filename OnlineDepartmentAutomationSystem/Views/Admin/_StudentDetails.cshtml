@@ -1,0 +1,95 @@
+﻿
+@using OnlineDepartmentAutomationSystem.Models
+@model StudentInformation
+<div style="font-family:Courier New;font-size: 20px">
+    
+       <img src='data:image/jpg;base64,@Convert.ToBase64String(Model.StudentImage)' class='img-circle' width='70px' height='60' style="position: absolute;right: 10%"/>
+    <br /><br/><br/>
+    <fieldset>
+        <legend>StudentInformation</legend>
+        @{
+            var hall = "";
+            var db=new DeptAutDbContext();
+            var departmentName = db.Departments.SingleOrDefault(m => m.DepartmentId.Equals(Model.DepartmentId)).DepartmentFullName;
+            var session= db.Sessions.SingleOrDefault(m => m.SessionId.Equals(Model.SessionId)).SessionName;
+            var faculty = db.Faculties.SingleOrDefault(m => m.FacultyId.Equals(Model.FacultyId)).Name;
+            hall = Model.HallId!=0 ? db.Halls.SingleOrDefault(m => m.Id.Equals(Model.HallId.Value)).HallName : null;
+        }
+        <b>ID:</b>    @Html.DisplayFor(model => model.StudentId)
+  
+  
+
+        <div class="display-label">
+            <b> @Html.DisplayNameFor(model => model.Name):</b>  @Html.DisplayFor(model => model.Name) 
+        </div>
+   
+        <div class="display-label">
+            <b> Department:</b>  @departmentName  
+        </div>
+        <div class="display-label">
+            <b>Faculty:</b>   @faculty
+        </div>
+ 
+
+  
+   
+        <div class="display-label">
+            <b> Session:</b>  @session
+        </div>
+  
+
+        <div class="display-label">
+            <b> @Html.DisplayNameFor(model => model.Phone):</b>  @Html.DisplayFor(model => model.Phone)
+        </div>
+ 
+
+        <div class="display-label">
+            <b> @Html.DisplayNameFor(model => model.Email):</b>   @Html.DisplayFor(model => model.Email)
+        </div>
+
+
+        <div class="display-label">
+            <b>@Html.DisplayNameFor(model => model.Gender):</b>   @Html.DisplayFor(model => model.Gender)
+        </div>
+
+
+        <div class="display-label">
+            <b>@Html.DisplayNameFor(model => model.Nationality):</b>    @Html.DisplayFor(model => model.Nationality) 
+        </div>
+        <div class="display-field">
+     
+        </div>
+
+        <div class="display-label">
+            <b>@Html.DisplayNameFor(model => model.PresentAddress):</b>    @Html.DisplayFor(model => model.PresentAddress)
+        </div>
+ 
+
+        <div class="display-label">
+            <b>@Html.DisplayNameFor(model => model.ParmanentAddress):</b>  @Html.DisplayFor(model => model.ParmanentAddress) 
+        </div>
+  
+
+        <div class="display-label">
+            @if (hall==null)
+            {
+                   <b>HallName:</b> <span>Not staying in hall</span>
+        
+            }
+              @if (hall!=null)
+            {
+                   <b>HallName:</b>  @hall
+        
+            }
+         
+        </div>
+        <div>
+            @if (ViewBag.yearTermName != null)
+            {
+                <b>Year Term : </b>
+                @ViewBag.yearTermName
+            }
+        </div>
+    </fieldset>
+
+</div>

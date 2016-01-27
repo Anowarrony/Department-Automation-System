@@ -1,0 +1,315 @@
+﻿
+@using OnlineDepartmentAutomationSystem.Models
+<!DOCTYPE html>
+<html lang="en" class="loading">
+    <head>
+       
+        <meta charset="utf-8" />
+        <title>@ViewBag.Title - My ASP.NET MVC Application</title>
+       
+        <meta name="viewport" content="width=device-width" />
+        @Styles.Render("~/Content/css")
+        <link href="~/Content/css/loading.css" rel="stylesheet" />
+        <link href="~/Content/all.css" rel="stylesheet" />
+        <link href="~/jqwidgets/jqx.base.css" rel="stylesheet" />
+        <link href="~/Content/css/bootstrap.css" rel="stylesheet" />
+        <link href="~/Content/Site.css" rel="stylesheet" />
+        <link href="~/Content/Al.css" rel="stylesheet" />
+        <link href="~/Content/jquery-ui-1.9.2.custom.css" rel="stylesheet" />    
+        <link href="~/Content/styles.css" rel="stylesheet" />
+        <link href="~/KendoUI/kendo.common.min.css" rel="stylesheet" />
+        <link href="~/KendoUI/kendo.dataviz.default.min.css" rel="stylesheet" />
+        <link href="~/KendoUI/kendo.dataviz.min.css" rel="stylesheet" />
+        <link href="~/KendoUI/kendo.default.min.css" rel="stylesheet" />
+        <link href="~/KendoUI/kendo.rtl.min.css" rel="stylesheet" />
+        <link href="~/Content/gh-buttons.css" rel="stylesheet" />  
+        <link href="~/jqwidgets/jqx.base.css" rel="stylesheet" />
+        <style>
+           
+            #logo{color: white;background: none;}
+        </style> 
+
+        @Scripts.Render("~/bundles/modernizr")
+    </head>
+    <body>
+    
+                
+    
+        <div id="header"> <img src="~/Content/NSTU_Logo.jpg" width="66"/>
+        <span>    <a id="logo" href="@Url.Action("Index", "Home")"  title="Home" style="position: relative;left: 92%;" >
+     
+         
+              <i class="icon-home icon-white"></i>     HOME
+        
+        
+            </a></span>
+      
+            <div id="header-menu">
+                <ul class="menu clearfix">
+                
+                
+                    
+                    @if (Request.IsAuthenticated)
+                    {
+                           using (Html.BeginForm("LogOff", "Login", FormMethod.Post, new { id = "logoutForm", @class = "" }))
+                                    {
+                                            @Html.AntiForgeryToken()
+                                        
+                   <a id="log" href="javascript:document.getElementById('logoutForm').submit()">   Log off</a> 
+                                    }
+                        var d = new DeptAutDbContext();
+                        var checkUser = d.Logins.Any(m => m.Username.Equals(User.Identity.Name));
+                        if (checkUser)
+                        {
+                            try
+                            {
+                            <text>
+              
+
+                                @{
+                    
+                                  
+
+                                var findAuthUerAsDmin = d.AdminLoginTables.SingleOrDefault(m => m.Username.Equals(User.Identity.Name));
+
+
+                                if (findAuthUerAsDmin == null)
+                                {
+                                    var z = d.Logins.SingleOrDefault(m => m.Username.Equals(User.Identity.Name));
+                                    if (z != null)
+                                    {
+                                        string authId = z.UniversityId;
+                                        var checkAuthId = d.StudentInformations.SingleOrDefault(m => m.StudentId.Equals(authId));
+                                        if (checkAuthId != null)
+                                        {
+                                                <label id="heloId">Hello,</label>    @Html.ActionLink(User.Identity.Name, "Index", "Student", routeValues: null, htmlAttributes: new { @class = "username button button icon settings", title = "Manage" })
+      
+                                        }
+                                        else
+                                        {
+                                                @Html.ActionLink(User.Identity.Name, "TeacherHomePage", "Teacher", routeValues: null, htmlAttributes: new { @class = "username", title = "Manage" })
+      
+                                        }
+                                    }
+
+
+                                    using (Html.BeginForm("LogOff", "Login", FormMethod.Post, new { id = "logoutForm", @class = "" }))
+                                    {
+                                            @Html.AntiForgeryToken()
+                                        
+                   <a id="log" href="javascript:document.getElementById('logoutForm').submit()">   Log off</a> 
+                                    }
+                                }
+              
+        
+        
+        
+               
+
+                                }
+
+
+                                @{
+    
+                                var db = new DeptAutDbContext();
+
+
+                                if (findAuthUerAsDmin == null)
+                                {
+                                    var c = db.Logins.SingleOrDefault(m => m.Username.Equals(User.Identity.Name));
+                                    if (c != null)
+                                    {
+                                        string id = c.UniversityId;
+
+                                        var check = db.StudentInformations.SingleOrDefault(m => m.StudentId.Equals(id));
+
+                                        if (check == null)
+                                        {
+                                            var v = db.TeacherInformations.SingleOrDefault(m => m.MobileNumber.Equals(id));
+                                            if (v != null)
+                                            {
+                                                ViewBag.userImage = v.Image;
+                                            }
+                                        }
+                                        else
+                                        {
+                                            var u = db.StudentInformations.SingleOrDefault(m => m.StudentId.Equals(id));
+                                            if (u != null)
+                                            {
+                                                ViewBag.userImage = u.StudentImage;
+                                            }
+                                        }
+                                    }
+
+                                        <img src="data:image/jpg;base64,@Convert.ToBase64String(ViewBag.userImage)" width="70px" height="60"/>
+   
+                                }
+           
+   
+                                }
+
+                            </text>
+                            }
+                            catch (Exception e)
+                            {
+                                Response.Write("<div id='excpFoLayoutPag'>");
+                                Response.Write("<img src='Content/dialog_cancel.png'/>");
+                                Response.Write(e.Message);
+                                Response.Write("</div>");
+                            }
+                        }
+                        else
+                        {
+                            
+                        <li> <i class="icon-user"></i>   @Html.ActionLink("Log in", "Login", "Login", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
+  
+                        }
+
+                    }
+
+                    else
+                    {
+ 
+       
+                        <li>@Html.ActionLink("Log in", "Login", "Login", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
+  
+                    }
+            
+                </ul>
+            </div>
+        </div>
+        <div id="body" style="background: navajowhite" >
+          <div class="navigation" id="navigation" style="position: absolute;top: 18%;left:0%">
+                <a class="nav-toggler" href="#" id="navToggler">
+                    <span class="show-nav">&#9776;</span>
+                    <span class="hide-nav">&times;</span>
+                </a>
+                <div class="navigation__inner">
+                    <ul>
+                        <li>
+                            <h2>All Task</h2>
+                        </li>
+    
+                        <li style="font-family: Arial;font-size: 22px;">
+                            @Html.ActionLink("Profile ", "Index", "Student", new { @class = "link", id = "profileLinkId" })                             
+                        </li>
+        
+                        <li style="font-family: Arial;font-size: 16px;">
+                            @Html.ActionLink(" Update Account", "UpdateAccount", "Student", new { @class = "link", id = "accountUpdateLinkId" })
+                   
+                        </li>
+                        <li style="font-family: Arial;font-size: 16px;">
+                            @Html.ActionLink(" Update Image", "UpdateStudentImage", "Student", new { @class = "link", id = "imageUpdateLinkId" })
+                    
+                        </li>
+                        <li style="font-family: Arial;font-size: 16px;">
+                            @Html.ActionLink("Register Regular Course", "RegisterStudentCourse", "Student", new { @class = "link", id = "courseRegLinkId" })
+                  
+                        </li>
+                        <li style="font-family: Arial;font-size: 16px;">
+                            @Html.ActionLink("Register Backlog Course", "Load", "Student", new { @class = "link", id = "backlogCourseLinkId" })
+                   
+                        </li>
+                        <li style="font-family: Arial;font-size: 16px;">
+                            @Html.ActionLink("Download Registration Form", "GetRegistrationForm", "Student", new { @class = "link", id = "regFormLinkId" })
+                   
+                        </li>
+                       
+                    </ul>
+                </div>
+            </div>
+      @RenderSection("featured", required: false)
+            <section class="content-wrapper main-content clear-fix">
+                @RenderBody()
+            </section>
+        
+  <div  id="divLoading" >        
+                     <img src="~/Images/ajax-loader.gif" style="background-position: center;position: relative;left: 40%;top: 10px"/>    
+     </div>
+        </div>
+      
+
+    @Scripts.Render("~/bundles/jquery")
+    @RenderSection("scripts", required: false)
+    @Scripts.Render("~/bundles/kendo")
+     @Scripts.Render("~/bundles/angular")
+    @Scripts.Render("~/bundles/bootstrap")
+         <script src="~/Scripts/jquery-1.7.1.js"></script>
+        <script src="~/Scripts/jquery-ui-1.8.20.js"></script>
+        <script type="text/javascript" src="~/jqwidgets/jqxcore.js"></script>  
+        <script type="text/javascript" src="~/jqwidgets/jqxdata.js"></script>  
+        <script type="text/javascript" src="~/jqwidgets/jqxbuttons.js"></script>  
+        <script type="text/javascript" src="~/jqwidgets/jqxscrollbar.js"></script>  
+        <script type="text/javascript" src="~/jqwidgets/jqxlistbox.js"></script>  
+        <script type="text/javascript" src="~/jqwidgets/jqxdropdownlist.js"></script>  
+        <script type="text/javascript" src="~/jqwidgets/jqxmenu.js"></script>  
+        <script type="text/javascript" src="~/jqwidgets/jqxgrid.js"></script>  
+        <script type="text/javascript" src="~/jqwidgets/jqxgrid.filter.js"></script>  
+        <script type="text/javascript" src="~/jqwidgets/jqxgrid.sort.js"></script>  
+        <script type="text/javascript" src="~/jqwidgets/jqxgrid.selection.js"></script>  
+        <script type="text/javascript" src="~/jqwidgets/jqxpanel.js"></script> 
+        <script src="~/jqwidgets/jqxgrid.columnsresize.js"></script>
+        <script src="~/jqwidgets/jqxnotification.js"></script>
+        <script src="~/jqwidgets/jqxcheckbox.js"></script>
+        <script src="~/jqwidgets/jqxwindow.js"></script>
+        <script src="~/jqwidgets/jqxtabs.js"></script>
+        <script type="text/javascript" src="~/jqwidgets/jqxgrid.pager.js"></script> 
+        <script type="text/javascript" src="~/jqwidgets/jqxpanel.js"></script>
+   <script src="@Url.Content("~/Scripts/jquery.imgareaselect.js")"></script>
+   <script src="@Url.Content("~/Scripts/jquery.validate.min.js")"></script>
+        <script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")"></script>
+        <script src="~/Bootstrape/bootstrap-tab.js"></script>
+<script src="~/Bootstrape/bootstrap-dropdown.js"></script>
+<script src="~/Bootstrape/bootstrap-alert.js"></script>
+        <script src="~/Scripts/loading.js"></script>
+        <script>
+            function LoadUrl(parameters) {
+                history.go(-1);
+            }
+         
+            function lodingFunction() {
+                $('#divLoading').dialog({ title: '<span style="font-family:Courier New;"> Please Wait....</span>'});
+
+            }
+
+            $("#log").css('color', 'white').css('text-decoration','underline');
+            $("#log").hover(function () {
+                $("#log").css('background', 'none').css('color', 'white').css('text-decoration', 'underline');
+            });
+            $('.username,#profileLinkId,#logo,#loginLink,#logoutForm,#accountUpdateLinkId,#imageUpdateLinkId,#courseRegLinkId,#backlogCourseLinkId,#regFormLinkId').click(function () {
+                lodingFunction();
+            });
+
+            jQuery(".navigation__inner li a").hover(function () {
+                    $(this).css({ 'font-size': '20px', 'color': 'white', 'background': 'green', 'text-decoration': 'underline'});
+                },
+            
+                function() {
+                    $(this).css({ 'color': 'white', 'background': '#212121', 'font-size': '15px', 'text-decoration': 'none' });
+                }
+            );
+
+         
+
+
+            $('#profileLinkId').click(function () {
+                lodingFunction();
+            });
+            $("#heloId").css('color', 'white');
+            $("#excpFoLayoutPag").dialog({buttons:{"close":function (){$(this).dialog('close')}}});
+
+            $("input[type='text']").css('height', '35px');
+            $("input[type='password']").css('height', '35px');
+        </script>
+  @if (Request.IsAuthenticated)
+  {
+                  
+      <script src="~/Scripts/Sidebar.js"></script>
+
+  }
+
+        
+
+    </body>
+     
+</html>

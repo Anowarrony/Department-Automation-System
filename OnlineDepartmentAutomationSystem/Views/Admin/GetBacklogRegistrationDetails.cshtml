@@ -1,0 +1,182 @@
+﻿@using OnlineDepartmentAutomationSystem.Models
+@{
+    ViewBag.Title = "GetBacklogRegistrationDetails"; ViewBag.Title = "T"; Layout = "~/Views/Admin/_AdminLayout.cshtml";
+}
+<script src="~/Scripts/jquery-1.7.1.js"></script>
+<script src="~/KendoUI/kendo.all.min.js"></script>
+<div class="prettyprint">
+    <table id="regDetailsKendoGrid">
+        <thead> <tr>
+                    <th data-sortable="false" data-menuable="false" data-filterable="false">Image</th>
+            
+                    <th data-sortable="false" data-menuable="false" data-filterable="false">
+                        Name
+                    </th>
+              
+                    <th >
+                        Roll
+                    </th>
+                    <th data-sortable="false" data-menuable="false" data-filterable="false">
+                        Course Code
+                    </th>
+                    <th data-sortable="false" data-menuable="false" data-filterable="false">
+                        Course Title
+                    </th>
+                    <th data-sortable="false" data-menuable="false" data-filterable="false">
+                        Year Term
+                    </th>
+           
+                
+                    <th data-sortable="false" data-menuable="false" data-filterable="false">Actions</th>
+                </tr></thead>
+        <tbody>
+
+            @foreach (var item in (IEnumerable<RegisteredBacklogDetailsModel>)ViewData["bacRegDetails"])
+            {
+                <tr>
+      
+                    <td>
+                        <img src="data:image/jpg;base64,@Convert.ToBase64String(item.Image)" width="70px" height="60"/>
+   
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+      
+                    <td>
+    
+                        @Html.DisplayFor(modelItem => item.Roll)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CourseCode)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CourseTitle)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.YearTerm)
+                    </td>
+     
+      
+       
+        
+                    <td>
+
+                        <span>   @Html.ActionLink("Delete", "DeleteRegisteredBacklog", new { id=item.Id },new{@class="lnkDelete button danger icon trash"})
+                        </span> 
+          
+          
+         
+        
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+	
+    </div>
+
+<div id="dialog-alert" style="display: none">
+<p>
+@TempData["msg"]!
+</p>
+</div>
+ 
+<div id="dialog-confirm" style="display: none">
+<p style="font-family: Courier New;font-size: 19px">
+<span  style="float: left; margin: 0 7px 20px 0;"></span>
+
+    <img src="~/Content/1405880767_warning_48.png" width="35"/>
+    Are you sure to <b>delete</b> this <b>Record</b> parmanently?
+</p>
+</div>
+ 
+<div id="dialog-edit" style="display: none">
+</div>
+<div id="dialog-detail" style="display: none">
+</div>
+
+
+
+<script>
+  
+
+    $(document).ready(function () {
+        $(".hi").hide();
+        var url = "";
+
+        if ('@TempData["msg"]' != "") {
+            $("#dialog-alert").dialog('open');
+        }
+
+
+
+        $("#dialog-confirm").dialog({
+            autoOpen: false,
+            title: ' Delete Pannel',
+            resizable: false,
+            height: 210,
+            width: 550,
+            position: [370, 120],
+            show: { effect: 'drop', direction: "up" },
+            modal: true,
+            draggable: true,
+            open: function (event, ui) {
+                $(".ui-dialog-titlebar-close").hide();
+
+            },
+            buttons: {
+                "OK": function () {
+                    $(this).dialog("close");
+                    window.location.href = url;
+                },
+                "Cancel": function () {
+                    $(this).dialog("close");
+                }
+            }
+        });
+
+
+
+
+    
+
+        $(".lnkDelete").live("click", function (e) {
+            // e.preventDefault(); use this or return false
+
+            url = $(this).attr('href');
+            $("#dialog-confirm").dialog('open');
+
+            return false;
+        });
+
+    
+
+        $("#btnClose").live("click", function (e) {
+            $("#dialog-edit").dialog("close");
+            return false;
+        });
+    });
+
+
+    $("#regDetailsKendoGrid").kendoGrid({
+
+
+        pageable: {
+            refresh: true,
+            pageSizes: true,
+            buttonCount: 5
+        }
+
+        , dataSource: { pageSize: 5 }
+        ,
+
+        scrollable: false
+        ,
+        sortable: true,
+        filterable: true,
+        columnMenu: false,
+        serverPaging: true,
+        type: "odata"
+    });
+</script>

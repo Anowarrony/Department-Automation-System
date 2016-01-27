@@ -1,0 +1,377 @@
+﻿@using OnlineDepartmentAutomationSystem.Models
+@model StudentMetadata
+
+@{
+    ViewBag.Title = "T"; Layout = "~/Views/Admin/_AdminLayout.cshtml";
+}
+
+<style>
+
+</style>
+<script src="~/Scripts/jquery-1.8.2.js"></script>
+<script src="~/KendoUI/kendo.all.min.js"></script>
+
+     
+	   
+<div  class="prettyprint">
+	
+
+@using(Html.BeginForm("AddNewStudent","Admin",FormMethod.Post, new { enctype = "multipart/form-data" }))
+
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+    <span style="color: darkcyan;">
+        @if (ViewBag.successMsg!=null)
+        {
+            
+               <img src="~/Content/1405880759_accepted_48.png" width="29"/>
+        @ViewBag.successMsg 
+        }
+     
+    </span>
+    <fieldset>
+        <legend>StudentInformation</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.StudentUniversityId)
+        </div>
+        <div class="editor-field">
+            @Html.TextBoxFor(model => model.StudentUniversityId,new{@class="empty"})
+            @Html.ValidationMessageFor(model => model.StudentUniversityId)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Name)
+        </div>
+        <div class="editor-field">
+            @Html.TextBoxFor(model => model.Name,new{@class="empty"})
+            @Html.ValidationMessageFor(model => model.Name)
+        </div>
+
+     
+
+        <div class="editor-label">
+                @Html.LabelFor(model => model.Department)
+        </div>
+        
+         <div class="editor-field">
+            @Html.DropDownList("Department", (MultiSelectList)ViewBag.departments, "Select Department", new { id = "g",@class="empty" })
+          
+                @Html.ValidationMessageFor(model => model.Department)
+           
+        </div>
+  
+       <span style="color: red;">@ViewBag.reMsg</span> 
+
+                <div class="editor-label">
+         @Html.LabelFor(model => model.Session)
+        </div>
+         <div class="editor-field">
+            @Html.DropDownList("Session", (MultiSelectList) ViewBag.sessions, "Select Session", new { id = "g",@class="empty" })
+           @Html.ValidationMessageFor(model => model.Session)
+           
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Phone)
+        </div>
+        <div class="editor-field">
+            @Html.TextBoxFor(model => model.Phone, new { @class = "empty" })
+            @Html.ValidationMessageFor(model => model.Phone)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Email)
+        </div>
+        <div class="editor-field">
+            @Html.TextBoxFor(model => model.Email,new { @class = "empty" })
+            @Html.ValidationMessageFor(model => model.Email)
+        </div>
+
+        <div class="editor-label">
+         @Html.LabelFor(model => model.Gender)
+        </div>
+       <div class="editor-field">
+                     @Html.DropDownList("Gender", new List<SelectListItem>
+            {
+                new SelectListItem{Text = "Male",Value = "Male"},
+                new SelectListItem{Text = "Female",Value = "Female"},
+               
+            }, "Select Gender", new { @class = "empty" })
+            @Html.ValidationMessageFor(model => model.Gender)
+        </div>
+
+        <div class="editor-label">
+          @Html.LabelFor(model => model.Nationality)
+        </div>
+         <div class="editor-field">
+                 @Html.DropDownList("Nationality", new List<SelectListItem>
+            {
+                new SelectListItem{Text = "Bangladeshi",Value = "Bangladeshi"},
+                new SelectListItem{Text = "Nepali",Value = "Nepali"},
+                  new SelectListItem{Text = "Indean",Value = "Indean"},
+                   new SelectListItem{Text = "Pakistani",Value = "Pakistani"}
+               
+            }, "Select Your Nationality", new { @class = "empty" })
+            @Html.ValidationMessageFor(model => model.Nationality)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.PresentAddress)
+        </div>
+        <div class="editor-field">
+            @Html.TextAreaFor(model => model.PresentAddress, new { @class = "empty" })
+            @Html.ValidationMessageFor(model => model.PresentAddress)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ParmanentAddress)
+        </div>
+        <div class="editor-field">
+            @Html.TextAreaFor(model => model.ParmanentAddress, new { @class = "empty" })
+            @Html.ValidationMessageFor(model => model.ParmanentAddress)
+        </div><br />
+        <div>      @Html.FileFor(model => model.File)
+      @*  <img alt="Field for image cutting" width="100"  id="preview" src="@Url.Content("~/Content/empty.png")" />*@
+
+        <span style="color: red">* @ViewBag.imgReq  </span>
+        </div>
+        <div>
+              <input type="checkbox"/> <span style="color:darkgray;font-weight: bold">(Check only for the stdents who are staying in Hall)</span>
+        </div><br />
+        <div id="hallselectList">
+                @Html.DropDownList("HallName", (MultiSelectList)ViewBag.halls, "Select Hall", new { id = "g",@class="empty" })
+        </div><br />
+        <p>
+            <input type="submit" value="Add Student" class="btn btn-info" id="stuAddButtId"/>
+        </p>
+       
+    </fieldset>
+}
+
+<input type="text" value="@ViewBag.check" id="EmptyFieldId" style="visibility: hidden"/>
+<br/>
+@*@Html.Partial("_Student")*@
+   
+
+
+
+
+<div id="dialog-alert" style="display: none">
+<p>
+@TempData["msg"]!
+</p>
+</div>
+ 
+<div id="dialog-confirm" style="display: none">
+<p style="font-family: Courier New;font-size: 19px">
+<span  style="float: left; margin: 0 7px 20px 0;"></span>
+
+    <img src="~/Content/1405880767_warning_48.png" width="35"/>
+    Are you sure to <b>delete</b> this <b>student</b>?.If there is any <b>record</b> related to this <b>student</b> will also be deleted <b>parmanently</b>.
+</p>
+</div>
+ 
+<div id="dialog-edit" style="display: none">
+</div>
+<div id="dialog-detail" style="display: none">
+</div>
+<br/>
+
+
+   
+    <script>
+       
+ 
+        $(".cancelButtonId").click(function () {
+            $("#ScrollPositionX").val($(document).scrollTop());
+        });
+
+        $("#ScrollPositionX").each(function () {
+            var val = parseInt($(this).val(), 0);
+            if (!isNaN(val))
+                $(document).scrollTop(val);
+        });
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $(".hi").hide();
+            var url = "";
+
+            if ('@TempData["msg"]' != "") {
+                $("#dialog-alert").dialog('open');
+            }
+
+            $("#dialog-edit").dialog({
+                title: 'Create User',
+                autoOpen: false,
+                resizable: false,
+                width: 600,
+                position: [300, 20],
+                show: { effect: 'drop', direction: "up" },
+                modal: true,
+                draggable: false,
+                open: function (event, ui) {
+                    $(".ui-dialog-titlebar-close").hide();
+                    $(this).load(url);
+                }
+            });
+
+            $("#dialog-confirm").dialog({
+                autoOpen: false,
+                title: ' Delete Pannel',
+                resizable: false,
+                height: 210,
+                width: 550,
+                position: [370, 120],
+                show: { effect: 'drop', direction: "up" },
+                modal: true,
+                draggable: true,
+                open: function (event, ui) {
+                    $(".ui-dialog-titlebar-close").hide();
+
+                },
+                buttons: {
+                    "OK": function () {
+                        $(this).dialog("close");
+                        window.location.href = url;
+                    },
+                    "Cancel": function () {
+                        $(this).dialog("close");
+                    }
+                }
+            });
+
+            $("#dialog-detail").dialog({
+                title: '<img src="/Content/symbol_information.png" width="35"/> Student Details',
+                autoOpen: false,
+                resizable: false,
+                width: 700,
+                position: [370, 20],
+                show: { effect: 'drop', direction: "up" },
+                modal: true,
+                draggable: false,
+                open: function (event, ui) {
+                    $(".ui-dialog-titlebar-close").hide();
+                    $(this).load(url);
+                },
+                buttons: {
+                    "Close": function () {
+                        $(this).dialog("close");
+                    }
+                }
+            });
+
+
+
+            $(".lnkEdit").live("click", function (e) {
+                // e.preventDefault(); use this or return false
+                url = $(this).attr('href');
+                $(".ui-dialog-title").html('<img src="/Content/system_software_update.png" width="35"/> Update Student');
+                $("#dialog-edit").dialog('open');
+
+                return false;
+            });
+
+            $(".lnkDelete").live("click", function (e) {
+                // e.preventDefault(); use this or return false
+
+                url = $(this).attr('href');
+                $("#dialog-confirm").dialog('open');
+
+                return false;
+            });
+
+            $(".lnkDetail").live("click", function (e) {
+                // e.preventDefault(); use this or return false
+                url = $(this).attr('href');
+                $("#dialog-detail").dialog('open');
+
+                return false;
+            });
+
+            $("#btnClose").live("click", function (e) {
+                $("#dialog-edit").dialog("close");
+                return false;
+            });
+           
+            
+        });
+    </script>
+
+
+
+
+    <script>
+
+        $("#studentGrid").kendoGrid({
+
+
+            pageable: {
+                refresh: true,
+                pageSizes: true,
+                buttonCount: 5
+            }
+
+            , dataSource: { pageSize: 5 }
+            ,
+
+            scrollable: false
+            ,
+            sortable: true,
+            filterable: true,
+            columnMenu: false,
+            serverPaging: true,
+            type: "odata"
+        });
+       
+        $(function () {
+
+            $("#hallselectList").hide();
+            $('input[type="checkbox"]').click(function () {
+                $("#hallselectList").toggle();
+            });
+        });
+    </script>
+</div>
+ 
+    @section Scripts
+{
+
+           @Scripts.Render("~/bundles/jqueryval")
+        
+   
+        <script>
+            
+
+            var t = $("#setDpt").val();
+
+            $(function () {
+                $("table").addClass('w');
+                var s = $("#d").val();
+
+
+                if (t == 3) {
+
+
+
+                }
+            });
+
+
+            var c = "";
+            if ($("#EmptyFieldId").val() == 1) {
+
+                $(".empty").attr('value', c);
+
+            }
+
+           
+            $(function () {
+                initSelect();
+            });
+            
+        </script>
+    }

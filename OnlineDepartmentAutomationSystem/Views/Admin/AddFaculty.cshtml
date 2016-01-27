@@ -1,0 +1,93 @@
+﻿@using OnlineDepartmentAutomationSystem.Models
+@model FacultyAddModel
+
+@{
+    ViewBag.Title = "AddFaculty"; Layout = "~/Views/Admin/_AdminLayout.cshtml";
+}
+
+<h2>Add Faculty</h2>
+<div class="prettyprint">
+    
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>FacultyAddModel</legend>
+
+        <table>
+            <tr>
+                <td style="font-weight: bold">
+                   Faculty 
+                </td>
+                <td>
+                    @Html.EditorFor(model => model.Faculty)
+                </td>
+                <td style="text-align: left">
+                    @Html.ValidationMessageFor(model => model.Faculty) 
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    
+                </td>
+                <td style="text-align: left">   <input type="submit" value="Add New Faculty" class="btn btn-info" id="btnSubmit"/></td>
+                <td></td>
+            </tr>
+        </table>
+     
+      
+    </fieldset>
+}
+    
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>
+                    Faculty 
+                </th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var faclty in (IEnumerable<FacltyViewModel>)ViewData["Faculties"])
+            {
+                    <tr>
+                <td>@Html.DisplayFor(x=>faclty.Faculty)</td>
+                <td>@Html.ActionLink("Delete", "DeleteFaculty", new { id=faclty.FacultyId},new{@class="lnkDelete button danger icon trash"}) </td>
+            </tr>
+            }
+        
+        </tbody>
+    </table>
+
+</div>
+
+
+<div id="dialog-alert" style="display: none">
+<p>
+@TempData["msg"]!
+</p>
+</div>
+ 
+<div id="dialog-confirm" style="display: none">
+<p style="font-family: Courier New;font-size: 19px">
+<span  style="float: left; margin: 0 7px 20px 0;"></span>
+
+    <img src="~/Content/1405880767_warning_48.png" width="35"/>
+    Are you sure to <b>delete</b> this <b>Faculty</b>?.It will be deleted parmanently.
+</p>
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+<script>
+
+      $("#btnSubmit").click(function() {
+if ($("#Faculty").val() != "") {
+    lodingFunction();
+}
+      });
+    </script>
+
+}

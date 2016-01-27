@@ -1,0 +1,221 @@
+﻿
+
+@using OnlineDepartmentAutomationSystem.Models
+@model StudentSearchModel
+
+@{
+    ViewBag.Title = "DisplayAdminHomePage";
+    Layout = "~/Views/Admin/_AdminLayout.cshtml";
+}
+
+<script src="~/Scripts/jquery-1.8.2.js"></script>
+<script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+
+<div  class="prettyprint">
+    <h2>Admin Home Page</h2>
+    
+
+    <div class="bs-docs-example">
+        <ul id="myTab" class="nav nav-tabs">
+     
+          <li >
+                <a href="#searchStudent" data-toggle="tab">
+                
+                    <i class="icon-info-sign"></i>
+                  Search Student
+                </a>
+                
+
+
+            </li>
+        
+            <li class="active">
+                <a href="#fee" data-toggle="tab">
+                          
+                    <i class="icon-book"></i>
+                    Student  Fee Information
+                </a>
+
+            </li>
+             <li>
+                <a href="#CourseRegDate" data-toggle="tab">
+                          
+                    <i class="icon-book"></i>
+                    Course Registration Date
+                </a>
+
+            </li>
+            <li class="dropdown">
+           
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    <i class="icon-eye-open"></i>
+                    View<b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a href="#dropdown1" data-toggle="tab">
+                        
+                            @Html.ActionLink("Student Result","GetDepartments","Admin",new{id="ResultLinkId"})
+
+                        </a>
+                    </li>
+                    
+                     <li>
+                        <a href="#dropdown1" data-toggle="tab">
+                        
+                            @Html.ActionLink("Registered Backlogs","GetBacklogRegistrationDetails","Admin",new{id="regBacklogLinkId"})
+
+                        </a>
+                    </li>
+            
+                </ul>
+    
+            </li>
+       
+         
+            <li class="dropdown" >
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    <i class="icon-plus"></i>
+                    Add
+                    <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="#dropdown1" data-toggle="tab" >
+                            @Html.ActionLink("Add New Student", "AddNewStudent", "Admin", new { id = "" }, new { @class = "link",id="addStudentLinkId" })
+                    
+                    
+
+                        </a></li>
+            
+                       <li><a href="#dropdown1" data-toggle="tab" >
+                            @Html.ActionLink("Add New Session", "AddSession", "Admin", new { id = "" }, new { @class = "link",id="addStudentLinkId" })
+                    
+                    
+
+                        </a></li> 
+                    
+                        <li><a href="#dropdown1" data-toggle="tab" >
+                            @Html.ActionLink("Add New Faculty", "AddFaculty", "Admin", new { id = "" }, new { @class = "link",id="addStudentLinkId" })
+                    
+                    
+
+                        </a></li>
+                    
+
+                    <li><a href="#dropdown2" data-toggle="tab">
+                            @Html.ActionLink("Add New Department", "AddDepartment", "Admin", new { id = "" }, new { @class = "link",id="addDeptLinkId" })
+                   
+                        </a></li>
+                    <li><a href="#dropdown2" data-toggle="tab">
+                            @Html.ActionLink("Add New Accounts", "AddAccount", "Admin", new { id = "" }, new { @class = "link",id="addNewAccountLinkId" })
+                    
+                        </a></li>
+        
+                    <li><a href="#dropdown2" data-toggle="tab">
+                            @Html.ActionLink("Add Current Semister", "AddCurrentSemister", "Admin", new { id = "" }, new { @class = "link",id="addCurrentSemisterLinkId" })
+                  
+                        </a></li>
+                    <li><a href="#dropdown2" data-toggle="tab">
+                        
+                            @Html.ActionLink("Add Student Result", "InsertStudentResult", "Admin", new { id = "" }, new { @class = "link" ,id="studentResultInsertLinkId"})
+                   
+                        </a></li>
+        
+                    <li><a href="#dropdown2" data-toggle="tab">
+                        
+                            @Html.ActionLink("Add Course", "AddCourse", "Admin", new { id = "" }, new { @class = "link" ,id="courseAddLinkId"})
+                   
+                        </a></li>
+                    <li><a href="#dropdown2" data-toggle="tab">
+                            @Html.ActionLink("Add Student Backlok", "AddStudentBacklog", "Admin", new { id = "" }, new { @class = "link" ,id="backlogAddLinkId"})
+                    
+                        </a></li>
+        
+          
+            
+                </ul>
+                    
+                     
+                    
+            </li>
+              
+                 
+        </ul>
+ 
+        <div id="myTabContent" class="tab-content">
+           
+            
+            <div class="tab-pane fade in " id="searchStudent">
+                
+                <table class="table table-bordered">
+    <tr>
+     
+     
+        <th style="font-size: 1.6em;text-align: center">
+          Department
+        </th>
+     
+    </tr>
+
+@foreach (var item in (IQueryable<DepartmentViewModel>)ViewData["Departments"]) {
+    <tr>
+   
+     
+        <td>
+         <a style="background: none;color: green;text-decoration: underline;font-size:1.2em" href="@Url.Action("GetStudentsDetailsByDepartment",new{departmentId=item.DepartmentId})">   @Html.DisplayFor(m => item.Department)</a>
+       
+             </td>
+      
+    </tr>
+}
+
+</table>
+
+            </div> 
+            
+            
+
+            <div class="tab-pane fade in active" id="fee">
+                    <p>
+                        @Html.Partial("_FeeDetails")
+                    </p>
+                </div>
+                <div class="tab-pane fade" id="CourseRegDate">
+                    <p>
+                        @Html.Partial("_GetCourseRegistrationDateView")
+                    </p>
+                </div>
+            </div>
+    </div>
+
+
+  
+
+
+</div>
+
+
+@section scripts
+{
+    @Scripts.Render("~/bundles/jqueryval")
+ 
+    <script src="~/Bootstrape/bootstrap-tab.js"></script>
+    <script src="~/Bootstrape/bootstrap-dropdown.js"></script>	
+
+    <script>
+
+
+        $("#btnLoadAll").css("background", "none").css("color", "black");
+        $(function() {
+
+            $("th").css('text-align', 'center');
+            $("#btnSearch").css('height', '45px');
+            $("#serBox").css('height', '36px');
+
+
+            $("#studentResultInsertLinkId, #addCurrentSemisterLinkId, #addNewAccountLinkId, #addDeptLinkId, #addStudentLinkId, #regBacklogLinkId, #ResultLinkId, #backlogAddLinkId, #courseAddLinkId").click(function() {
+                lodingFunction();
+            });
+            </script>
+    
+}

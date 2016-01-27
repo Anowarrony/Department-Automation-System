@@ -1,0 +1,33 @@
+﻿@using OnlineDepartmentAutomationSystem.Models
+
+@{
+    ViewBag.Title = "GetDepartments"; Layout = "~/Views/Admin/_AdminLayout.cshtml";
+}
+
+
+
+<div class="prettyprint">
+<table class="table table-bordered">
+    <tr>
+     
+     
+        <th style="font-size: 1.6em;text-align: center">
+          Department
+        </th>
+     
+    </tr>
+
+@foreach (var item in (IQueryable<DepartmentViewModel>)ViewData["Departments"]) {
+    <tr>
+   
+     
+        <td>
+         <a style="background: none;color: green;text-decoration: underline;font-size:1.2em" href="@Url.Action("GetStudentNamesAndIdsByDepartment",new{departmentId=item.DepartmentId})">   @Html.DisplayFor(m => item.Department)</a>
+       
+             </td>
+      
+    </tr>
+}
+
+</table>
+    </div>
